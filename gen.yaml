@@ -8,7 +8,7 @@ generation:
   sdkClassName: SDK
   sdkFlattening: false
 python:
-  version: ""
+  version: 0.0.1
   author: speakeasy-sdks
   description: Python SDK for Fivetran API
   packageName: fivetran
