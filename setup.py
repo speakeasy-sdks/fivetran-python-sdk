@@ -7,7 +7,7 @@ except FileNotFoundError:
     long_description = ""
 
 setuptools.setup(
-    name="fivetran",
+    name="fivetran-python-sdk",
     version="0.0.1",
     author="speakeasy-sdks",
     description="Python SDK for Fivetran API",

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install fivetran
+pip install fivetran-python-sdk
 ```
 <!-- End SDK Installation -->
 
