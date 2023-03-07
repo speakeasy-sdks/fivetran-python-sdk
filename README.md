@@ -1,4 +1,17 @@
-# fivetran
+<div align="center">
+    <picture>
+        <img src="" width="500">
+    </picture>
+   <p>Fivetran makes access to data as simple and reliable as electricity, and our REST API makes it automatable! With our API, you can build a data-driven applications on top of our platform with [Powered by Fivetran](https://fivetran.com/docs/rest-api/powered-by-fivetran)</p>
+   <a href="https://developers.fivetran.com/openapi/reference/v1/overview/"><img src="https://img.shields.io/static/v1?label=Docs&message=API Ref&color=000000&style=for-the-badge" /></a>
+   <a href="https://github.com/speakeasy-sdks/fivetran-python-sdk/actions"><img src="https://img.shields.io/github/actions/workflow/status/speakeasy-sdks/fivetran-python-sdk/speakeasy_sdk_generation.yml?style=for-the-badge" /></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" /></a>
+  <a href="https://github.com/speakeasy-sdks/fivetran-python-sdk/releases"><img src="https://img.shields.io/github/v/release/speakeasy-sdks/fivetran-python-sdk?sort=semver&style=for-the-badge" /></a>
+</div>
+
+## Authentication
+
+
 
 <!-- Start SDK Installation -->
 ## SDK Installation
