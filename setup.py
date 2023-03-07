@@ -8,7 +8,7 @@ except FileNotFoundError:
 
 setuptools.setup(
     name="fivetran-python-sdk",
-    version="0.0.1",
+    version="1.1.0",
     author="speakeasy-sdks",
     description="Python SDK for Fivetran API",
     long_description=long_description,

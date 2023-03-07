@@ -1,15 +1,13 @@
 <!-- Start SDK Example Usage -->
 ```python
-import sdk
-from sdk.models import operations, shared
+import fivetran
+from fivetran.models import operations, shared
 
-s = sdk.SDK()
+s = fivetran.Fivetran()
 s.config_security(
     security=shared.Security(
-        basic_auth=shared.SchemeBasicAuth(
-            password="YOUR_PASSWORD_HERE",
-            username="YOUR_USERNAME_HERE",
-        ),
+        password="YOUR_PASSWORD_HERE",
+        username="YOUR_USERNAME_HERE",
     )
 )
    
