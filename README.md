@@ -1,17 +1,28 @@
 <div align="center">
     <picture>
-        <img src="" width="500">
+        <img src="https://user-images.githubusercontent.com/68016351/223284832-d571065b-026c-46d4-88a6-a895afeb8c97.png" width="500">
     </picture>
-   <p>Fivetran makes access to data as simple and reliable as electricity, and our REST API makes it automatable! With our API, you can build a data-driven applications on top of our platform with [Powered by Fivetran](https://fivetran.com/docs/rest-api/powered-by-fivetran)</p>
+   <p>Fivetran makes access to data as simple and reliable as electricity, and our REST API makes it automatable! With our API, you can build a data-driven applications on top of our platform with Powered by Fivetran </p>
    <a href="https://developers.fivetran.com/openapi/reference/v1/overview/"><img src="https://img.shields.io/static/v1?label=Docs&message=API Ref&color=000000&style=for-the-badge" /></a>
    <a href="https://github.com/speakeasy-sdks/fivetran-python-sdk/actions"><img src="https://img.shields.io/github/actions/workflow/status/speakeasy-sdks/fivetran-python-sdk/speakeasy_sdk_generation.yml?style=for-the-badge" /></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" /></a>
-  <a href="https://github.com/speakeasy-sdks/fivetran-python-sdk/releases"><img src="https://img.shields.io/github/v/release/speakeasy-sdks/fivetran-python-sdk?sort=semver&style=for-the-badge" /></a>
+  <a href="https://github.com/speakeasy-sdks/fivetran-python-sdk/releases"><img src="https://img.shields.io/github/v/release/speakeasy-sdks/fivetran-python-sdk?sort=semver&style=for-the-badge"/></a>
 </div>
 
 ## Authentication
 
+Account Administrators in Free, Standard, Enterprise, and Business Critical accounts can manage the API configuration settings. To access the API configuration settings:
 
+1) Log in to [Fivetran](https://fivetran.com/login).
+2) In the bottom left menu, click on your username, then click API Key to access your user-level API key and secret.
+
+Fivetran REST API uses API Key authentication. For each request to the API provide an Authorization HTTP header with the following value: Basic `{api_key}:{api_secret}`. The `{api_key}:{api_secret}` part should be base64 encoded.
+
+For instance, for API key `d9c4511349dd4b86` and API secret `1f6f2d161365888a1943160ccdb8d968`, encode d`9c4511349dd4b86:1f6f2d161365888a1943160ccdb8d968` to base64 `(ZDljNDUxMTM0OWRkNGI4NjoxZjZmMmQxNjEzNjU4ODhhMTk0MzE2MGNjZGI4ZDk2OA==)` and use the following Authorization HTTP header value:
+
+`Basic ZDljNDUxMTM0OWRkNGI4NjoxZjZmMmQxNjEzNjU4ODhhMTk0MzE2MGNjZGI4ZDk2OA==`
+
+NOTE: The API key is unique for the account and Account Administrator user pair. Different Account Administrators have different API keys.
 
 <!-- Start SDK Installation -->
 ## SDK Installation
