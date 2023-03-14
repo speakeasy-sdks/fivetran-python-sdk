@@ -29,7 +29,7 @@ class GroupManagement:
         url = utils.generate_url(operations.AddUserToGroupRequest, base_url, '/v1/groups/{groupId}/users', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "add_user_to_group_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -57,7 +57,7 @@ class GroupManagement:
         url = base_url.removesuffix('/') + '/v1/groups'
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "new_group_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -238,7 +238,7 @@ class GroupManagement:
         url = utils.generate_url(operations.ModifyGroupRequest, base_url, '/v1/groups/{groupId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "update_group_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         

@@ -29,7 +29,7 @@ class UserManagement:
         url = utils.generate_url(operations.AddUserMembershipInConnectorRequest, base_url, '/v1/users/{userId}/connectors', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "membership_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -59,7 +59,7 @@ class UserManagement:
         url = utils.generate_url(operations.AddUserMembershipInGroupRequest, base_url, '/v1/users/{userId}/groups', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "membership_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -89,7 +89,7 @@ class UserManagement:
         url = base_url.removesuffix('/') + '/v1/users'
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "new_user_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -355,7 +355,7 @@ class UserManagement:
         url = utils.generate_url(operations.ModifyUserRequest, base_url, '/v1/users/{userId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "update_user_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -385,7 +385,7 @@ class UserManagement:
         url = utils.generate_url(operations.UpdateUserMembershipInConnectorRequest, base_url, '/v1/users/{userId}/connectors/{connectorId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "update_membership_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -413,7 +413,7 @@ class UserManagement:
         url = utils.generate_url(operations.UpdateUserMembershipInGroupRequest, base_url, '/v1/users/{userId}/groups/{groupId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "update_membership_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         

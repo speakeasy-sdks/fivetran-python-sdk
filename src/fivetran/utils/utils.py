@@ -142,9 +142,14 @@ def _parse_basic_auth_scheme(client: SecurityClient, scheme: dataclass):
 def generate_url(clazz: type, server_url: str, path: str, path_params: dataclass, gbls: dict[str, dict[str, dict[str, Any]]] = None) -> str:
     path_param_fields: Tuple[Field, ...] = fields(clazz)
     for field in path_param_fields:
+        request_metadata = field.metadata.get('request')
+        if request_metadata is not None:
+            continue
+
         param_metadata = field.metadata.get('path_param')
         if param_metadata is None:
             continue
+
         if param_metadata.get('style', 'simple') == 'simple':
             param = getattr(
                 path_params, field.name) if path_params is not None else None
@@ -222,6 +227,10 @@ def get_query_params(clazz: type, query_params: dataclass, gbls: dict[str, dict[
 
     param_fields: Tuple[Field, ...] = fields(clazz)
     for field in param_fields:
+        request_metadata = field.metadata.get('request')
+        if request_metadata is not None:
+            continue
+
         metadata = field.metadata.get('query_param')
         if not metadata:
             continue
@@ -357,27 +366,27 @@ SERIALIZATION_METHOD_TO_CONTENT_TYPE = {
 }
 
 
-def serialize_request_body(request: dataclass, serializtion_method: str) -> Tuple[str, any, any]:
+def serialize_request_body(request: dataclass, request_field_name: str, serialization_method: str) -> Tuple[str, any, any]:
     if request is None:
         return None, None, None, None
-    
-    if not is_dataclass(request) or not hasattr(request, 'request'):
-        return serialize_content_type('request', SERIALIZATION_METHOD_TO_CONTENT_TYPE[serializtion_method], request)
 
-    request_val = getattr(request, 'request')
+    if not is_dataclass(request) or not hasattr(request, request_field_name):
+        return serialize_content_type(request_field_name, SERIALIZATION_METHOD_TO_CONTENT_TYPE[serialization_method], request)
+
+    request_val = getattr(request, request_field_name)
 
     request_fields: Tuple[Field, ...] = fields(request)
     request_metadata = None
 
     for field in request_fields:
-        if field.name == 'request':
+        if field.name == request_field_name:
             request_metadata = field.metadata.get('request')
             break
 
     if request_metadata is None:
         raise Exception('invalid request type')
 
-    return serialize_content_type('request', request_metadata.get('media_type', 'application/octet-stream'), request_val)
+    return serialize_content_type(request_field_name, request_metadata.get('media_type', 'application/octet-stream'), request_val)
 
 
 def serialize_content_type(field_name: str, media_type: str, request: dataclass) -> Tuple[str, any, list[list[any]]]:
