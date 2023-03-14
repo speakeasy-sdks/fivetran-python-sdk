@@ -10,6 +10,7 @@ security:
   - basicAuth: []
 paths:
   /v1/teams/{teamId}/connectors:
+  x-speakeasy-usage-example: true
     get:
       tags:
         - Team Management
@@ -47,6 +48,7 @@ paths:
           description: Successful response
           content:
             application/json:
+              x-speakeasy-usage-example: true
               schema:
                 properties:
                   code:
