@@ -6,20 +6,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class RunSetupTestsPathParams:
-    connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class RunSetupTestsHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class RunSetupTestsRequest:
-    headers: RunSetupTestsHeaders = dataclasses.field()
-    path_params: RunSetupTestsPathParams = dataclasses.field()
-    request: Optional[shared_runsetuptestsrequest.RunSetupTestsRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    run_setup_tests_request: Optional[shared_runsetuptestsrequest.RunSetupTestsRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

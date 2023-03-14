@@ -6,14 +6,9 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class CreateGroupHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class CreateGroupRequest:
-    headers: CreateGroupHeaders = dataclasses.field()
-    request: Optional[shared_newgrouprequest.NewGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    new_group_request: Optional[shared_newgrouprequest.NewGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

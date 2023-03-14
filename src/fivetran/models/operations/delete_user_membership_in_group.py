@@ -5,20 +5,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class DeleteUserMembershipInGroupPathParams:
+class DeleteUserMembershipInGroupRequest:
     group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class DeleteUserMembershipInGroupHeaders:
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class DeleteUserMembershipInGroupRequest:
-    headers: DeleteUserMembershipInGroupHeaders = dataclasses.field()
-    path_params: DeleteUserMembershipInGroupPathParams = dataclasses.field()
     
 
 @dataclasses.dataclass

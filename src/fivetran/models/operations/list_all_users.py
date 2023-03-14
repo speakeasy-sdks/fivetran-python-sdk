@@ -5,20 +5,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ListAllUsersQueryParams:
+class ListAllUsersRequest:
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    
-
-@dataclasses.dataclass
-class ListAllUsersHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ListAllUsersRequest:
-    headers: ListAllUsersHeaders = dataclasses.field()
-    query_params: ListAllUsersQueryParams = dataclasses.field()
     
 
 @dataclasses.dataclass

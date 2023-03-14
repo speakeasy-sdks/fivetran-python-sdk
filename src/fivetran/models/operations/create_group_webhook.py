@@ -6,20 +6,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class CreateGroupWebhookPathParams:
-    group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class CreateGroupWebhookHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class CreateGroupWebhookRequest:
-    headers: CreateGroupWebhookHeaders = dataclasses.field()
-    path_params: CreateGroupWebhookPathParams = dataclasses.field()
-    request: Optional[shared_webhookrequest.WebhookRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    webhook_request: Optional[shared_webhookrequest.WebhookRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

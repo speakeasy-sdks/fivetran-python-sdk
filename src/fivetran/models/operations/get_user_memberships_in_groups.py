@@ -5,26 +5,11 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class GetUserMembershipsInGroupsPathParams:
+class GetUserMembershipsInGroupsRequest:
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class GetUserMembershipsInGroupsQueryParams:
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    
-
-@dataclasses.dataclass
-class GetUserMembershipsInGroupsHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class GetUserMembershipsInGroupsRequest:
-    headers: GetUserMembershipsInGroupsHeaders = dataclasses.field()
-    path_params: GetUserMembershipsInGroupsPathParams = dataclasses.field()
-    query_params: GetUserMembershipsInGroupsQueryParams = dataclasses.field()
     
 
 @dataclasses.dataclass

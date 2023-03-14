@@ -26,10 +26,10 @@ class MetadataManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/metadata/connectors/{connectorId}/columns', request.path_params)
+        url = utils.generate_url(operations.ColumnMetadataRequest, base_url, '/v1/metadata/connectors/{connectorId}/columns', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.ColumnMetadataRequest, request)
         
         client = self._security_client
         
@@ -52,10 +52,10 @@ class MetadataManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/metadata/connectors/{connectorId}/schemas', request.path_params)
+        url = utils.generate_url(operations.SchemaMetadataRequest, base_url, '/v1/metadata/connectors/{connectorId}/schemas', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.SchemaMetadataRequest, request)
         
         client = self._security_client
         
@@ -78,10 +78,10 @@ class MetadataManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/metadata/connectors/{connectorId}/tables', request.path_params)
+        url = utils.generate_url(operations.TableMetadataRequest, base_url, '/v1/metadata/connectors/{connectorId}/tables', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.TableMetadataRequest, request)
         
         client = self._security_client
         

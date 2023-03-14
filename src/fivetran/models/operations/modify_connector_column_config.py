@@ -6,23 +6,13 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ModifyConnectorColumnConfigPathParams:
+class ModifyConnectorColumnConfigRequest:
     column_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'columnName', 'style': 'simple', 'explode': False }})
     connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
     schema_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'schemaName', 'style': 'simple', 'explode': False }})
     table_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tableName', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ModifyConnectorColumnConfigHeaders:
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ModifyConnectorColumnConfigRequest:
-    headers: ModifyConnectorColumnConfigHeaders = dataclasses.field()
-    path_params: ModifyConnectorColumnConfigPathParams = dataclasses.field()
-    request: Optional[shared_columnupdaterequest.ColumnUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    column_update_request: Optional[shared_columnupdaterequest.ColumnUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

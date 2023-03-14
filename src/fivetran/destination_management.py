@@ -28,8 +28,8 @@ class DestinationManagement:
         
         url = base_url.removesuffix('/') + '/v1/destinations'
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -44,9 +44,7 @@ class DestinationManagement:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[Any])
                 res.create_destination_201_application_json_any = out
-        elif http_res.status_code == 400:
-            pass
-        elif http_res.status_code == 500:
+        elif http_res.status_code in [400, 500]:
             pass
 
         return res
@@ -58,9 +56,9 @@ class DestinationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/destinations/{destinationId}', request.path_params)
+        url = utils.generate_url(operations.DeleteDestinationRequest, base_url, '/v1/destinations/{destinationId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -73,9 +71,7 @@ class DestinationManagement:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[Any])
                 res.delete_destination_200_application_json_any = out
-        elif http_res.status_code == 404:
-            pass
-        elif http_res.status_code == 409:
+        elif http_res.status_code in [404, 409]:
             pass
 
         return res
@@ -87,9 +83,9 @@ class DestinationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/destinations/{destinationId}', request.path_params)
+        url = utils.generate_url(operations.DestinationDetailsRequest, base_url, '/v1/destinations/{destinationId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -114,10 +110,10 @@ class DestinationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/destinations/{destinationId}', request.path_params)
+        url = utils.generate_url(operations.ModifyDestinationRequest, base_url, '/v1/destinations/{destinationId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -144,10 +140,10 @@ class DestinationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/destinations/{destinationId}/test', request.path_params)
+        url = utils.generate_url(operations.RunDestinationSetupTestsRequest, base_url, '/v1/destinations/{destinationId}/test', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         

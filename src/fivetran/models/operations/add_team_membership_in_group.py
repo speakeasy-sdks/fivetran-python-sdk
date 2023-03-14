@@ -6,20 +6,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class AddTeamMembershipInGroupPathParams:
-    team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class AddTeamMembershipInGroupHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class AddTeamMembershipInGroupRequest:
-    headers: AddTeamMembershipInGroupHeaders = dataclasses.field()
-    path_params: AddTeamMembershipInGroupPathParams = dataclasses.field()
-    request: Optional[shared_membershiprequest.MembershipRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    membership_request: Optional[shared_membershiprequest.MembershipRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

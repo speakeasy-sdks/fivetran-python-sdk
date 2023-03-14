@@ -6,14 +6,9 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ApproveCertificateHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class ApproveCertificateRequest:
-    headers: ApproveCertificateHeaders = dataclasses.field()
-    request: Optional[shared_trustcertificaterequest.TrustCertificateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    trust_certificate_request: Optional[shared_trustcertificaterequest.TrustCertificateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

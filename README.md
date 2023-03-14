@@ -36,19 +36,17 @@ pip install fivetran-python-sdk
 import fivetran
 from fivetran.models import operations, shared
 
-s = fivetran.Fivetran()
-s.config_security(
+s = fivetran.Fivetran(
     security=shared.Security(
         password="YOUR_PASSWORD_HERE",
         username="YOUR_USERNAME_HERE",
-    )
-)
-   
-req = operations.ApproveCertificateRequest(
-    headers=operations.ApproveCertificateHeaders(
-        accept="unde",
     ),
-    request=shared.TrustCertificateRequest(
+)
+
+
+req = operations.ApproveCertificateRequest(
+    accept="unde",
+    trust_certificate_request=shared.TrustCertificateRequest(
         connector_id="deserunt",
         destination_id="porro",
         encoded_cert="nulla",

@@ -6,20 +6,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ResyncConnectorPathParams:
-    connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ResyncConnectorHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class ResyncConnectorRequest:
-    headers: ResyncConnectorHeaders = dataclasses.field()
-    path_params: ResyncConnectorPathParams = dataclasses.field()
-    request: Optional[shared_resyncconnectorrequest.ResyncConnectorRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    resync_connector_request: Optional[shared_resyncconnectorrequest.ResyncConnectorRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

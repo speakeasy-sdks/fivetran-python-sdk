@@ -6,20 +6,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ModifyConnectorSchemaConfigPathParams:
-    connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ModifyConnectorSchemaConfigHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class ModifyConnectorSchemaConfigRequest:
-    headers: ModifyConnectorSchemaConfigHeaders = dataclasses.field()
-    path_params: ModifyConnectorSchemaConfigPathParams = dataclasses.field()
-    request: Optional[shared_standardconfigupdaterequest.StandardConfigUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    standard_config_update_request: Optional[shared_standardconfigupdaterequest.StandardConfigUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

@@ -6,21 +6,11 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ModifyConnectorDatabaseSchemaConfigPathParams:
+class ModifyConnectorDatabaseSchemaConfigRequest:
     connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
     schema_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'schemaName', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ModifyConnectorDatabaseSchemaConfigHeaders:
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ModifyConnectorDatabaseSchemaConfigRequest:
-    headers: ModifyConnectorDatabaseSchemaConfigHeaders = dataclasses.field()
-    path_params: ModifyConnectorDatabaseSchemaConfigPathParams = dataclasses.field()
-    request: Optional[shared_schemaupdaterequest.SchemaUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    schema_update_request: Optional[shared_schemaupdaterequest.SchemaUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

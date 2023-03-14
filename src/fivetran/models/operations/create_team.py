@@ -6,14 +6,9 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class CreateTeamHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class CreateTeamRequest:
-    headers: CreateTeamHeaders = dataclasses.field()
-    request: Optional[shared_teamrequest.TeamRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    team_request: Optional[shared_teamrequest.TeamRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

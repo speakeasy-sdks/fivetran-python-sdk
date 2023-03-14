@@ -6,20 +6,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ModifyGroupPathParams:
-    group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ModifyGroupHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class ModifyGroupRequest:
-    headers: ModifyGroupHeaders = dataclasses.field()
-    path_params: ModifyGroupPathParams = dataclasses.field()
-    request: Optional[shared_updategrouprequest.UpdateGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    update_group_request: Optional[shared_updategrouprequest.UpdateGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

@@ -5,20 +5,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ListAllRolesQueryParams:
+class ListAllRolesRequest:
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    
-
-@dataclasses.dataclass
-class ListAllRolesHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ListAllRolesRequest:
-    headers: ListAllRolesHeaders = dataclasses.field()
-    query_params: ListAllRolesQueryParams = dataclasses.field()
     
 
 @dataclasses.dataclass

@@ -28,8 +28,8 @@ class DBTTransformationManagement:
         
         url = base_url.removesuffix('/') + '/v1/dbt/projects'
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -54,10 +54,10 @@ class DBTTransformationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/dbt/projects/{projectId}/transformations', request.path_params)
+        url = utils.generate_url(operations.CreateDbtTransformationRequest, base_url, '/v1/dbt/projects/{projectId}/transformations', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -82,9 +82,9 @@ class DBTTransformationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/dbt/models/{modelId}', request.path_params)
+        url = utils.generate_url(operations.DbtModelDetailsRequest, base_url, '/v1/dbt/models/{modelId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -107,9 +107,9 @@ class DBTTransformationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/dbt/projects/{projectId}', request.path_params)
+        url = utils.generate_url(operations.DbtProjectDetailsRequest, base_url, '/v1/dbt/projects/{projectId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -132,9 +132,9 @@ class DBTTransformationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/dbt/transformations/{transformationId}', request.path_params)
+        url = utils.generate_url(operations.DbtTransformationDetailsRequest, base_url, '/v1/dbt/transformations/{transformationId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -157,9 +157,9 @@ class DBTTransformationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/dbt/transformations/{transformationId}', request.path_params)
+        url = utils.generate_url(operations.DeleteDbtTransformationRequest, base_url, '/v1/dbt/transformations/{transformationId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -182,10 +182,10 @@ class DBTTransformationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/dbt/projects/{projectId}/models', request.path_params)
+        url = utils.generate_url(operations.ListDbtProjectModelsRequest, base_url, '/v1/dbt/projects/{projectId}/models', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.ListDbtProjectModelsRequest, request)
         
         client = self._security_client
         
@@ -208,10 +208,10 @@ class DBTTransformationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/dbt/projects/{projectId}/transformations', request.path_params)
+        url = utils.generate_url(operations.ListDbtProjectTransformationsRequest, base_url, '/v1/dbt/projects/{projectId}/transformations', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.ListDbtProjectTransformationsRequest, request)
         
         client = self._security_client
         
@@ -236,8 +236,8 @@ class DBTTransformationManagement:
         
         url = base_url.removesuffix('/') + '/v1/dbt/projects'
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.ListDbtProjectsRequest, request)
         
         client = self._security_client
         
@@ -260,10 +260,10 @@ class DBTTransformationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/dbt/transformations/{transformationId}', request.path_params)
+        url = utils.generate_url(operations.ModifyDbtTransformationRequest, base_url, '/v1/dbt/transformations/{transformationId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -288,9 +288,9 @@ class DBTTransformationManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/dbt/projects/{projectId}/test', request.path_params)
+        url = utils.generate_url(operations.TestDbtProjectRequest, base_url, '/v1/dbt/projects/{projectId}/test', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         

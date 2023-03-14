@@ -26,10 +26,10 @@ class GroupManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/groups/{groupId}/users', request.path_params)
+        url = utils.generate_url(operations.AddUserToGroupRequest, base_url, '/v1/groups/{groupId}/users', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -56,8 +56,8 @@ class GroupManagement:
         
         url = base_url.removesuffix('/') + '/v1/groups'
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -82,9 +82,9 @@ class GroupManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/groups/{groupId}', request.path_params)
+        url = utils.generate_url(operations.DeleteGroupRequest, base_url, '/v1/groups/{groupId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -107,9 +107,9 @@ class GroupManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/groups/{groupId}/users/{userId}', request.path_params)
+        url = utils.generate_url(operations.DeleteUserFromGroupRequest, base_url, '/v1/groups/{groupId}/users/{userId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -132,9 +132,9 @@ class GroupManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/groups/{groupId}', request.path_params)
+        url = utils.generate_url(operations.GroupDetailsRequest, base_url, '/v1/groups/{groupId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -157,10 +157,10 @@ class GroupManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/groups/{groupId}/connectors', request.path_params)
+        url = utils.generate_url(operations.ListAllConnectorsInGroupRequest, base_url, '/v1/groups/{groupId}/connectors', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.ListAllConnectorsInGroupRequest, request)
         
         client = self._security_client
         
@@ -185,8 +185,8 @@ class GroupManagement:
         
         url = base_url.removesuffix('/') + '/v1/groups'
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.ListAllGroupsRequest, request)
         
         client = self._security_client
         
@@ -209,10 +209,10 @@ class GroupManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/groups/{groupId}/users', request.path_params)
+        url = utils.generate_url(operations.ListAllUsersInGroupRequest, base_url, '/v1/groups/{groupId}/users', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.ListAllUsersInGroupRequest, request)
         
         client = self._security_client
         
@@ -235,10 +235,10 @@ class GroupManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/groups/{groupId}', request.path_params)
+        url = utils.generate_url(operations.ModifyGroupRequest, base_url, '/v1/groups/{groupId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         

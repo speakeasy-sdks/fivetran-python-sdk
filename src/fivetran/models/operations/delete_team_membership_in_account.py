@@ -5,19 +5,9 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class DeleteTeamMembershipInAccountPathParams:
-    team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class DeleteTeamMembershipInAccountHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class DeleteTeamMembershipInAccountRequest:
-    headers: DeleteTeamMembershipInAccountHeaders = dataclasses.field()
-    path_params: DeleteTeamMembershipInAccountPathParams = dataclasses.field()
+    team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
 @dataclasses.dataclass

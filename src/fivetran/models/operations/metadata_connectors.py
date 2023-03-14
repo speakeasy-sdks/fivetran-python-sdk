@@ -5,26 +5,11 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class MetadataConnectorsPathParams:
+class MetadataConnectorsRequest:
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class MetadataConnectorsQueryParams:
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    
-
-@dataclasses.dataclass
-class MetadataConnectorsHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class MetadataConnectorsRequest:
-    headers: MetadataConnectorsHeaders = dataclasses.field()
-    path_params: MetadataConnectorsPathParams = dataclasses.field()
-    query_params: MetadataConnectorsQueryParams = dataclasses.field()
     
 
 @dataclasses.dataclass

@@ -5,19 +5,9 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class DbtModelDetailsPathParams:
-    model_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'modelId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class DbtModelDetailsHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class DbtModelDetailsRequest:
-    headers: DbtModelDetailsHeaders = dataclasses.field()
-    path_params: DbtModelDetailsPathParams = dataclasses.field()
+    model_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'modelId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
 @dataclasses.dataclass
