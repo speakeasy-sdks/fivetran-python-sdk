@@ -5,19 +5,9 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class UserDetailsPathParams:
-    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class UserDetailsHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class UserDetailsRequest:
-    headers: UserDetailsHeaders = dataclasses.field()
-    path_params: UserDetailsPathParams = dataclasses.field()
+    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
 @dataclasses.dataclass

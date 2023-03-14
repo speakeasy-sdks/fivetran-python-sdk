@@ -26,10 +26,10 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}/connectors', request.path_params)
+        url = utils.generate_url(operations.AddUserMembershipInConnectorRequest, base_url, '/v1/users/{userId}/connectors', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -56,10 +56,10 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}/groups', request.path_params)
+        url = utils.generate_url(operations.AddUserMembershipInGroupRequest, base_url, '/v1/users/{userId}/groups', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -74,9 +74,7 @@ class UserManagement:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[Any])
                 res.add_user_membership_in_group_201_application_json_any = out
-        elif http_res.status_code == 400:
-            pass
-        elif http_res.status_code == 404:
+        elif http_res.status_code in [400, 404]:
             pass
 
         return res
@@ -90,8 +88,8 @@ class UserManagement:
         
         url = base_url.removesuffix('/') + '/v1/users'
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -118,9 +116,9 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}', request.path_params)
+        url = utils.generate_url(operations.DeleteUserRequest, base_url, '/v1/users/{userId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -145,9 +143,9 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}/role', request.path_params)
+        url = utils.generate_url(operations.DeleteUserMembershipInAccountRequest, base_url, '/v1/users/{userId}/role', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -172,9 +170,9 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}/connectors/{connectorId}', request.path_params)
+        url = utils.generate_url(operations.DeleteUserMembershipInConnectorRequest, base_url, '/v1/users/{userId}/connectors/{connectorId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -197,9 +195,9 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}/groups/{groupId}', request.path_params)
+        url = utils.generate_url(operations.DeleteUserMembershipInGroupRequest, base_url, '/v1/users/{userId}/groups/{groupId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -224,9 +222,9 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}/connectors/{connectorId}', request.path_params)
+        url = utils.generate_url(operations.GetUserMembershipInConnectorRequest, base_url, '/v1/users/{userId}/connectors/{connectorId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -249,9 +247,9 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}/groups/{groupId}', request.path_params)
+        url = utils.generate_url(operations.GetUserMembershipInGroupRequest, base_url, '/v1/users/{userId}/groups/{groupId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -276,10 +274,10 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}/connectors', request.path_params)
+        url = utils.generate_url(operations.GetUserMembershipsInConnectorsRequest, base_url, '/v1/users/{userId}/connectors', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.GetUserMembershipsInConnectorsRequest, request)
         
         client = self._security_client
         
@@ -302,10 +300,10 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}/groups', request.path_params)
+        url = utils.generate_url(operations.GetUserMembershipsInGroupsRequest, base_url, '/v1/users/{userId}/groups', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.GetUserMembershipsInGroupsRequest, request)
         
         client = self._security_client
         
@@ -330,8 +328,8 @@ class UserManagement:
         
         url = base_url.removesuffix('/') + '/v1/users'
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.ListAllUsersRequest, request)
         
         client = self._security_client
         
@@ -354,10 +352,10 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}', request.path_params)
+        url = utils.generate_url(operations.ModifyUserRequest, base_url, '/v1/users/{userId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -384,10 +382,10 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}/connectors/{connectorId}', request.path_params)
+        url = utils.generate_url(operations.UpdateUserMembershipInConnectorRequest, base_url, '/v1/users/{userId}/connectors/{connectorId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -412,10 +410,10 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}/groups/{groupId}', request.path_params)
+        url = utils.generate_url(operations.UpdateUserMembershipInGroupRequest, base_url, '/v1/users/{userId}/groups/{groupId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -442,9 +440,9 @@ class UserManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/users/{userId}', request.path_params)
+        url = utils.generate_url(operations.UserDetailsRequest, base_url, '/v1/users/{userId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         

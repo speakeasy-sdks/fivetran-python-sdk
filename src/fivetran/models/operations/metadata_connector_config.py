@@ -5,20 +5,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class MetadataConnectorConfigPathParams:
+class MetadataConnectorConfigRequest:
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
     service: str = dataclasses.field(metadata={'path_param': { 'field_name': 'service', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class MetadataConnectorConfigHeaders:
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class MetadataConnectorConfigRequest:
-    headers: MetadataConnectorConfigHeaders = dataclasses.field()
-    path_params: MetadataConnectorConfigPathParams = dataclasses.field()
     
 
 @dataclasses.dataclass

@@ -5,20 +5,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ResyncTablesPathParams:
-    connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ResyncTablesHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class ResyncTablesRequest:
-    headers: ResyncTablesHeaders = dataclasses.field()
-    path_params: ResyncTablesPathParams = dataclasses.field()
-    request: Optional[dict[str, list[str]]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    request_body: Optional[dict[str, list[str]]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

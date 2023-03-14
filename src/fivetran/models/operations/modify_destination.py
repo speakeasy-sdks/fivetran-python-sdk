@@ -6,20 +6,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ModifyDestinationPathParams:
-    destination_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'destinationId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ModifyDestinationHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class ModifyDestinationRequest:
-    headers: ModifyDestinationHeaders = dataclasses.field()
-    path_params: ModifyDestinationPathParams = dataclasses.field()
-    request: Optional[shared_updatedestinationrequest.UpdateDestinationRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    destination_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'destinationId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    update_destination_request: Optional[shared_updatedestinationrequest.UpdateDestinationRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

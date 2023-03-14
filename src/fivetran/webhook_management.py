@@ -28,8 +28,8 @@ class WebhookManagement:
         
         url = base_url.removesuffix('/') + '/v1/webhooks/account'
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -54,10 +54,10 @@ class WebhookManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/webhooks/group/{groupId}', request.path_params)
+        url = utils.generate_url(operations.CreateGroupWebhookRequest, base_url, '/v1/webhooks/group/{groupId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -82,9 +82,9 @@ class WebhookManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/webhooks/{webhookId}', request.path_params)
+        url = utils.generate_url(operations.DeleteWebhookRequest, base_url, '/v1/webhooks/{webhookId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -109,8 +109,8 @@ class WebhookManagement:
         
         url = base_url.removesuffix('/') + '/v1/webhooks'
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.ListAllWebhooksRequest, request)
         
         client = self._security_client
         
@@ -133,10 +133,10 @@ class WebhookManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/webhooks/{webhookId}', request.path_params)
+        url = utils.generate_url(operations.ModifyWebhookRequest, base_url, '/v1/webhooks/{webhookId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -161,10 +161,10 @@ class WebhookManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/webhooks/{webhookId}/test', request.path_params)
+        url = utils.generate_url(operations.TestWebhookRequest, base_url, '/v1/webhooks/{webhookId}/test', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -189,9 +189,9 @@ class WebhookManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/webhooks/{webhookId}', request.path_params)
+        url = utils.generate_url(operations.WebhookDetailsRequest, base_url, '/v1/webhooks/{webhookId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         

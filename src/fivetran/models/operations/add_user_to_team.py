@@ -6,20 +6,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class AddUserToTeamPathParams:
-    team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class AddUserToTeamHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class AddUserToTeamRequest:
-    headers: AddUserToTeamHeaders = dataclasses.field()
-    path_params: AddUserToTeamPathParams = dataclasses.field()
-    request: Optional[shared_teammembershiprequest.TeamMembershipRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    team_membership_request: Optional[shared_teammembershiprequest.TeamMembershipRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

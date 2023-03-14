@@ -6,22 +6,12 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ModifyConnectorTableConfigPathParams:
+class ModifyConnectorTableConfigRequest:
     connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
     schema_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'schemaName', 'style': 'simple', 'explode': False }})
     table_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tableName', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ModifyConnectorTableConfigHeaders:
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ModifyConnectorTableConfigRequest:
-    headers: ModifyConnectorTableConfigHeaders = dataclasses.field()
-    path_params: ModifyConnectorTableConfigPathParams = dataclasses.field()
-    request: Optional[shared_tableupdaterequest.TableUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    table_update_request: Optional[shared_tableupdaterequest.TableUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

@@ -26,10 +26,10 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/connectors', request.path_params)
+        url = utils.generate_url(operations.AddTeamMembershipInConnectorRequest, base_url, '/v1/teams/{teamId}/connectors', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -54,10 +54,10 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/groups', request.path_params)
+        url = utils.generate_url(operations.AddTeamMembershipInGroupRequest, base_url, '/v1/teams/{teamId}/groups', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -82,10 +82,10 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/users', request.path_params)
+        url = utils.generate_url(operations.AddUserToTeamRequest, base_url, '/v1/teams/{teamId}/users', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -112,8 +112,8 @@ class TeamManagement:
         
         url = base_url.removesuffix('/') + '/v1/teams'
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -138,9 +138,9 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}', request.path_params)
+        url = utils.generate_url(operations.DeleteTeamRequest, base_url, '/v1/teams/{teamId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -163,9 +163,9 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/role', request.path_params)
+        url = utils.generate_url(operations.DeleteTeamMembershipInAccountRequest, base_url, '/v1/teams/{teamId}/role', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -188,9 +188,9 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/connectors/{connectorId}', request.path_params)
+        url = utils.generate_url(operations.DeleteTeamMembershipInConnectorRequest, base_url, '/v1/teams/{teamId}/connectors/{connectorId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -213,9 +213,9 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/groups/{groupId}', request.path_params)
+        url = utils.generate_url(operations.DeleteTeamMembershipInGroupRequest, base_url, '/v1/teams/{teamId}/groups/{groupId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -238,9 +238,9 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/users/{userId}', request.path_params)
+        url = utils.generate_url(operations.DeleteUserFromTeamRequest, base_url, '/v1/teams/{teamId}/users/{userId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -263,9 +263,9 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/connectors/{connectorId}', request.path_params)
+        url = utils.generate_url(operations.GetTeamMembershipInConnectorRequest, base_url, '/v1/teams/{teamId}/connectors/{connectorId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -288,9 +288,9 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/groups/{groupId}', request.path_params)
+        url = utils.generate_url(operations.GetTeamMembershipInGroupRequest, base_url, '/v1/teams/{teamId}/groups/{groupId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -313,10 +313,10 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/connectors', request.path_params)
+        url = utils.generate_url(operations.GetTeamMembershipsInConnectorsRequest, base_url, '/v1/teams/{teamId}/connectors', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.GetTeamMembershipsInConnectorsRequest, request)
         
         client = self._security_client
         
@@ -339,10 +339,10 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/groups', request.path_params)
+        url = utils.generate_url(operations.GetTeamMembershipsInGroupsRequest, base_url, '/v1/teams/{teamId}/groups', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.GetTeamMembershipsInGroupsRequest, request)
         
         client = self._security_client
         
@@ -365,9 +365,9 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/users/{userId}', request.path_params)
+        url = utils.generate_url(operations.GetUserInTeamRequest, base_url, '/v1/teams/{teamId}/users/{userId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -392,8 +392,8 @@ class TeamManagement:
         
         url = base_url.removesuffix('/') + '/v1/teams'
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.ListAllTeamsRequest, request)
         
         client = self._security_client
         
@@ -416,10 +416,10 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/users', request.path_params)
+        url = utils.generate_url(operations.ListUsersInTeamRequest, base_url, '/v1/teams/{teamId}/users', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.ListUsersInTeamRequest, request)
         
         client = self._security_client
         
@@ -442,10 +442,10 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}', request.path_params)
+        url = utils.generate_url(operations.ModifyTeamRequest, base_url, '/v1/teams/{teamId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -470,9 +470,9 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}', request.path_params)
+        url = utils.generate_url(operations.TeamDetailsRequest, base_url, '/v1/teams/{teamId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -495,10 +495,10 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/connectors/{connectorId}', request.path_params)
+        url = utils.generate_url(operations.UpdateTeamMembershipInConnectorRequest, base_url, '/v1/teams/{teamId}/connectors/{connectorId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -523,10 +523,10 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/groups/{groupId}', request.path_params)
+        url = utils.generate_url(operations.UpdateTeamMembershipInGroupRequest, base_url, '/v1/teams/{teamId}/groups/{groupId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -551,10 +551,10 @@ class TeamManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/teams/{teamId}/users/{userId}', request.path_params)
+        url = utils.generate_url(operations.UpdateUserMembershipRequest, base_url, '/v1/teams/{teamId}/users/{userId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         

@@ -26,9 +26,9 @@ class ConnectorSchemaManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}/schemas/{schema}/tables/{table}/columns', request.path_params)
+        url = utils.generate_url(operations.ConnectorColumnConfigRequest, base_url, '/v1/connectors/{connectorId}/schemas/{schema}/tables/{table}/columns', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -51,9 +51,9 @@ class ConnectorSchemaManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}/schemas', request.path_params)
+        url = utils.generate_url(operations.ConnectorSchemaConfigRequest, base_url, '/v1/connectors/{connectorId}/schemas', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -76,10 +76,10 @@ class ConnectorSchemaManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}', request.path_params)
+        url = utils.generate_url(operations.ModifyConnectorColumnConfigRequest, base_url, '/v1/connectors/{connectorId}/schemas/{schemaName}/tables/{tableName}/columns/{columnName}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -104,10 +104,10 @@ class ConnectorSchemaManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}/schemas/{schemaName}', request.path_params)
+        url = utils.generate_url(operations.ModifyConnectorDatabaseSchemaConfigRequest, base_url, '/v1/connectors/{connectorId}/schemas/{schemaName}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -132,10 +132,10 @@ class ConnectorSchemaManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}/schemas', request.path_params)
+        url = utils.generate_url(operations.ModifyConnectorSchemaConfigRequest, base_url, '/v1/connectors/{connectorId}/schemas', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -160,10 +160,10 @@ class ConnectorSchemaManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}/schemas/{schemaName}/tables/{tableName}', request.path_params)
+        url = utils.generate_url(operations.ModifyConnectorTableConfigRequest, base_url, '/v1/connectors/{connectorId}/schemas/{schemaName}/tables/{tableName}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -188,10 +188,10 @@ class ConnectorSchemaManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}/schemas/reload', request.path_params)
+        url = utils.generate_url(operations.ReloadConnectorSchemaConfigRequest, base_url, '/v1/connectors/{connectorId}/schemas/reload', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -216,10 +216,10 @@ class ConnectorSchemaManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}/schemas/tables/resync', request.path_params)
+        url = utils.generate_url(operations.ResyncTablesRequest, base_url, '/v1/connectors/{connectorId}/schemas/tables/resync', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         

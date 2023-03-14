@@ -28,8 +28,8 @@ class RoleManagement:
         
         url = base_url.removesuffix('/') + '/v1/roles'
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.ListAllRolesRequest, request)
         
         client = self._security_client
         

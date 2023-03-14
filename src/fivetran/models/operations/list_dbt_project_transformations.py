@@ -5,26 +5,11 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ListDbtProjectTransformationsPathParams:
+class ListDbtProjectTransformationsRequest:
     project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ListDbtProjectTransformationsQueryParams:
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    
-
-@dataclasses.dataclass
-class ListDbtProjectTransformationsHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ListDbtProjectTransformationsRequest:
-    headers: ListDbtProjectTransformationsHeaders = dataclasses.field()
-    path_params: ListDbtProjectTransformationsPathParams = dataclasses.field()
-    query_params: ListDbtProjectTransformationsQueryParams = dataclasses.field()
     
 
 @dataclasses.dataclass

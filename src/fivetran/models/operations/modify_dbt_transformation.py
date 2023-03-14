@@ -6,20 +6,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ModifyDbtTransformationPathParams:
-    transformation_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'transformationId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ModifyDbtTransformationHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class ModifyDbtTransformationRequest:
-    headers: ModifyDbtTransformationHeaders = dataclasses.field()
-    path_params: ModifyDbtTransformationPathParams = dataclasses.field()
-    request: Optional[shared_updatetransformationrequest.UpdateTransformationRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    transformation_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'transformationId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    update_transformation_request: Optional[shared_updatetransformationrequest.UpdateTransformationRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

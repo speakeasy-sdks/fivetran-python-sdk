@@ -5,26 +5,11 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class SchemaMetadataPathParams:
+class SchemaMetadataRequest:
     connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class SchemaMetadataQueryParams:
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    
-
-@dataclasses.dataclass
-class SchemaMetadataHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class SchemaMetadataRequest:
-    headers: SchemaMetadataHeaders = dataclasses.field()
-    path_params: SchemaMetadataPathParams = dataclasses.field()
-    query_params: SchemaMetadataQueryParams = dataclasses.field()
     
 
 @dataclasses.dataclass

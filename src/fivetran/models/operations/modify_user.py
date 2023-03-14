@@ -6,20 +6,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class ModifyUserPathParams:
-    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class ModifyUserHeaders:
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
 class ModifyUserRequest:
-    headers: ModifyUserHeaders = dataclasses.field()
-    path_params: ModifyUserPathParams = dataclasses.field()
-    request: Optional[shared_updateuserrequest.UpdateUserRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    update_user_request: Optional[shared_updateuserrequest.UpdateUserRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass

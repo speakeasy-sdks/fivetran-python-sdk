@@ -26,10 +26,10 @@ class ConnectorManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}/connect-card', request.path_params)
+        url = utils.generate_url(operations.ConnectCardRequest, base_url, '/v1/connectors/{connectorId}/connect-card', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -54,9 +54,9 @@ class ConnectorManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}', request.path_params)
+        url = utils.generate_url(operations.ConnectorDetailsRequest, base_url, '/v1/connectors/{connectorId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -81,8 +81,8 @@ class ConnectorManagement:
         
         url = base_url.removesuffix('/') + '/v1/connectors'
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -109,9 +109,9 @@ class ConnectorManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}', request.path_params)
+        url = utils.generate_url(operations.DeleteConnectorRequest, base_url, '/v1/connectors/{connectorId}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -136,9 +136,9 @@ class ConnectorManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/metadata/{name}/{service}', request.path_params)
+        url = utils.generate_url(operations.MetadataConnectorConfigRequest, base_url, '/v1/metadata/{name}/{service}', request)
         
-        headers = utils.get_headers(request.headers)
+        headers = utils.get_headers(request)
         
         client = self._security_client
         
@@ -161,10 +161,10 @@ class ConnectorManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/metadata/{name}', request.path_params)
+        url = utils.generate_url(operations.MetadataConnectorsRequest, base_url, '/v1/metadata/{name}', request)
         
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
+        headers = utils.get_headers(request)
+        query_params = utils.get_query_params(operations.MetadataConnectorsRequest, request)
         
         client = self._security_client
         
@@ -187,10 +187,10 @@ class ConnectorManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}', request.path_params)
+        url = utils.generate_url(operations.ModifyConnectorRequest, base_url, '/v1/connectors/{connectorId}', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -217,10 +217,10 @@ class ConnectorManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}/resync', request.path_params)
+        url = utils.generate_url(operations.ResyncConnectorRequest, base_url, '/v1/connectors/{connectorId}/resync', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -247,10 +247,10 @@ class ConnectorManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}/test', request.path_params)
+        url = utils.generate_url(operations.RunSetupTestsRequest, base_url, '/v1/connectors/{connectorId}/test', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -277,10 +277,10 @@ class ConnectorManagement:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/connectors/{connectorId}/sync', request.path_params)
+        url = utils.generate_url(operations.SyncConnectorRequest, base_url, '/v1/connectors/{connectorId}/sync', request)
         
-        headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        headers = utils.get_headers(request)
+        req_content_type, data, form = utils.serialize_request_body(request, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         

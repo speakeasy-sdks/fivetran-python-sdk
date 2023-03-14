@@ -5,20 +5,10 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class GetUserMembershipInConnectorPathParams:
+class GetUserMembershipInConnectorRequest:
     connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class GetUserMembershipInConnectorHeaders:
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class GetUserMembershipInConnectorRequest:
-    headers: GetUserMembershipInConnectorHeaders = dataclasses.field()
-    path_params: GetUserMembershipInConnectorPathParams = dataclasses.field()
     
 
 @dataclasses.dataclass

@@ -6,21 +6,11 @@ from typing import Any, Optional
 
 
 @dataclasses.dataclass
-class UpdateUserMembershipInConnectorPathParams:
+class UpdateUserMembershipInConnectorRequest:
     connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class UpdateUserMembershipInConnectorHeaders:
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    
-
-@dataclasses.dataclass
-class UpdateUserMembershipInConnectorRequest:
-    headers: UpdateUserMembershipInConnectorHeaders = dataclasses.field()
-    path_params: UpdateUserMembershipInConnectorPathParams = dataclasses.field()
-    request: Optional[shared_updatemembershiprequest.UpdateMembershipRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    update_membership_request: Optional[shared_updatemembershiprequest.UpdateMembershipRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass
