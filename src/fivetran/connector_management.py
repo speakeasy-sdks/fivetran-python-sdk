@@ -29,7 +29,7 @@ class ConnectorManagement:
         url = utils.generate_url(operations.ConnectCardRequest, base_url, '/v1/connectors/{connectorId}/connect-card', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "connect_card_config_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -82,7 +82,7 @@ class ConnectorManagement:
         url = base_url.removesuffix('/') + '/v1/connectors'
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "new_connector_request_v1", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -190,7 +190,7 @@ class ConnectorManagement:
         url = utils.generate_url(operations.ModifyConnectorRequest, base_url, '/v1/connectors/{connectorId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "update_connector_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -220,7 +220,7 @@ class ConnectorManagement:
         url = utils.generate_url(operations.ResyncConnectorRequest, base_url, '/v1/connectors/{connectorId}/resync', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "resync_connector_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -250,7 +250,7 @@ class ConnectorManagement:
         url = utils.generate_url(operations.RunSetupTestsRequest, base_url, '/v1/connectors/{connectorId}/test', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "run_setup_tests_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -280,7 +280,7 @@ class ConnectorManagement:
         url = utils.generate_url(operations.SyncConnectorRequest, base_url, '/v1/connectors/{connectorId}/sync', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "sync_connector_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         

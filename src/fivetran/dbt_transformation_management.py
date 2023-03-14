@@ -29,7 +29,7 @@ class DBTTransformationManagement:
         url = base_url.removesuffix('/') + '/v1/dbt/projects'
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "new_dbt_project_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -57,7 +57,7 @@ class DBTTransformationManagement:
         url = utils.generate_url(operations.CreateDbtTransformationRequest, base_url, '/v1/dbt/projects/{projectId}/transformations', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "new_transformation_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -263,7 +263,7 @@ class DBTTransformationManagement:
         url = utils.generate_url(operations.ModifyDbtTransformationRequest, base_url, '/v1/dbt/transformations/{transformationId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "update_transformation_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         

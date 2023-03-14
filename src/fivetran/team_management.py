@@ -29,7 +29,7 @@ class TeamManagement:
         url = utils.generate_url(operations.AddTeamMembershipInConnectorRequest, base_url, '/v1/teams/{teamId}/connectors', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "membership_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -57,7 +57,7 @@ class TeamManagement:
         url = utils.generate_url(operations.AddTeamMembershipInGroupRequest, base_url, '/v1/teams/{teamId}/groups', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "membership_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -85,7 +85,7 @@ class TeamManagement:
         url = utils.generate_url(operations.AddUserToTeamRequest, base_url, '/v1/teams/{teamId}/users', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "team_membership_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -113,7 +113,7 @@ class TeamManagement:
         url = base_url.removesuffix('/') + '/v1/teams'
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "team_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -445,7 +445,7 @@ class TeamManagement:
         url = utils.generate_url(operations.ModifyTeamRequest, base_url, '/v1/teams/{teamId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "team_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -498,7 +498,7 @@ class TeamManagement:
         url = utils.generate_url(operations.UpdateTeamMembershipInConnectorRequest, base_url, '/v1/teams/{teamId}/connectors/{connectorId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "update_membership_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -526,7 +526,7 @@ class TeamManagement:
         url = utils.generate_url(operations.UpdateTeamMembershipInGroupRequest, base_url, '/v1/teams/{teamId}/groups/{groupId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "update_membership_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -554,7 +554,7 @@ class TeamManagement:
         url = utils.generate_url(operations.UpdateUserMembershipRequest, base_url, '/v1/teams/{teamId}/users/{userId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "update_membership_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         

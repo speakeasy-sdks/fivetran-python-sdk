@@ -29,7 +29,7 @@ class WebhookManagement:
         url = base_url.removesuffix('/') + '/v1/webhooks/account'
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "webhook_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -57,7 +57,7 @@ class WebhookManagement:
         url = utils.generate_url(operations.CreateGroupWebhookRequest, base_url, '/v1/webhooks/group/{groupId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "webhook_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -136,7 +136,7 @@ class WebhookManagement:
         url = utils.generate_url(operations.ModifyWebhookRequest, base_url, '/v1/webhooks/{webhookId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "webhook_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -164,7 +164,7 @@ class WebhookManagement:
         url = utils.generate_url(operations.TestWebhookRequest, base_url, '/v1/webhooks/{webhookId}/test', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "webhook_test_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         

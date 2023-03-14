@@ -29,7 +29,7 @@ class DestinationManagement:
         url = base_url.removesuffix('/') + '/v1/destinations'
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "new_destination_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -113,7 +113,7 @@ class DestinationManagement:
         url = utils.generate_url(operations.ModifyDestinationRequest, base_url, '/v1/destinations/{destinationId}', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "update_destination_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
@@ -143,7 +143,7 @@ class DestinationManagement:
         url = utils.generate_url(operations.RunDestinationSetupTestsRequest, base_url, '/v1/destinations/{destinationId}/test', request)
         
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "run_setup_tests_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         
