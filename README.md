@@ -47,7 +47,7 @@ s = fivetran.Fivetran(security=shared.Security(
 req = operations.ConnectorDetailsRequest(connector_id="myconnectorid")
 
 res = s.connector_management.connector_details(req)
-
+print(res)
 ```
 <!-- End SDK Example Usage -->
 
