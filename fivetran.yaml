@@ -10,8 +10,8 @@ security:
   - basicAuth: []
 paths:
   /v1/teams/{teamId}/connectors:
-    x-speakeasy-usage-example: true
     get:
+      x-speakeasy-usage-example: true
       tags:
         - Team Management
       summary: List all connector memberships

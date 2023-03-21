@@ -28,6 +28,9 @@ NOTE: The API key is unique for the account and Account Administrator user pair.
 ```bash
 pip install fivetran-python-sdk
 ```
+
+[![Run on Repl.it](https://repl.it/badge/github/speakeasy-sdks/fivetran-python-sdk)](https://replit.com/join/bgzdebsgjh-sagarbatchu1)
+
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
@@ -36,28 +39,15 @@ pip install fivetran-python-sdk
 import fivetran
 from fivetran.models import operations, shared
 
-s = fivetran.Fivetran(
-    security=shared.Security(
-        password="YOUR_PASSWORD_HERE",
-        username="YOUR_USERNAME_HERE",
-    ),
-)
+s = fivetran.Fivetran(security=shared.Security(
+  password="YOUR_PASSWORD_HERE",
+  username="YOUR_USERNAME_HERE",
+), )
 
+req = operations.ConnectorDetailsRequest(connector_id="myconnectorid")
 
-req = operations.ApproveCertificateRequest(
-    accept="application/json",
-    trust_certificate_request=shared.TrustCertificateRequest(
-        connector_id="unde",
-        destination_id="deserunt",
-        encoded_cert="porro",
-        hash="nulla",
-    ),
-)
-    
-res = s.certificate_management.approve_certificate(req)
-
-if res.approve_certificate_200_application_json_any is not None:
-    # handle response
+res = s.connector_management.connector_details(req)
+print(res)
 ```
 <!-- End SDK Example Usage -->
 
