@@ -7,6 +7,8 @@
     <a href="https://github.com/speakeasy-sdks/fivetran-python-sdk/releases"><img src="https://img.shields.io/github/v/release/speakeasy-sdks/fivetran-python-sdk?sort=semver&style=for-the-badge"/></a>
 </div>
 
+[![Run on Repl.it](https://repl.it/badge/github/speakeasy-sdks/fivetran-python-sdk)](https://replit.com/join/bgzdebsgjh-sagarbatchu1)
+
 ## Authentication
 
 Account Administrators in Free, Standard, Enterprise, and Business Critical accounts can manage the API configuration settings. To access the API configuration settings:
