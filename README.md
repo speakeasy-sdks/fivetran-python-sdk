@@ -28,7 +28,7 @@ NOTE: The API key is unique for the account and Account Administrator user pair.
 ## SDK Installation
 
 ```bash
-pip install fivetran-python-sdk
+pip install git+<UNSET>.git
 ```
 <!-- End SDK Installation -->
 
