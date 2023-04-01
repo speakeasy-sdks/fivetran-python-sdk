@@ -8,19 +8,19 @@ from fivetran import utils
 from typing import Optional
 
 class TransformationScheduleDaysOfWeekEnum(str, Enum):
-    MONDAY = "MONDAY"
-    TUESDAY = "TUESDAY"
-    WEDNESDAY = "WEDNESDAY"
-    THURSDAY = "THURSDAY"
-    FRIDAY = "FRIDAY"
-    SATURDAY = "SATURDAY"
-    SUNDAY = "SUNDAY"
+    MONDAY = 'MONDAY'
+    TUESDAY = 'TUESDAY'
+    WEDNESDAY = 'WEDNESDAY'
+    THURSDAY = 'THURSDAY'
+    FRIDAY = 'FRIDAY'
+    SATURDAY = 'SATURDAY'
+    SUNDAY = 'SUNDAY'
 
 class TransformationScheduleScheduleTypeEnum(str, Enum):
     r"""Schedule type"""
-    INTEGRATED = "INTEGRATED"
-    TIME_OF_DAY = "TIME_OF_DAY"
-    INTERVAL = "INTERVAL"
+    INTEGRATED = 'INTEGRATED'
+    TIME_OF_DAY = 'TIME_OF_DAY'
+    INTERVAL = 'INTERVAL'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

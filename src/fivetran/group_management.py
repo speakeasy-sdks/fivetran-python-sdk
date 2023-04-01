@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class GroupManagement:
     _client: requests_http.Session
@@ -43,8 +43,8 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.add_user_to_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.AddUserToGroup200ApplicationJSON])
+                res.add_user_to_group_200_application_json_object = out
 
         return res
 
@@ -70,8 +70,8 @@ class GroupManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_group_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateGroup201ApplicationJSON])
+                res.create_group_201_application_json_object = out
 
         return res
 
@@ -94,8 +94,8 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteGroup200ApplicationJSON])
+                res.delete_group_200_application_json_object = out
 
         return res
 
@@ -118,8 +118,8 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_user_from_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteUserFromGroup200ApplicationJSON])
+                res.delete_user_from_group_200_application_json_object = out
 
         return res
 
@@ -142,8 +142,8 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.group_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GroupDetails200ApplicationJSON])
+                res.group_details_200_application_json_object = out
 
         return res
 
@@ -167,8 +167,8 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_all_connectors_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListAllConnectorsInGroup200ApplicationJSON])
+                res.list_all_connectors_in_group_200_application_json_object = out
 
         return res
 
@@ -192,8 +192,8 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_all_groups_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListAllGroups200ApplicationJSON])
+                res.list_all_groups_200_application_json_object = out
 
         return res
 
@@ -217,8 +217,8 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_all_users_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListAllUsersInGroup200ApplicationJSON])
+                res.list_all_users_in_group_200_application_json_object = out
 
         return res
 
@@ -244,8 +244,8 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyGroup200ApplicationJSON])
+                res.modify_group_200_application_json_object = out
 
         return res
 

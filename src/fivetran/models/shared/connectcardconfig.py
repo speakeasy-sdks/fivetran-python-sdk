@@ -14,5 +14,5 @@ class ConnectCardConfig:
     hide_setup_guide: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hide_setup_guide'), 'exclude': lambda f: f is None }})
     r"""An optional parameter that lets you hide the embedded setup guide in the Connect Card."""  
     redirect_uri: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('redirect_uri'), 'exclude': lambda f: f is None }})
-    r"""The URI on your site we redirect the end user to after successful setup. The URI must start with the `https` or `http` prefix. """  
+    r"""The URI on your site we redirect the end user to after successful setup. The URI must start with the `https` or `http` prefix."""  
     

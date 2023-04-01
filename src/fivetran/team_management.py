@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class TeamManagement:
     _client: requests_http.Session
@@ -43,8 +43,8 @@ class TeamManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.add_team_membership_in_connector_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.AddTeamMembershipInConnector201ApplicationJSON])
+                res.add_team_membership_in_connector_201_application_json_object = out
 
         return res
 
@@ -70,8 +70,8 @@ class TeamManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.add_team_membership_in_group_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.AddTeamMembershipInGroup201ApplicationJSON])
+                res.add_team_membership_in_group_201_application_json_object = out
 
         return res
 
@@ -97,8 +97,8 @@ class TeamManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.add_user_to_team_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.AddUserToTeam201ApplicationJSON])
+                res.add_user_to_team_201_application_json_object = out
 
         return res
 
@@ -124,8 +124,8 @@ class TeamManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_team_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateTeam201ApplicationJSON])
+                res.create_team_201_application_json_object = out
 
         return res
 
@@ -148,8 +148,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_team_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteTeam200ApplicationJSON])
+                res.delete_team_200_application_json_object = out
 
         return res
 
@@ -172,8 +172,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_team_membership_in_account_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteTeamMembershipInAccount200ApplicationJSON])
+                res.delete_team_membership_in_account_200_application_json_object = out
 
         return res
 
@@ -196,8 +196,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_team_membership_in_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteTeamMembershipInConnector200ApplicationJSON])
+                res.delete_team_membership_in_connector_200_application_json_object = out
 
         return res
 
@@ -220,8 +220,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_team_membership_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteTeamMembershipInGroup200ApplicationJSON])
+                res.delete_team_membership_in_group_200_application_json_object = out
 
         return res
 
@@ -244,8 +244,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_user_from_team_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteUserFromTeam200ApplicationJSON])
+                res.delete_user_from_team_200_application_json_object = out
 
         return res
 
@@ -268,8 +268,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_team_membership_in_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetTeamMembershipInConnector200ApplicationJSON])
+                res.get_team_membership_in_connector_200_application_json_object = out
 
         return res
 
@@ -292,8 +292,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_team_membership_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetTeamMembershipInGroup200ApplicationJSON])
+                res.get_team_membership_in_group_200_application_json_object = out
 
         return res
 
@@ -317,8 +317,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_team_memberships_in_connectors_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetTeamMembershipsInConnectors200ApplicationJSON])
+                res.get_team_memberships_in_connectors_200_application_json_object = out
 
         return res
 
@@ -342,8 +342,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_team_memberships_in_groups_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetTeamMembershipsInGroups200ApplicationJSON])
+                res.get_team_memberships_in_groups_200_application_json_object = out
 
         return res
 
@@ -366,8 +366,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_user_in_team_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetUserInTeam200ApplicationJSON])
+                res.get_user_in_team_200_application_json_object = out
 
         return res
 
@@ -391,8 +391,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_all_teams_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListAllTeams200ApplicationJSON])
+                res.list_all_teams_200_application_json_object = out
 
         return res
 
@@ -416,8 +416,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_users_in_team_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListUsersInTeam200ApplicationJSON])
+                res.list_users_in_team_200_application_json_object = out
 
         return res
 
@@ -443,8 +443,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_team_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyTeam200ApplicationJSON])
+                res.modify_team_200_application_json_object = out
 
         return res
 
@@ -467,8 +467,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.team_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.TeamDetails200ApplicationJSON])
+                res.team_details_200_application_json_object = out
 
         return res
 
@@ -494,8 +494,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.update_team_membership_in_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.UpdateTeamMembershipInConnector200ApplicationJSON])
+                res.update_team_membership_in_connector_200_application_json_object = out
 
         return res
 
@@ -521,8 +521,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.update_team_membership_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.UpdateTeamMembershipInGroup200ApplicationJSON])
+                res.update_team_membership_in_group_200_application_json_object = out
 
         return res
 
@@ -548,8 +548,8 @@ class TeamManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.update_user_membership_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.UpdateUserMembership200ApplicationJSON])
+                res.update_user_membership_200_application_json_object = out
 
         return res
 

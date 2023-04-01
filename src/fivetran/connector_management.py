@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class ConnectorManagement:
     _client: requests_http.Session
@@ -43,8 +43,8 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.connect_card_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ConnectCard200ApplicationJSON])
+                res.connect_card_200_application_json_object = out
 
         return res
 
@@ -67,8 +67,8 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.connector_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ConnectorDetails200ApplicationJSON])
+                res.connector_details_200_application_json_object = out
 
         return res
 
@@ -94,8 +94,8 @@ class ConnectorManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_connector_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateConnector201ApplicationJSON])
+                res.create_connector_201_application_json_object = out
         elif http_res.status_code == 400:
             pass
 
@@ -120,8 +120,8 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteConnector200ApplicationJSON])
+                res.delete_connector_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
@@ -146,8 +146,8 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.metadata_connector_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.MetadataConnectorConfig200ApplicationJSON])
+                res.metadata_connector_config_200_application_json_object = out
 
         return res
 
@@ -171,8 +171,8 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.metadata_connectors_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.MetadataConnectors200ApplicationJSON])
+                res.metadata_connectors_200_application_json_object = out
 
         return res
 
@@ -198,8 +198,8 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyConnector200ApplicationJSON])
+                res.modify_connector_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
@@ -227,8 +227,8 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.resync_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ResyncConnector200ApplicationJSON])
+                res.resync_connector_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
@@ -256,8 +256,8 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.run_setup_tests_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.RunSetupTests200ApplicationJSON])
+                res.run_setup_tests_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
@@ -285,8 +285,8 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.sync_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.SyncConnector200ApplicationJSON])
+                res.sync_connector_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 

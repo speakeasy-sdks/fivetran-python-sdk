@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class DBTTransformationManagement:
     _client: requests_http.Session
@@ -43,8 +43,8 @@ class DBTTransformationManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_dbt_project_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateDbtProject201ApplicationJSON])
+                res.create_dbt_project_201_application_json_object = out
 
         return res
 
@@ -70,8 +70,8 @@ class DBTTransformationManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_dbt_transformation_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateDbtTransformation201ApplicationJSON])
+                res.create_dbt_transformation_201_application_json_object = out
 
         return res
 
@@ -94,8 +94,8 @@ class DBTTransformationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.dbt_model_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DbtModelDetails200ApplicationJSON])
+                res.dbt_model_details_200_application_json_object = out
 
         return res
 
@@ -118,8 +118,8 @@ class DBTTransformationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.dbt_project_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DbtProjectDetails200ApplicationJSON])
+                res.dbt_project_details_200_application_json_object = out
 
         return res
 
@@ -142,8 +142,8 @@ class DBTTransformationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.dbt_transformation_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DbtTransformationDetails200ApplicationJSON])
+                res.dbt_transformation_details_200_application_json_object = out
 
         return res
 
@@ -166,8 +166,8 @@ class DBTTransformationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_dbt_transformation_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteDbtTransformation200ApplicationJSON])
+                res.delete_dbt_transformation_200_application_json_object = out
 
         return res
 
@@ -191,8 +191,8 @@ class DBTTransformationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_dbt_project_models_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListDbtProjectModels200ApplicationJSON])
+                res.list_dbt_project_models_200_application_json_object = out
 
         return res
 
@@ -216,8 +216,8 @@ class DBTTransformationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_dbt_project_transformations_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListDbtProjectTransformations200ApplicationJSON])
+                res.list_dbt_project_transformations_200_application_json_object = out
 
         return res
 
@@ -241,8 +241,8 @@ class DBTTransformationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_dbt_projects_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListDbtProjects200ApplicationJSON])
+                res.list_dbt_projects_200_application_json_object = out
 
         return res
 
@@ -268,8 +268,8 @@ class DBTTransformationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_dbt_transformation_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyDbtTransformation200ApplicationJSON])
+                res.modify_dbt_transformation_200_application_json_object = out
 
         return res
 
@@ -292,8 +292,8 @@ class DBTTransformationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.test_dbt_project_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.TestDbtProject200ApplicationJSON])
+                res.test_dbt_project_200_application_json_object = out
 
         return res
 

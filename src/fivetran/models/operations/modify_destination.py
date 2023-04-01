@@ -3,8 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
+from ..shared import destinationresponse as shared_destinationresponse
 from ..shared import updatedestinationrequest as shared_updatedestinationrequest
-from typing import Any, Optional
+from dataclasses_json import Undefined, dataclass_json
+from fivetran import utils
+from typing import Optional
 
 
 @dataclasses.dataclass
@@ -16,12 +19,24 @@ class ModifyDestinationRequest:
     update_destination_request: Optional[shared_updatedestinationrequest.UpdateDestinationRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})  
     
 
+@dataclass_json(undefined=Undefined.EXCLUDE)
+@dataclasses.dataclass
+class ModifyDestination200ApplicationJSON:
+    r"""Successful response"""
+    
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
+    r"""Response status code"""  
+    data: Optional[shared_destinationresponse.DestinationResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})  
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
+    r"""Response status text"""  
+    
+
 @dataclasses.dataclass
 class ModifyDestinationResponse:
     
     content_type: str = dataclasses.field()  
     status_code: int = dataclasses.field()  
-    modify_destination_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    modify_destination_200_application_json_object: Optional[ModifyDestination200ApplicationJSON] = dataclasses.field(default=None)
     r"""Successful response"""  
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
     

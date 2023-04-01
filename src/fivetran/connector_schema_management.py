@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class ConnectorSchemaManagement:
     _client: requests_http.Session
@@ -40,8 +40,8 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.connector_column_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ConnectorColumnConfig200ApplicationJSON])
+                res.connector_column_config_200_application_json_object = out
 
         return res
 
@@ -64,8 +64,8 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.connector_schema_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ConnectorSchemaConfig200ApplicationJSON])
+                res.connector_schema_config_200_application_json_object = out
 
         return res
 
@@ -91,8 +91,8 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_connector_column_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyConnectorColumnConfig200ApplicationJSON])
+                res.modify_connector_column_config_200_application_json_object = out
 
         return res
 
@@ -118,8 +118,8 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_connector_database_schema_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyConnectorDatabaseSchemaConfig200ApplicationJSON])
+                res.modify_connector_database_schema_config_200_application_json_object = out
 
         return res
 
@@ -145,8 +145,8 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_connector_schema_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyConnectorSchemaConfig200ApplicationJSON])
+                res.modify_connector_schema_config_200_application_json_object = out
 
         return res
 
@@ -172,8 +172,8 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_connector_table_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyConnectorTableConfig200ApplicationJSON])
+                res.modify_connector_table_config_200_application_json_object = out
 
         return res
 
@@ -199,8 +199,8 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.reload_connector_schema_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ReloadConnectorSchemaConfig200ApplicationJSON])
+                res.reload_connector_schema_config_200_application_json_object = out
 
         return res
 
@@ -226,8 +226,8 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.resync_tables_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ResyncTables200ApplicationJSON])
+                res.resync_tables_200_application_json_object = out
 
         return res
 

@@ -4,7 +4,9 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import trustfingerprintrequest as shared_trustfingerprintrequest
-from typing import Any, Optional
+from dataclasses_json import Undefined, dataclass_json
+from fivetran import utils
+from typing import Optional
 
 
 @dataclasses.dataclass
@@ -14,12 +16,23 @@ class ApproveFingerprintRequest:
     trust_fingerprint_request: Optional[shared_trustfingerprintrequest.TrustFingerprintRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})  
     
 
+@dataclass_json(undefined=Undefined.EXCLUDE)
+@dataclasses.dataclass
+class ApproveFingerprint200ApplicationJSON:
+    r"""Successful response"""
+    
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
+    r"""Response status code"""  
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
+    r"""Response status text"""  
+    
+
 @dataclasses.dataclass
 class ApproveFingerprintResponse:
     
     content_type: str = dataclasses.field()  
     status_code: int = dataclasses.field()  
-    approve_fingerprint_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    approve_fingerprint_200_application_json_object: Optional[ApproveFingerprint200ApplicationJSON] = dataclasses.field(default=None)
     r"""Successful response"""  
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
     

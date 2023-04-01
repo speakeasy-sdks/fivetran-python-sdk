@@ -10,9 +10,9 @@ from typing import Optional
 
 class TableUpdateRequestSyncModeEnum(str, Enum):
     r"""This field appears in the response if the connector supports switching sync modes for tables"""
-    SOFT_DELETE = "SOFT_DELETE"
-    HISTORY = "HISTORY"
-    LIVE = "LIVE"
+    SOFT_DELETE = 'SOFT_DELETE'
+    HISTORY = 'HISTORY'
+    LIVE = 'LIVE'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

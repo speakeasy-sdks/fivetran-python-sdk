@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class MetadataManagement:
     _client: requests_http.Session
@@ -41,8 +41,8 @@ class MetadataManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.column_metadata_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ColumnMetadata200ApplicationJSON])
+                res.column_metadata_200_application_json_object = out
 
         return res
 
@@ -66,8 +66,8 @@ class MetadataManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.schema_metadata_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.SchemaMetadata200ApplicationJSON])
+                res.schema_metadata_200_application_json_object = out
 
         return res
 
@@ -91,8 +91,8 @@ class MetadataManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.table_metadata_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.TableMetadata200ApplicationJSON])
+                res.table_metadata_200_application_json_object = out
 
         return res
 

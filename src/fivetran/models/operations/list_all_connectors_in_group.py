@@ -3,7 +3,10 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from typing import Any, Optional
+from ..shared import connectorresponse as shared_connectorresponse
+from dataclasses_json import Undefined, dataclass_json
+from fivetran import utils
+from typing import Optional
 
 
 @dataclasses.dataclass
@@ -20,12 +23,34 @@ class ListAllConnectorsInGroupRequest:
     r"""The name used both as the connector's name within the Fivetran system and as the source schema's name within your destination."""  
     
 
+@dataclass_json(undefined=Undefined.EXCLUDE)
+@dataclasses.dataclass
+class ListAllConnectorsInGroup200ApplicationJSONData:
+    
+    items: Optional[list[shared_connectorresponse.ConnectorResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('items'), 'exclude': lambda f: f is None }})
+    r"""The collection of return items"""  
+    next_cursor: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nextCursor'), 'exclude': lambda f: f is None }})
+    r"""The value of the cursor parameter for the next page"""  
+    
+
+@dataclass_json(undefined=Undefined.EXCLUDE)
+@dataclasses.dataclass
+class ListAllConnectorsInGroup200ApplicationJSON:
+    r"""Successful response"""
+    
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
+    r"""Response status code"""  
+    data: Optional[ListAllConnectorsInGroup200ApplicationJSONData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})  
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
+    r"""Response status text"""  
+    
+
 @dataclasses.dataclass
 class ListAllConnectorsInGroupResponse:
     
     content_type: str = dataclasses.field()  
     status_code: int = dataclasses.field()  
-    list_all_connectors_in_group_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    list_all_connectors_in_group_200_application_json_object: Optional[ListAllConnectorsInGroup200ApplicationJSON] = dataclasses.field(default=None)
     r"""Successful response"""  
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
     

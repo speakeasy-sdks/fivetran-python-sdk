@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class CertificateManagement:
     _client: requests_http.Session
@@ -43,8 +43,8 @@ class CertificateManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.approve_certificate_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ApproveCertificate200ApplicationJSON])
+                res.approve_certificate_200_application_json_object = out
 
         return res
 
@@ -70,8 +70,8 @@ class CertificateManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.approve_fingerprint_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ApproveFingerprint200ApplicationJSON])
+                res.approve_fingerprint_200_application_json_object = out
 
         return res
 

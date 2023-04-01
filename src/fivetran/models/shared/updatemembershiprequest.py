@@ -11,5 +11,5 @@ from fivetran import utils
 class UpdateMembershipRequest:
     
     role: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role') }})
-    r"""The role that you would like to assign to the user """  
+    r"""The role that you would like to assign to the user"""  
     

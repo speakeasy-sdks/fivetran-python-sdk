@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class DestinationManagement:
     _client: requests_http.Session
@@ -43,8 +43,8 @@ class DestinationManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_destination_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateDestination201ApplicationJSON])
+                res.create_destination_201_application_json_object = out
         elif http_res.status_code in [400, 500]:
             pass
 
@@ -69,8 +69,8 @@ class DestinationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_destination_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteDestination200ApplicationJSON])
+                res.delete_destination_200_application_json_object = out
         elif http_res.status_code in [404, 409]:
             pass
 
@@ -95,8 +95,8 @@ class DestinationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.destination_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DestinationDetails200ApplicationJSON])
+                res.destination_details_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
@@ -124,8 +124,8 @@ class DestinationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_destination_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyDestination200ApplicationJSON])
+                res.modify_destination_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
@@ -153,8 +153,8 @@ class DestinationManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.run_destination_setup_tests_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.RunDestinationSetupTests200ApplicationJSON])
+                res.run_destination_setup_tests_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 

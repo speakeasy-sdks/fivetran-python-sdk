@@ -9,21 +9,21 @@ from typing import Any, Optional
 
 class UpdateConnectorRequestScheduleTypeEnum(str, Enum):
     r"""The connector schedule configuration type. Supported values: auto, manual"""
-    AUTO = "auto"
-    MANUAL = "manual"
+    AUTO = 'auto'
+    MANUAL = 'manual'
 
 class UpdateConnectorRequestSyncFrequencyEnum(str, Enum):
     r"""The connector sync frequency in minutes"""
-    FIVE = "5"
-    FIFTEEN = "15"
-    THIRTY = "30"
-    SIXTY = "60"
-    ONE_HUNDRED_AND_TWENTY = "120"
-    ONE_HUNDRED_AND_EIGHTY = "180"
-    THREE_HUNDRED_AND_SIXTY = "360"
-    FOUR_HUNDRED_AND_EIGHTY = "480"
-    SEVEN_HUNDRED_AND_TWENTY = "720"
-    ONE_THOUSAND_FOUR_HUNDRED_AND_FORTY = "1440"
+    FIVE = '5'
+    FIFTEEN = '15'
+    THIRTY = '30'
+    SIXTY = '60'
+    ONE_HUNDRED_AND_TWENTY = '120'
+    ONE_HUNDRED_AND_EIGHTY = '180'
+    THREE_HUNDRED_AND_SIXTY = '360'
+    FOUR_HUNDRED_AND_EIGHTY = '480'
+    SEVEN_HUNDRED_AND_TWENTY = '720'
+    ONE_THOUSAND_FOUR_HUNDRED_AND_FORTY = '1440'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

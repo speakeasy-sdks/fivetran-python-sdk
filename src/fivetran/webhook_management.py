@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class WebhookManagement:
     _client: requests_http.Session
@@ -43,8 +43,8 @@ class WebhookManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_account_webhook_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateAccountWebhook200ApplicationJSON])
+                res.create_account_webhook_200_application_json_object = out
 
         return res
 
@@ -70,8 +70,8 @@ class WebhookManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_group_webhook_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateGroupWebhook200ApplicationJSON])
+                res.create_group_webhook_200_application_json_object = out
 
         return res
 
@@ -94,8 +94,8 @@ class WebhookManagement:
         
         if http_res.status_code == 204:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_webhook_204_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteWebhook204ApplicationJSON])
+                res.delete_webhook_204_application_json_object = out
 
         return res
 
@@ -119,8 +119,8 @@ class WebhookManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_all_webhooks_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListAllWebhooks200ApplicationJSON])
+                res.list_all_webhooks_200_application_json_object = out
 
         return res
 
@@ -146,8 +146,8 @@ class WebhookManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_webhook_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyWebhook200ApplicationJSON])
+                res.modify_webhook_200_application_json_object = out
 
         return res
 
@@ -173,8 +173,8 @@ class WebhookManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.test_webhook_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.TestWebhook200ApplicationJSON])
+                res.test_webhook_200_application_json_object = out
 
         return res
 
@@ -197,8 +197,8 @@ class WebhookManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.webhook_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.WebhookDetails200ApplicationJSON])
+                res.webhook_details_200_application_json_object = out
 
         return res
 

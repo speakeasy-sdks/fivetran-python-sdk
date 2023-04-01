@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations, shared
-from typing import Any, Optional
+from typing import Optional
 
 class UserManagement:
     _client: requests_http.Session
@@ -72,8 +72,8 @@ class UserManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.add_user_membership_in_group_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.AddUserMembershipInGroup201ApplicationJSON])
+                res.add_user_membership_in_group_201_application_json_object = out
         elif http_res.status_code in [400, 404]:
             pass
 
@@ -101,8 +101,8 @@ class UserManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_user_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateUser201ApplicationJSON])
+                res.create_user_201_application_json_object = out
         elif http_res.status_code == 400:
             pass
 
@@ -127,8 +127,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_user_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteUser200ApplicationJSON])
+                res.delete_user_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
@@ -153,8 +153,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_user_membership_in_account_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteUserMembershipInAccount200ApplicationJSON])
+                res.delete_user_membership_in_account_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
@@ -179,8 +179,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_user_membership_in_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteUserMembershipInConnector200ApplicationJSON])
+                res.delete_user_membership_in_connector_200_application_json_object = out
 
         return res
 
@@ -203,8 +203,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_user_membership_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteUserMembershipInGroup200ApplicationJSON])
+                res.delete_user_membership_in_group_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
@@ -229,8 +229,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_user_membership_in_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetUserMembershipInConnector200ApplicationJSON])
+                res.get_user_membership_in_connector_200_application_json_object = out
 
         return res
 
@@ -253,8 +253,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_user_membership_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetUserMembershipInGroup200ApplicationJSON])
+                res.get_user_membership_in_group_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
@@ -280,8 +280,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_user_memberships_in_connectors_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetUserMembershipsInConnectors200ApplicationJSON])
+                res.get_user_memberships_in_connectors_200_application_json_object = out
 
         return res
 
@@ -305,8 +305,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_user_memberships_in_groups_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetUserMembershipsInGroups200ApplicationJSON])
+                res.get_user_memberships_in_groups_200_application_json_object = out
 
         return res
 
@@ -330,8 +330,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_all_users_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListAllUsers200ApplicationJSON])
+                res.list_all_users_200_application_json_object = out
 
         return res
 
@@ -357,8 +357,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_user_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyUser200ApplicationJSON])
+                res.modify_user_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
@@ -386,8 +386,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.update_user_membership_in_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.UpdateUserMembershipInConnector200ApplicationJSON])
+                res.update_user_membership_in_connector_200_application_json_object = out
 
         return res
 
@@ -413,8 +413,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.update_user_membership_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.UpdateUserMembershipInGroup200ApplicationJSON])
+                res.update_user_membership_in_group_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
@@ -439,8 +439,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.user_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.UserDetails200ApplicationJSON])
+                res.user_details_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
