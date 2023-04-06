@@ -38,8 +38,8 @@ class Fivetran:
     _security_client: requests_http.Session
     _server_url: str = SERVERS[0]
     _language: str = "python"
-    _sdk_version: str = "1.10.1"
-    _gen_version: str = "2.16.7"
+    _sdk_version: str = "1.10.2"
+    _gen_version: str = "2.17.8"
 
     def __init__(self,
                  security: shared.Security = None,
