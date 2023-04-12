@@ -2,13 +2,13 @@ configVersion: 1.0.0
 management:
   docChecksum: 2e08714ddf4998bf00a7a40c62f9ab3b
   docVersion: v1
-  speakeasyVersion: 1.19.6
+  speakeasyVersion: 1.19.7
 generation:
   telemetryEnabled: false
   sdkClassName: fivetran
-  sdkFlattening: true
+  sdkFlattening: false
 python:
-  version: 1.10.2
+  version: 1.10.3
   author: speakeasy-sdks
   description: Python SDK for Fivetran API
   packageName: fivetran-python-sdk
