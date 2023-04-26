@@ -177,4 +177,16 @@ src/fivetran/models/shared/webhooktestresponse.py
 src/fivetran/models/shared/webhooktestrequest.py
 src/fivetran/models/shared/security.py
 src/fivetran/models/shared/__init__.py
+docs/fivetran/README.md
+docs/certificatemanagement/README.md
+docs/connectormanagement/README.md
+docs/connectorschemamanagement/README.md
+docs/dbttransformationmanagement/README.md
+docs/destinationmanagement/README.md
+docs/groupmanagement/README.md
+docs/metadatamanagement/README.md
+docs/rolemanagement/README.md
+docs/teammanagement/README.md
+docs/usermanagement/README.md
+docs/webhookmanagement/README.md
 USAGE.md

@@ -20,7 +20,7 @@ req = operations.ApproveCertificateRequest(
         hash="quibusdam",
     ),
 )
-    
+
 res = s.certificate_management.approve_certificate(req)
 
 if res.approve_certificate_200_application_json_object is not None:
