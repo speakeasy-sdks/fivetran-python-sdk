@@ -13,7 +13,9 @@ from typing import Optional
 class DbtProjectTestResponse:
     
     dbt_project_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dbt_project_id'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier for the DBT Project within the Fivetran system."""  
+
+    r"""The unique identifier for the DBT Project within the Fivetran system."""
     setup_tests: Optional[list[shared_setuptestresultresponse.SetupTestResultResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('setup_tests'), 'exclude': lambda f: f is None }})
-    r"""Setup tests results"""  
+
+    r"""Setup tests results"""
     

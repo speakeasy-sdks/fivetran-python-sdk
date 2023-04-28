@@ -15,9 +15,12 @@ from typing import Optional
 class GroupResponse:
     
     created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso'), 'exclude': lambda f: f is None }})
-    r"""The timestamp of when the group was created in your account."""  
+
+    r"""The timestamp of when the group was created in your account."""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier for the group within the Fivetran system."""  
+
+    r"""The unique identifier for the group within the Fivetran system."""
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    r"""The name of the group within your account."""  
+
+    r"""The name of the group within your account."""
     

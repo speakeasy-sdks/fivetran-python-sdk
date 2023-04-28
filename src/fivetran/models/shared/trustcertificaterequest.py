@@ -12,11 +12,15 @@ from typing import Optional
 class TrustCertificateRequest:
     
     encoded_cert: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('encoded_cert') }})
-    r"""The certificate encoded in base64."""  
+
+    r"""The certificate encoded in base64."""
     hash: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hash') }})
-    r"""Hash of the certificate."""  
+
+    r"""Hash of the certificate."""
     connector_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connector_id'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier for the connector"""  
+
+    r"""The unique identifier for the connector"""
     destination_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destination_id'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier for the destination."""  
+
+    r"""The unique identifier for the destination."""
     

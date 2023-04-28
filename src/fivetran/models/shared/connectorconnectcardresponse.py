@@ -13,8 +13,11 @@ from typing import Optional
 @dataclasses.dataclass
 class ConnectorConnectCardResponse:
     
-    connect_card: Optional[shared_connectcardresponse.ConnectCardResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connect_card'), 'exclude': lambda f: f is None }})  
-    connect_card_config: Optional[shared_connectcardconfig.ConnectCardConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connect_card_config'), 'exclude': lambda f: f is None }})  
+    connect_card: Optional[shared_connectcardresponse.ConnectCardResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connect_card'), 'exclude': lambda f: f is None }})
+
+    connect_card_config: Optional[shared_connectcardconfig.ConnectCardConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connect_card_config'), 'exclude': lambda f: f is None }})
+
     connector_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connector_id'), 'exclude': lambda f: f is None }})
-    r"""The connector identifier"""  
+
+    r"""The connector identifier"""
     

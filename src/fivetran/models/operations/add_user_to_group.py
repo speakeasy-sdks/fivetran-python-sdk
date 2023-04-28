@@ -13,9 +13,12 @@ from typing import Optional
 class AddUserToGroupRequest:
     
     group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
-    r"""The unique identifier for the group within the Fivetran system."""  
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})  
-    add_user_to_group_request: Optional[shared_addusertogrouprequest.AddUserToGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})  
+
+    r"""The unique identifier for the group within the Fivetran system."""
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+
+    add_user_to_group_request: Optional[shared_addusertogrouprequest.AddUserToGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -24,17 +27,23 @@ class AddUserToGroup200ApplicationJSON:
     r"""Successful response"""
     
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-    r"""Response status code"""  
+
+    r"""Response status code"""
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-    r"""Response status text"""  
+
+    r"""Response status text"""
     
 
 @dataclasses.dataclass
 class AddUserToGroupResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     add_user_to_group_200_application_json_object: Optional[AddUserToGroup200ApplicationJSON] = dataclasses.field(default=None)
-    r"""Successful response"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""Successful response"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

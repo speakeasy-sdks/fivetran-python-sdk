@@ -12,11 +12,15 @@ from typing import Optional
 class RoleResponse:
     
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
-    r"""The role description"""  
+
+    r"""The role description"""
     is_custom: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_custom'), 'exclude': lambda f: f is None }})
-    r"""Defines whether the role is standard or custom"""  
+
+    r"""Defines whether the role is standard or custom"""
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    r"""The role name"""  
+
+    r"""The role name"""
     scope: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scope'), 'exclude': lambda f: f is None }})
-    r"""Defines the list of resources the role manages"""  
+
+    r"""Defines the list of resources the role manages"""
     

@@ -13,10 +13,13 @@ from typing import Optional
 class GetUserMembershipInGroupRequest:
     
     group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
-    r"""The unique identifier for the group within the account."""  
+
+    r"""The unique identifier for the group within the account."""
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
-    r"""The unique identifier for the user within the account."""  
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})  
+
+    r"""The unique identifier for the user within the account."""
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -25,18 +28,25 @@ class GetUserMembershipInGroup200ApplicationJSON:
     r"""Successful response"""
     
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-    r"""Response status code"""  
-    data: Optional[shared_membershipresponse.MembershipResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})  
+
+    r"""Response status code"""
+    data: Optional[shared_membershipresponse.MembershipResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-    r"""Response status text"""  
+
+    r"""Response status text"""
     
 
 @dataclasses.dataclass
 class GetUserMembershipInGroupResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     get_user_membership_in_group_200_application_json_object: Optional[GetUserMembershipInGroup200ApplicationJSON] = dataclasses.field(default=None)
-    r"""Successful response"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""Successful response"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

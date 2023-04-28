@@ -13,7 +13,9 @@ from typing import Optional
 class SchemaUpdateRequest:
     
     enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enabled'), 'exclude': lambda f: f is None }})
-    r"""The boolean value specifying whether the sync for the table into the destination is enabled."""  
+
+    r"""The boolean value specifying whether the sync for the table into the destination is enabled."""
     tables: Optional[dict[str, shared_tableupdaterequest.TableUpdateRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tables'), 'exclude': lambda f: f is None }})
-    r"""The set of tables within your database schema config that are synced into the destination"""  
+
+    r"""The set of tables within your database schema config that are synced into the destination"""
     

@@ -12,11 +12,15 @@ from typing import Optional
 class TrustFingerprintRequest:
     
     hash: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hash') }})
-    r"""Hash of the fingerprint"""  
+
+    r"""Hash of the fingerprint"""
     public_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('public_key') }})
-    r"""The SSH public key"""  
+
+    r"""The SSH public key"""
     connector_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connector_id'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier for the connector"""  
+
+    r"""The unique identifier for the connector"""
     destination_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destination_id'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier for the destination"""  
+
+    r"""The unique identifier for the destination"""
     

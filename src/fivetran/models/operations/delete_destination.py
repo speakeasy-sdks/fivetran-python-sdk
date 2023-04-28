@@ -12,8 +12,10 @@ from typing import Optional
 class DeleteDestinationRequest:
     
     destination_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'destinationId', 'style': 'simple', 'explode': False }})
-    r"""The unique identifier for the destination within your Fivetran account."""  
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})  
+
+    r"""The unique identifier for the destination within your Fivetran account."""
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -22,17 +24,23 @@ class DeleteDestination200ApplicationJSON:
     r"""Successful response"""
     
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-    r"""Response status code"""  
+
+    r"""Response status code"""
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-    r"""Response status text"""  
+
+    r"""Response status text"""
     
 
 @dataclasses.dataclass
 class DeleteDestinationResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     delete_destination_200_application_json_object: Optional[DeleteDestination200ApplicationJSON] = dataclasses.field(default=None)
-    r"""Successful response"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""Successful response"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

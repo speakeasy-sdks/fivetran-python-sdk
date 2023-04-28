@@ -12,7 +12,9 @@ from typing import Optional
 class ColumnUpdateRequest:
     
     enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enabled'), 'exclude': lambda f: f is None }})
-    r"""The boolean value specifying whether the sync for the table into the destination is enabled."""  
+
+    r"""The boolean value specifying whether the sync for the table into the destination is enabled."""
     hashed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hashed'), 'exclude': lambda f: f is None }})
-    r"""The boolean value specifying whether a column should be hashed"""  
+
+    r"""The boolean value specifying whether a column should be hashed"""
     

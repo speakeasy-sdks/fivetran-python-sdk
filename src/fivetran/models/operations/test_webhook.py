@@ -14,9 +14,12 @@ from typing import Optional
 class TestWebhookRequest:
     
     webhook_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'webhookId', 'style': 'simple', 'explode': False }})
-    r"""The webhook ID"""  
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})  
-    webhook_test_request: Optional[shared_webhooktestrequest.WebhookTestRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})  
+
+    r"""The webhook ID"""
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+
+    webhook_test_request: Optional[shared_webhooktestrequest.WebhookTestRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -25,18 +28,25 @@ class TestWebhook200ApplicationJSON:
     r"""Successful response"""
     
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-    r"""Response status code"""  
-    data: Optional[shared_webhooktestresponse.WebhookTestResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})  
+
+    r"""Response status code"""
+    data: Optional[shared_webhooktestresponse.WebhookTestResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-    r"""Response status text"""  
+
+    r"""Response status text"""
     
 
 @dataclasses.dataclass
 class TestWebhookResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     test_webhook_200_application_json_object: Optional[TestWebhook200ApplicationJSON] = dataclasses.field(default=None)
-    r"""Successful response"""  
+
+    r"""Successful response"""
     

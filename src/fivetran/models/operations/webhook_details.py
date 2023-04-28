@@ -13,8 +13,10 @@ from typing import Optional
 class WebhookDetailsRequest:
     
     webhook_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'webhookId', 'style': 'simple', 'explode': False }})
-    r"""The webhook ID"""  
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})  
+
+    r"""The webhook ID"""
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -23,18 +25,25 @@ class WebhookDetails200ApplicationJSON:
     r"""Successful response"""
     
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-    r"""Response status code"""  
-    data: Optional[shared_webhookresponse.WebhookResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})  
+
+    r"""Response status code"""
+    data: Optional[shared_webhookresponse.WebhookResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-    r"""Response status text"""  
+
+    r"""Response status text"""
     
 
 @dataclasses.dataclass
 class WebhookDetailsResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     webhook_details_200_application_json_object: Optional[WebhookDetails200ApplicationJSON] = dataclasses.field(default=None)
-    r"""Successful response"""  
+
+    r"""Successful response"""
     

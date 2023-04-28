@@ -13,5 +13,6 @@ from typing import Optional
 class TableColumnsConfigResponse:
     
     columns: Optional[dict[str, shared_columnconfigresponse.ColumnConfigResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('columns'), 'exclude': lambda f: f is None }})
-    r"""The set of columns within your table schema config that are synced into the destination"""  
+
+    r"""The set of columns within your table schema config that are synced into the destination"""
     

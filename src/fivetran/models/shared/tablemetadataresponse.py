@@ -12,11 +12,15 @@ from typing import Optional
 class TableMetadataResponse:
     
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    r"""The unique table identifier"""  
+
+    r"""The unique table identifier"""
     name_in_destination: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name_in_destination'), 'exclude': lambda f: f is None }})
-    r"""The table name in the destination"""  
+
+    r"""The table name in the destination"""
     name_in_source: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name_in_source'), 'exclude': lambda f: f is None }})
-    r"""The table name in the source"""  
+
+    r"""The table name in the source"""
     parent_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('parent_id'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier of the schema associated with the table"""  
+
+    r"""The unique identifier of the schema associated with the table"""
     

@@ -43,24 +43,35 @@ class MetadataResponseTypeEnum(str, Enum):
 class MetadataResponse:
     
     auth: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth'), 'exclude': lambda f: f is None }})
-    r"""Metadata for authorization fields (optional)"""  
+
+    r"""Metadata for authorization fields (optional)"""
     config: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('config'), 'exclude': lambda f: f is None }})
-    r"""Metadata for configuration fields"""  
+
+    r"""Metadata for configuration fields"""
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
-    r"""The description characterizing the purpose of the connector"""  
+
+    r"""The description characterizing the purpose of the connector"""
     icon_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('icon_url'), 'exclude': lambda f: f is None }})
-    r"""The icon resource URL"""  
+
+    r"""The icon resource URL"""
     icons: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('icons'), 'exclude': lambda f: f is None }})
-    r"""The set of additional icon resource URLs in different formats (.svg, .png). Updating this list is not a breaking change. The set of icon URLs or the icons themselves may be changed"""  
+
+    r"""The set of additional icon resource URLs in different formats (.svg, .png). Updating this list is not a breaking change. The set of icon URLs or the icons themselves may be changed"""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    r"""The connector type identifier within the Fivetran system"""  
+
+    r"""The connector type identifier within the Fivetran system"""
     link_to_docs: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('link_to_docs'), 'exclude': lambda f: f is None }})
-    r"""The link to the connector documentation"""  
+
+    r"""The link to the connector documentation"""
     link_to_erd: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('link_to_erd'), 'exclude': lambda f: f is None }})
-    r"""The link to the connector ERD (entity–relationship diagram)"""  
+
+    r"""The link to the connector ERD (entity–relationship diagram)"""
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    r"""The connector service name within the Fivetran system"""  
-    service_status: Optional[MetadataResponseServiceStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('service_status'), 'exclude': lambda f: f is None }})  
+
+    r"""The connector service name within the Fivetran system"""
+    service_status: Optional[MetadataResponseServiceStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('service_status'), 'exclude': lambda f: f is None }})
+
     type: Optional[MetadataResponseTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    r"""The connector service type"""  
+
+    r"""The connector service type"""
     

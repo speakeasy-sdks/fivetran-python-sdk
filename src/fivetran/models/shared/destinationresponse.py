@@ -34,17 +34,24 @@ class DestinationResponseRegionEnum(str, Enum):
 class DestinationResponse:
     
     group_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('group_id'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier for the group within the Fivetran system."""  
+
+    r"""The unique identifier for the group within the Fivetran system."""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier for the destination within the Fivetran system"""  
+
+    r"""The unique identifier for the destination within the Fivetran system"""
     region: Optional[DestinationResponseRegionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('region'), 'exclude': lambda f: f is None }})
-    r"""Data processing location. This is where Fivetran will operate and run computation on data."""  
+
+    r"""Data processing location. This is where Fivetran will operate and run computation on data."""
     service: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('service'), 'exclude': lambda f: f is None }})
-    r"""The name for the destination type within the Fivetran system."""  
+
+    r"""The name for the destination type within the Fivetran system."""
     setup_status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('setup_status'), 'exclude': lambda f: f is None }})
-    r"""Destination setup status"""  
+
+    r"""Destination setup status"""
     setup_tests: Optional[list[shared_setuptestresultresponse.SetupTestResultResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('setup_tests'), 'exclude': lambda f: f is None }})
-    r"""Setup tests results for this destination"""  
+
+    r"""Setup tests results for this destination"""
     time_zone_offset: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time_zone_offset'), 'exclude': lambda f: f is None }})
-    r"""Determines the time zone for the Fivetran sync schedule."""  
+
+    r"""Determines the time zone for the Fivetran sync schedule."""
     

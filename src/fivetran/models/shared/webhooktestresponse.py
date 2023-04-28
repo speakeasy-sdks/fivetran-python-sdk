@@ -12,9 +12,12 @@ from typing import Optional
 class WebhookTestResponse:
     
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-    r"""Test message"""  
+
+    r"""Test message"""
     status: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-    r"""Test status"""  
+
+    r"""Test status"""
     succeed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('succeed'), 'exclude': lambda f: f is None }})
-    r"""Test result"""  
+
+    r"""Test result"""
     

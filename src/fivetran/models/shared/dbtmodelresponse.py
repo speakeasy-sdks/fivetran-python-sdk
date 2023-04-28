@@ -12,9 +12,12 @@ from typing import Optional
 class DbtModelResponse:
     
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier for the DBT Model within the Fivetran system."""  
+
+    r"""The unique identifier for the DBT Model within the Fivetran system."""
     model_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('model_name'), 'exclude': lambda f: f is None }})
-    r"""The DBT Model name."""  
+
+    r"""The DBT Model name."""
     scheduled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduled'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier for the DBT Model within the Fivetran system."""  
+
+    r"""The unique identifier for the DBT Model within the Fivetran system."""
     

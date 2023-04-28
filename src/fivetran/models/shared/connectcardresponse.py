@@ -12,7 +12,9 @@ from typing import Optional
 class ConnectCardResponse:
     
     token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('token'), 'exclude': lambda f: f is None }})
-    r"""The connect-card auth token"""  
+
+    r"""The connect-card auth token"""
     uri: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('uri'), 'exclude': lambda f: f is None }})
-    r"""The Connect Card URI for the user interface"""  
+
+    r"""The Connect Card URI for the user interface"""
     

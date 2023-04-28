@@ -19,9 +19,12 @@ class TableEnabledPatchSettingsReasonCodeEnum(str, Enum):
 class TableEnabledPatchSettings:
     
     allowed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('allowed'), 'exclude': lambda f: f is None }})
-    r"""The boolean value specifying whether the enabled property can be modified"""  
+
+    r"""The boolean value specifying whether the enabled property can be modified"""
     reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reason'), 'exclude': lambda f: f is None }})
-    r"""The additional message indicating the reason why the enabled property cannot be modified. This field appears in the response only when the reason_code value is OTHER"""  
+
+    r"""The additional message indicating the reason why the enabled property cannot be modified. This field appears in the response only when the reason_code value is OTHER"""
     reason_code: Optional[TableEnabledPatchSettingsReasonCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reason_code'), 'exclude': lambda f: f is None }})
-    r"""The reason code indicating the reason why the enabled property cannot be modified: <br /> SYSTEM_TABLE - the table is a system table <br /> DELETED - the table was deleted in the source <br /> OTHER - the table was excluded by the system for some reason <br /> This field appears in the response when the allowed property value is FALSE"""  
+
+    r"""The reason code indicating the reason why the enabled property cannot be modified: <br /> SYSTEM_TABLE - the table is a system table <br /> DELETED - the table was deleted in the source <br /> OTHER - the table was excluded by the system for some reason <br /> This field appears in the response when the allowed property value is FALSE"""
     

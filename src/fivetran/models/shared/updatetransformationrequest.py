@@ -13,6 +13,8 @@ from typing import Optional
 class UpdateTransformationRequest:
     
     run_tests: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('run_tests'), 'exclude': lambda f: f is None }})
-    r"""The field indicates whether the tests has been confugured for DBT Transformation."""  
-    schedule: Optional[shared_transformationschedule.TransformationSchedule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schedule'), 'exclude': lambda f: f is None }})  
+
+    r"""The field indicates whether the tests has been confugured for DBT Transformation."""
+    schedule: Optional[shared_transformationschedule.TransformationSchedule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schedule'), 'exclude': lambda f: f is None }})
+
     

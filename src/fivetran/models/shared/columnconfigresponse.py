@@ -13,10 +13,14 @@ from typing import Optional
 class ColumnConfigResponse:
     
     enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enabled'), 'exclude': lambda f: f is None }})
-    r"""The boolean value specifying whether the sync for the table into the destination is enabled."""  
-    enabled_patch_settings: Optional[shared_columnenabledpatchsettings.ColumnEnabledPatchSettings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enabled_patch_settings'), 'exclude': lambda f: f is None }})  
+
+    r"""The boolean value specifying whether the sync for the table into the destination is enabled."""
+    enabled_patch_settings: Optional[shared_columnenabledpatchsettings.ColumnEnabledPatchSettings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enabled_patch_settings'), 'exclude': lambda f: f is None }})
+
     hashed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hashed'), 'exclude': lambda f: f is None }})
-    r"""The boolean value specifying whether a column should be hashed"""  
+
+    r"""The boolean value specifying whether a column should be hashed"""
     name_in_destination: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name_in_destination'), 'exclude': lambda f: f is None }})
-    r"""The schema name within your destination in accordance with Fivetran conventional rules"""  
+
+    r"""The schema name within your destination in accordance with Fivetran conventional rules"""
     

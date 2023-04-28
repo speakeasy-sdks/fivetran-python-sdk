@@ -12,11 +12,15 @@ from typing import Optional
 class WebhookRequest:
     
     active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('active'), 'exclude': lambda f: f is None }})
-    r"""Boolean, if set to true, webhooks are immediately sent in response to events"""  
+
+    r"""Boolean, if set to true, webhooks are immediately sent in response to events"""
     events: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events'), 'exclude': lambda f: f is None }})
-    r"""The array of event types"""  
+
+    r"""The array of event types"""
     secret: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('secret'), 'exclude': lambda f: f is None }})
-    r"""The secret string used for payload signing. Optional."""  
+
+    r"""The secret string used for payload signing. Optional."""
     url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('url'), 'exclude': lambda f: f is None }})
-    r"""Your webhooks URL endpoint for your application"""  
+
+    r"""Your webhooks URL endpoint for your application"""
     
