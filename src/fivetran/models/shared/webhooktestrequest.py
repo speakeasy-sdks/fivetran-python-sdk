@@ -12,6 +12,5 @@ from typing import Optional
 class WebhookTestRequest:
     
     event: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('event'), 'exclude': lambda f: f is None }})
-
     r"""Events"""
     

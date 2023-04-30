@@ -20,12 +20,9 @@ class StandardConfigResponseSchemaChangeHandlingEnum(str, Enum):
 class StandardConfigResponse:
     
     enable_new_by_default: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enable_new_by_default'), 'exclude': lambda f: f is None }})
-
     r"""The boolean value specifying whether to enable new schemas, tables, and columns by default"""
     schema_change_handling: Optional[StandardConfigResponseSchemaChangeHandlingEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema_change_handling'), 'exclude': lambda f: f is None }})
-
     r"""The possible values for the schema_change_handling parameter are as follows: <br /> ALLOW_ALL - all new schemas, tables, and columns which appear in the source after the initial setup are included in syncs <br /> ALLOW_COLUMNS - all new schemas and tables which appear in the source after the initial setup are excluded from syncs, but new columns are included <br /> BLOCK_ALL - all new schemas, tables, and columns which appear in the source after the initial setup are excluded from syncs"""
     schemas: Optional[dict[str, shared_schemaconfigresponse.SchemaConfigResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schemas'), 'exclude': lambda f: f is None }})
-
     r"""The set of schemas within your connector schema config that are synced into the destination"""
     

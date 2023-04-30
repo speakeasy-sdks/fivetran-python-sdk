@@ -13,12 +13,9 @@ from typing import Optional
 class SchemaConfigResponse:
     
     enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enabled'), 'exclude': lambda f: f is None }})
-
     r"""The boolean value specifying whether the sync for the table into the destination is enabled."""
     name_in_destination: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name_in_destination'), 'exclude': lambda f: f is None }})
-
     r"""The schema name within your destination in accordance with Fivetran conventional rules"""
     tables: Optional[dict[str, shared_tableconfigresponse.TableConfigResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tables'), 'exclude': lambda f: f is None }})
-
     r"""The set of tables within your database schema config that are synced into the destination"""
     

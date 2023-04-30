@@ -13,16 +13,12 @@ from typing import Optional
 class ConnectorColumnConfigRequest:
     
     connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
-
     r"""The unique identifier for the connector within the Fivetran system"""
     schema: str = dataclasses.field(metadata={'path_param': { 'field_name': 'schema', 'style': 'simple', 'explode': False }})
-
     r"""The database schema name within your destination"""
     table: str = dataclasses.field(metadata={'path_param': { 'field_name': 'table', 'style': 'simple', 'explode': False }})
-
     r"""The table name within your database schema"""
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -31,12 +27,9 @@ class ConnectorColumnConfig200ApplicationJSON:
     r"""Successful response"""
     
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-
     r"""Response status code"""
     data: Optional[shared_tablecolumnsconfigresponse.TableColumnsConfigResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
-
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-
     r"""Response status text"""
     
 
@@ -44,12 +37,8 @@ class ConnectorColumnConfig200ApplicationJSON:
 class ConnectorColumnConfigResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     connector_column_config_200_application_json_object: Optional[ConnectorColumnConfig200ApplicationJSON] = dataclasses.field(default=None)
-
     r"""Successful response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

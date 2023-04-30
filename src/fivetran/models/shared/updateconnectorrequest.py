@@ -31,42 +31,29 @@ class UpdateConnectorRequestSyncFrequencyEnum(str, Enum):
 class UpdateConnectorRequest:
     
     auth: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth'), 'exclude': lambda f: f is None }})
-
     r"""The connector authorization settings. Check possible config formats in [create method](/openapi/reference/v1/operation/create_connector/)"""
     config: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('config'), 'exclude': lambda f: f is None }})
-
     r"""The connector setup configuration. Check possible config formats in [create method](/openapi/reference/v1/operation/create_connector/)"""
     daily_sync_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('daily_sync_time'), 'exclude': lambda f: f is None }})
-
     r"""The connector daily sync start time that we return only when the sync frequency is set to 1440 (which means 24 hours) and the daily_sync_time parameter was set using the Create a Connector or Modify a Connector request"""
     is_historical_sync: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_historical_sync'), 'exclude': lambda f: f is None }})
-
     r"""The boolean specifying whether the connector should be triggered to re-sync all historical data. If you set this parameter to TRUE, the next scheduled sync will be historical. If the value is FALSE or not specified, the connector will not re-sync historical data. NOTE: When the value is TRUE, only the next scheduled sync will be historical, all subsequent ones will be incremental. This parameter is set to FALSE once the historical sync is completed."""
     pause_after_trial: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pause_after_trial'), 'exclude': lambda f: f is None }})
-
     r"""Specifies whether the connector should be paused after the free trial period has ended"""
     paused: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paused'), 'exclude': lambda f: f is None }})
-
     r"""Specifies whether the connector is paused"""
     paused_after_trial: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paused_after_trial'), 'exclude': lambda f: f is None }})
-
     r"""Specifies whether the connector should be paused after the free trial period has ended"""
     run_setup_tests: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('run_setup_tests'), 'exclude': lambda f: f is None }})
-
     r"""Specifies whether the setup tests should be run automatically. The default value is TRUE."""
     schedule_type: Optional[UpdateConnectorRequestScheduleTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schedule_type'), 'exclude': lambda f: f is None }})
-
     r"""The connector schedule configuration type. Supported values: auto, manual"""
     schema_status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema_status'), 'exclude': lambda f: f is None }})
-
     r"""Schema status"""
     sync_frequency: Optional[UpdateConnectorRequestSyncFrequencyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sync_frequency'), 'exclude': lambda f: f is None }})
-
     r"""The connector sync frequency in minutes"""
     trust_certificates: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trust_certificates'), 'exclude': lambda f: f is None }})
-
     r"""Specifies whether we should trust the certificate automatically. The default value is FALSE. If a certificate is not trusted automatically, it has to be approved with [Certificates Management API Approve a destination certificate](https://fivetran.com/docs/rest-api/certificates#approveadestinationcertificate)."""
     trust_fingerprints: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trust_fingerprints'), 'exclude': lambda f: f is None }})
-
     r"""Specifies whether we should trust the SSH fingerprint automatically. The default value is FALSE. If a fingerprint is not trusted automatically, it has to be approved with [Certificates Management API Approve a destination fingerprint](https://fivetran.com/docs/rest-api/certificates#approveadestinationfingerprint)."""
     

@@ -14,9 +14,7 @@ from typing import Optional
 class CreateGroupRequest:
     
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-
     new_group_request: Optional[shared_newgrouprequest.NewGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -25,12 +23,9 @@ class CreateGroup201ApplicationJSON:
     r"""Successful response"""
     
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-
     r"""Response status code"""
     data: Optional[shared_groupresponse.GroupResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
-
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-
     r"""Response status text"""
     
 
@@ -38,12 +33,8 @@ class CreateGroup201ApplicationJSON:
 class CreateGroupResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     create_group_201_application_json_object: Optional[CreateGroup201ApplicationJSON] = dataclasses.field(default=None)
-
     r"""Successful response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

@@ -19,60 +19,40 @@ from typing import Any, Optional
 class ConnectorResponse:
     
     config: Optional[dict[str, dict[str, Any]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('config'), 'exclude': lambda f: f is None }})
-
     r"""The connector setup configuration."""
     connect_card: Optional[shared_connectcardresponse.ConnectCardResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connect_card'), 'exclude': lambda f: f is None }})
-
     connect_card_config: Optional[shared_connectcardconfig.ConnectCardConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connect_card_config'), 'exclude': lambda f: f is None }})
-
     connected_by: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connected_by'), 'exclude': lambda f: f is None }})
-
     r"""The unique identifier of the user who has created the connector in your account."""
     created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso'), 'exclude': lambda f: f is None }})
-
     r"""The timestamp of when the group was created in your account."""
     daily_sync_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('daily_sync_time'), 'exclude': lambda f: f is None }})
-
     r"""The optional parameter that defines the sync start time when the sync frequency is already set or being set by the current request to 1440. It can be specified in one hour increments starting from 00:00 to 23:00. If not specified, we will use the baseline sync start time. This parameter has no effect on the 0 to 60 minutes offset used to determine the actual sync start time."""
     failed_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('failed_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso'), 'exclude': lambda f: f is None }})
-
     r"""The timestamp of the time the connector sync failed last time."""
     group_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('group_id'), 'exclude': lambda f: f is None }})
-
     r"""The unique identifier for the group within the Fivetran system."""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-
     r"""The unique identifier for the group within the Fivetran system."""
     pause_after_trial: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pause_after_trial'), 'exclude': lambda f: f is None }})
-
     r"""Specifies whether the connector should be paused after the free trial period has ended."""
     paused: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paused'), 'exclude': lambda f: f is None }})
-
     r"""Specifies whether the connector is paused."""
     schedule_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schedule_type'), 'exclude': lambda f: f is None }})
-
     r"""The connector schedule config type. Supported values: auto, manual. Lets you disable or enable an automatic data sync on a schedule."""
     schema: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema'), 'exclude': lambda f: f is None }})
-
     r"""The name used both as the connector's name within the Fivetran system and as the source schema's name within your destination."""
     service: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('service'), 'exclude': lambda f: f is None }})
-
     r"""The name for the connector type within the Fivetran system."""
     service_version: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('service_version'), 'exclude': lambda f: f is None }})
-
     r"""The connector type version within the Fivetran system."""
     setup_tests: Optional[list[shared_setuptestresultresponse.SetupTestResultResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('setup_tests'), 'exclude': lambda f: f is None }})
-
     r"""Setup tests results"""
     source_sync_details: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source_sync_details'), 'exclude': lambda f: f is None }})
-
     r"""The additional information about the connector's state. The format of this parameter is specific for each connector type."""
     status: Optional[shared_connectorstatusresponse.ConnectorStatusResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-
     succeeded_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('succeeded_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso'), 'exclude': lambda f: f is None }})
-
     r"""The timestamp of the time the connector sync succeeded last time."""
     sync_frequency: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sync_frequency'), 'exclude': lambda f: f is None }})
-
     r"""The connector sync frequency in minutes"""
     

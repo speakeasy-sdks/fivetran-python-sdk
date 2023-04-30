@@ -28,15 +28,11 @@ class TransformationScheduleScheduleTypeEnum(str, Enum):
 class TransformationSchedule:
     
     days_of_week: Optional[list[TransformationScheduleDaysOfWeekEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('days_of_week'), 'exclude': lambda f: f is None }})
-
     r"""Days of week"""
     interval: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interval'), 'exclude': lambda f: f is None }})
-
     r"""Interval."""
     schedule_type: Optional[TransformationScheduleScheduleTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schedule_type'), 'exclude': lambda f: f is None }})
-
     r"""Schedule type"""
     time_of_day: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time_of_day'), 'exclude': lambda f: f is None }})
-
     r"""Time of day"""
     

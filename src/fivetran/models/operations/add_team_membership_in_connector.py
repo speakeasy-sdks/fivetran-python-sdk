@@ -14,12 +14,9 @@ from typing import Optional
 class AddTeamMembershipInConnectorRequest:
     
     team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
-
     r"""The unique identifier for the team within the account"""
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-
     membership_request: Optional[shared_membershiprequest.MembershipRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -28,12 +25,9 @@ class AddTeamMembershipInConnector201ApplicationJSON:
     r"""Successful response"""
     
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-
     r"""Response status code"""
     data: Optional[shared_membershipresponse.MembershipResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
-
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-
     r"""Response status text"""
     
 
@@ -41,12 +35,8 @@ class AddTeamMembershipInConnector201ApplicationJSON:
 class AddTeamMembershipInConnectorResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     add_team_membership_in_connector_201_application_json_object: Optional[AddTeamMembershipInConnector201ApplicationJSON] = dataclasses.field(default=None)
-
     r"""Successful response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

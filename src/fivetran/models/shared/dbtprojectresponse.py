@@ -15,15 +15,11 @@ from typing import Optional
 class DbtProjectResponse:
     
     created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso'), 'exclude': lambda f: f is None }})
-
     r"""The timestamp when DBT project was created."""
     created_by_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by_id'), 'exclude': lambda f: f is None }})
-
     r"""The unique identifier for the User within the Fivetran system."""
     group_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('group_id'), 'exclude': lambda f: f is None }})
-
     r"""The unique identifier for the Group within the Fivetran system."""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-
     r"""The unique identifier for the DBT Model within the Fivetran system."""
     

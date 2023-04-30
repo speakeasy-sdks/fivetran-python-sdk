@@ -14,9 +14,7 @@ from typing import Optional
 class CreateConnectorRequest:
     
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-
     new_connector_request_v1: Optional[shared_newconnectorrequestv1.NewConnectorRequestV1] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -25,12 +23,9 @@ class CreateConnector201ApplicationJSON:
     r"""Successful response"""
     
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-
     r"""Response status code"""
     data: Optional[shared_connectorresponsev1.ConnectorResponseV1] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
-
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-
     r"""Response status text"""
     
 
@@ -38,12 +33,8 @@ class CreateConnector201ApplicationJSON:
 class CreateConnectorResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     create_connector_201_application_json_object: Optional[CreateConnector201ApplicationJSON] = dataclasses.field(default=None)
-
     r"""Successful response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

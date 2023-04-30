@@ -13,13 +13,10 @@ from typing import Optional
 class MetadataConnectorConfigRequest:
     
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
-
     r"""The connector name within the Fivetran system"""
     service: str = dataclasses.field(metadata={'path_param': { 'field_name': 'service', 'style': 'simple', 'explode': False }})
-
     r"""[The connector type](https://fivetran.com/docs/rest-api/getting-started#commonterms) identifier within the Fivetran system"""
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -28,12 +25,9 @@ class MetadataConnectorConfig200ApplicationJSON:
     r"""Successful response"""
     
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-
     r"""Response status code"""
     data: Optional[shared_metadataresponse.MetadataResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
-
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-
     r"""Response status text"""
     
 
@@ -41,12 +35,8 @@ class MetadataConnectorConfig200ApplicationJSON:
 class MetadataConnectorConfigResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     metadata_connector_config_200_application_json_object: Optional[MetadataConnectorConfig200ApplicationJSON] = dataclasses.field(default=None)
-
     r"""Successful response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

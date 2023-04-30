@@ -13,15 +13,11 @@ from typing import Optional
 class ListDbtProjectsRequest:
     
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-
     cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-
     r"""Paging cursor, [read more about pagination](https://fivetran.com/docs/rest-api/pagination)"""
     group_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'group_id', 'style': 'form', 'explode': True }})
-
     r"""The unique identifier for the Group within the Fivetran system."""
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-
     r"""Number of records to fetch per page. Accepts a number in the range 1..1000; the default value is 100."""
     
 
@@ -30,10 +26,8 @@ class ListDbtProjectsRequest:
 class ListDbtProjects200ApplicationJSONData:
     
     items: Optional[list[shared_dbtprojectresponse.DbtProjectResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('items'), 'exclude': lambda f: f is None }})
-
     r"""The collection of return items"""
     next_cursor: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nextCursor'), 'exclude': lambda f: f is None }})
-
     r"""The value of the cursor parameter for the next page"""
     
 
@@ -43,12 +37,9 @@ class ListDbtProjects200ApplicationJSON:
     r"""Successful response"""
     
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-
     r"""Response status code"""
     data: Optional[ListDbtProjects200ApplicationJSONData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
-
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-
     r"""Response status text"""
     
 
@@ -56,12 +47,8 @@ class ListDbtProjects200ApplicationJSON:
 class ListDbtProjectsResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     list_dbt_projects_200_application_json_object: Optional[ListDbtProjects200ApplicationJSON] = dataclasses.field(default=None)
-
     r"""Successful response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

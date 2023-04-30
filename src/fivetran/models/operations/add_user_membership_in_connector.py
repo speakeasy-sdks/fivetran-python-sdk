@@ -12,24 +12,17 @@ from typing import Optional
 class AddUserMembershipInConnectorRequest:
     
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
-
     r"""The unique identifier for the user within the account."""
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-
     membership_request: Optional[shared_membershiprequest.MembershipRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-
     
 
 @dataclasses.dataclass
 class AddUserMembershipInConnectorResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     membership_response: Optional[shared_membershipresponse.MembershipResponse] = dataclasses.field(default=None)
-
     r"""Successful response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

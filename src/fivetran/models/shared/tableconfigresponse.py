@@ -21,17 +21,12 @@ class TableConfigResponseSyncModeEnum(str, Enum):
 class TableConfigResponse:
     
     columns: Optional[dict[str, shared_columnconfigresponse.ColumnConfigResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('columns'), 'exclude': lambda f: f is None }})
-
     r"""The set of columns within your table schema config that are synced into the destination"""
     enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enabled'), 'exclude': lambda f: f is None }})
-
     r"""The boolean value specifying whether the sync for the table into the destination is enabled."""
     enabled_patch_settings: Optional[shared_tableenabledpatchsettings.TableEnabledPatchSettings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enabled_patch_settings'), 'exclude': lambda f: f is None }})
-
     name_in_destination: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name_in_destination'), 'exclude': lambda f: f is None }})
-
     r"""The schema name within your destination in accordance with Fivetran conventional rules"""
     sync_mode: Optional[TableConfigResponseSyncModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sync_mode'), 'exclude': lambda f: f is None }})
-
     r"""This field appears in the response if the connector supports switching sync modes for tables"""
     

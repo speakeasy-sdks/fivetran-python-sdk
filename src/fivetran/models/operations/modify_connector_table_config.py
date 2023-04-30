@@ -14,18 +14,13 @@ from typing import Optional
 class ModifyConnectorTableConfigRequest:
     
     connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
-
     r"""The unique identifier for the connector within the Fivetran system"""
     schema_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'schemaName', 'style': 'simple', 'explode': False }})
-
     r"""The database schema name within your destination (different from the connector schema)"""
     table_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tableName', 'style': 'simple', 'explode': False }})
-
     r"""The table name within your database schema"""
     accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-
     table_update_request: Optional[shared_tableupdaterequest.TableUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -34,12 +29,9 @@ class ModifyConnectorTableConfig200ApplicationJSON:
     r"""Successful response"""
     
     code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-
     r"""Response status code"""
     data: Optional[shared_standardconfigresponse.StandardConfigResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
-
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-
     r"""Response status text"""
     
 
@@ -47,12 +39,8 @@ class ModifyConnectorTableConfig200ApplicationJSON:
 class ModifyConnectorTableConfigResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     modify_connector_table_config_200_application_json_object: Optional[ModifyConnectorTableConfig200ApplicationJSON] = dataclasses.field(default=None)
-
     r"""Successful response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     
