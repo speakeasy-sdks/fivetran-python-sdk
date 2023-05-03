@@ -43,12 +43,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.AddTeamMembershipInConnectorRequest(
-    accept="application/json",
+    accept='application/json',
     membership_request=shared.MembershipRequest(
-        id="9a3efa77-dfb1-44cd-a6ae-395efb9ba88f",
-        role="amet",
+        id='9a3efa77-dfb1-44cd-a6ae-395efb9ba88f',
+        role='amet',
     ),
-    team_id="deserunt",
+    team_id='deserunt',
 )
 
 res = s.team_management.add_team_membership_in_connector(req)
@@ -76,12 +76,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.AddTeamMembershipInGroupRequest(
-    accept="application/json",
+    accept='application/json',
     membership_request=shared.MembershipRequest(
-        id="66997074-ba44-469b-ae21-41959890afa5",
-        role="eum",
+        id='66997074-ba44-469b-ae21-41959890afa5',
+        role='eum',
     ),
-    team_id="dolor",
+    team_id='dolor',
 )
 
 res = s.team_management.add_team_membership_in_group(req)
@@ -109,12 +109,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.AddUserToTeamRequest(
-    accept="application/json",
+    accept='application/json',
     team_membership_request=shared.TeamMembershipRequest(
-        role="necessitatibus",
-        user_id="odit",
+        role='necessitatibus',
+        user_id='odit',
     ),
-    team_id="nemo",
+    team_id='nemo',
 )
 
 res = s.team_management.add_user_to_team(req)
@@ -142,11 +142,11 @@ s = fivetran.Fivetran(
 
 
 req = operations.CreateTeamRequest(
-    accept="application/json",
+    accept='application/json',
     team_request=shared.TeamRequest(
-        description="quasi",
-        name="Melba Toy",
-        role="deleniti",
+        description='quasi',
+        name='Melba Toy',
+        role='deleniti',
     ),
 )
 
@@ -175,8 +175,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteTeamRequest(
-    accept="application/json",
-    team_id="facilis",
+    accept='application/json',
+    team_id='facilis',
 )
 
 res = s.team_management.delete_team(req)
@@ -204,8 +204,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteTeamMembershipInAccountRequest(
-    accept="application/json",
-    team_id="in",
+    accept='application/json',
+    team_id='in',
 )
 
 res = s.team_management.delete_team_membership_in_account(req)
@@ -233,9 +233,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteTeamMembershipInConnectorRequest(
-    accept="application/json",
-    connector_id="architecto",
-    team_id="architecto",
+    accept='application/json',
+    connector_id='architecto',
+    team_id='architecto',
 )
 
 res = s.team_management.delete_team_membership_in_connector(req)
@@ -263,9 +263,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteTeamMembershipInGroupRequest(
-    accept="application/json",
-    group_id="repudiandae",
-    team_id="ullam",
+    accept='application/json',
+    group_id='repudiandae',
+    team_id='ullam',
 )
 
 res = s.team_management.delete_team_membership_in_group(req)
@@ -293,9 +293,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteUserFromTeamRequest(
-    accept="application/json",
-    team_id="expedita",
-    user_id="nihil",
+    accept='application/json',
+    team_id='expedita',
+    user_id='nihil',
 )
 
 res = s.team_management.delete_user_from_team(req)
@@ -323,9 +323,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.GetTeamMembershipInConnectorRequest(
-    accept="application/json",
-    connector_id="repellat",
-    team_id="quibusdam",
+    accept='application/json',
+    connector_id='repellat',
+    team_id='quibusdam',
 )
 
 res = s.team_management.get_team_membership_in_connector(req)
@@ -353,9 +353,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.GetTeamMembershipInGroupRequest(
-    accept="application/json",
-    group_id="sed",
-    team_id="saepe",
+    accept='application/json',
+    group_id='sed',
+    team_id='saepe',
 )
 
 res = s.team_management.get_team_membership_in_group(req)
@@ -383,10 +383,10 @@ s = fivetran.Fivetran(
 
 
 req = operations.GetTeamMembershipsInConnectorsRequest(
-    accept="application/json",
-    cursor="pariatur",
+    accept='application/json',
+    cursor='pariatur',
     limit=37559,
-    team_id="consequuntur",
+    team_id='consequuntur',
 )
 
 res = s.team_management.get_team_memberships_in_connectors(req)
@@ -414,10 +414,10 @@ s = fivetran.Fivetran(
 
 
 req = operations.GetTeamMembershipsInGroupsRequest(
-    accept="application/json",
-    cursor="praesentium",
+    accept='application/json',
+    cursor='praesentium',
     limit=615560,
-    team_id="magni",
+    team_id='magni',
 )
 
 res = s.team_management.get_team_memberships_in_groups(req)
@@ -445,9 +445,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.GetUserInTeamRequest(
-    accept="application/json",
-    team_id="sunt",
-    user_id="quo",
+    accept='application/json',
+    team_id='sunt',
+    user_id='quo',
 )
 
 res = s.team_management.get_user_in_team(req)
@@ -475,8 +475,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.ListAllTeamsRequest(
-    accept="application/json",
-    cursor="illum",
+    accept='application/json',
+    cursor='illum',
     limit=864934,
 )
 
@@ -505,10 +505,10 @@ s = fivetran.Fivetran(
 
 
 req = operations.ListUsersInTeamRequest(
-    accept="application/json",
-    cursor="maxime",
+    accept='application/json',
+    cursor='maxime',
     limit=411397,
-    team_id="excepturi",
+    team_id='excepturi',
 )
 
 res = s.team_management.list_users_in_team(req)
@@ -536,13 +536,13 @@ s = fivetran.Fivetran(
 
 
 req = operations.ModifyTeamRequest(
-    accept="application/json",
+    accept='application/json',
     team_request=shared.TeamRequest(
-        description="odit",
-        name="Donna Bernhard",
-        role="ipsam",
+        description='odit',
+        name='Donna Bernhard',
+        role='ipsam',
     ),
-    team_id="voluptate",
+    team_id='voluptate',
 )
 
 res = s.team_management.modify_team(req)
@@ -570,8 +570,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.TeamDetailsRequest(
-    accept="application/json",
-    team_id="autem",
+    accept='application/json',
+    team_id='autem',
 )
 
 res = s.team_management.team_details(req)
@@ -599,12 +599,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.UpdateTeamMembershipInConnectorRequest(
-    accept="application/json",
+    accept='application/json',
     update_membership_request=shared.UpdateMembershipRequest(
-        role="nam",
+        role='nam',
     ),
-    connector_id="eaque",
-    team_id="pariatur",
+    connector_id='eaque',
+    team_id='pariatur',
 )
 
 res = s.team_management.update_team_membership_in_connector(req)
@@ -632,12 +632,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.UpdateTeamMembershipInGroupRequest(
-    accept="application/json",
+    accept='application/json',
     update_membership_request=shared.UpdateMembershipRequest(
-        role="nemo",
+        role='nemo',
     ),
-    group_id="voluptatibus",
-    team_id="perferendis",
+    group_id='voluptatibus',
+    team_id='perferendis',
 )
 
 res = s.team_management.update_team_membership_in_group(req)
@@ -665,12 +665,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.UpdateUserMembershipRequest(
-    accept="application/json",
+    accept='application/json',
     update_membership_request=shared.UpdateMembershipRequest(
-        role="fugiat",
+        role='fugiat',
     ),
-    team_id="amet",
-    user_id="aut",
+    team_id='amet',
+    user_id='aut',
 )
 
 res = s.team_management.update_user_membership(req)

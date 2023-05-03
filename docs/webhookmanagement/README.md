@@ -29,14 +29,14 @@ s = fivetran.Fivetran(
 
 
 req = operations.CreateAccountWebhookRequest(
-    accept="application/json",
+    accept='application/json',
     webhook_request=shared.WebhookRequest(
         active=False,
         events=[
-            "perferendis",
+            'perferendis',
         ],
-        secret="amet",
-        url="optio",
+        secret='amet',
+        url='optio',
     ),
 )
 
@@ -65,19 +65,19 @@ s = fivetran.Fivetran(
 
 
 req = operations.CreateGroupWebhookRequest(
-    accept="application/json",
+    accept='application/json',
     webhook_request=shared.WebhookRequest(
         active=False,
         events=[
-            "ad",
-            "saepe",
-            "suscipit",
-            "deserunt",
+            'ad',
+            'saepe',
+            'suscipit',
+            'deserunt',
         ],
-        secret="provident",
-        url="minima",
+        secret='provident',
+        url='minima',
     ),
-    group_id="repellendus",
+    group_id='repellendus',
 )
 
 res = s.webhook_management.create_group_webhook(req)
@@ -105,8 +105,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteWebhookRequest(
-    accept="application/json",
-    webhook_id="totam",
+    accept='application/json',
+    webhook_id='totam',
 )
 
 res = s.webhook_management.delete_webhook(req)
@@ -134,8 +134,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.ListAllWebhooksRequest(
-    accept="application/json",
-    cursor="similique",
+    accept='application/json',
+    cursor='similique',
     limit=55,
 )
 
@@ -164,19 +164,19 @@ s = fivetran.Fivetran(
 
 
 req = operations.ModifyWebhookRequest(
-    accept="application/json",
+    accept='application/json',
     webhook_request=shared.WebhookRequest(
         active=False,
         events=[
-            "quaerat",
-            "tempora",
-            "vel",
-            "quod",
+            'quaerat',
+            'tempora',
+            'vel',
+            'quod',
         ],
-        secret="officiis",
-        url="qui",
+        secret='officiis',
+        url='qui',
     ),
-    webhook_id="dolorum",
+    webhook_id='dolorum',
 )
 
 res = s.webhook_management.modify_webhook(req)
@@ -204,11 +204,11 @@ s = fivetran.Fivetran(
 
 
 req = operations.TestWebhookRequest(
-    accept="application/json",
+    accept='application/json',
     webhook_test_request=shared.WebhookTestRequest(
-        event="a",
+        event='a',
     ),
-    webhook_id="esse",
+    webhook_id='esse',
 )
 
 res = s.webhook_management.test_webhook(req)
@@ -236,8 +236,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.WebhookDetailsRequest(
-    accept="application/json",
-    webhook_id="harum",
+    accept='application/json',
+    webhook_id='harum',
 )
 
 res = s.webhook_management.webhook_details(req)

@@ -25,9 +25,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.ColumnMetadataRequest(
-    accept="application/json",
-    connector_id="facilis",
-    cursor="tempore",
+    accept='application/json',
+    connector_id='facilis',
+    cursor='tempore',
     limit=288476,
 )
 
@@ -56,9 +56,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.SchemaMetadataRequest(
-    accept="application/json",
-    connector_id="delectus",
-    cursor="eum",
+    accept='application/json',
+    connector_id='delectus',
+    cursor='eum',
     limit=248753,
 )
 
@@ -87,9 +87,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.TableMetadataRequest(
-    accept="application/json",
-    connector_id="eligendi",
-    cursor="sint",
+    accept='application/json',
+    connector_id='eligendi',
+    cursor='sint',
     limit=396098,
 )
 

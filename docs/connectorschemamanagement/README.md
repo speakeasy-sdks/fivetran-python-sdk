@@ -30,10 +30,10 @@ s = fivetran.Fivetran(
 
 
 req = operations.ConnectorColumnConfigRequest(
-    accept="application/json",
-    connector_id="cum",
-    schema="esse",
-    table="ipsum",
+    accept='application/json',
+    connector_id='cum',
+    schema='esse',
+    table='ipsum',
 )
 
 res = s.connector_schema_management.connector_column_config(req)
@@ -61,8 +61,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.ConnectorSchemaConfigRequest(
-    accept="application/json",
-    connector_id="excepturi",
+    accept='application/json',
+    connector_id='excepturi',
 )
 
 res = s.connector_schema_management.connector_schema_config(req)
@@ -90,15 +90,15 @@ s = fivetran.Fivetran(
 
 
 req = operations.ModifyConnectorColumnConfigRequest(
-    accept="application/json",
+    accept='application/json',
     column_update_request=shared.ColumnUpdateRequest(
         enabled=False,
         hashed=False,
     ),
-    column_name="aspernatur",
-    connector_id="perferendis",
-    schema_name="ad",
-    table_name="natus",
+    column_name='aspernatur',
+    connector_id='perferendis',
+    schema_name='ad',
+    table_name='natus',
 )
 
 res = s.connector_schema_management.modify_connector_column_config(req)
@@ -126,7 +126,7 @@ s = fivetran.Fivetran(
 
 
 req = operations.ModifyConnectorDatabaseSchemaConfigRequest(
-    accept="application/json",
+    accept='application/json',
     schema_update_request=shared.SchemaUpdateRequest(
         enabled=False,
         tables={
@@ -138,12 +138,12 @@ req = operations.ModifyConnectorDatabaseSchemaConfigRequest(
                     ),
                 },
                 enabled=False,
-                sync_mode="HISTORY",
+                sync_mode=shared.TableUpdateRequestSyncModeEnum.HISTORY,
             ),
         },
     ),
-    connector_id="hic",
-    schema_name="saepe",
+    connector_id='hic',
+    schema_name='saepe',
 )
 
 res = s.connector_schema_management.modify_connector_database_schema_config(req)
@@ -171,9 +171,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.ModifyConnectorSchemaConfigRequest(
-    accept="application/json",
+    accept='application/json',
     standard_config_update_request=shared.StandardConfigUpdateRequest(
-        schema_change_handling="BLOCK_ALL",
+        schema_change_handling=shared.StandardConfigUpdateRequestSchemaChangeHandlingEnum.BLOCK_ALL,
         schemas={
             "corporis": shared.SchemaUpdateRequest(
                 enabled=False,
@@ -198,7 +198,7 @@ req = operations.ModifyConnectorSchemaConfigRequest(
                             ),
                         },
                         enabled=False,
-                        sync_mode="LIVE",
+                        sync_mode=shared.TableUpdateRequestSyncModeEnum.LIVE,
                     ),
                     "mollitia": shared.TableUpdateRequest(
                         columns={
@@ -216,7 +216,7 @@ req = operations.ModifyConnectorSchemaConfigRequest(
                             ),
                         },
                         enabled=False,
-                        sync_mode="SOFT_DELETE",
+                        sync_mode=shared.TableUpdateRequestSyncModeEnum.SOFT_DELETE,
                     ),
                     "nobis": shared.TableUpdateRequest(
                         columns={
@@ -230,7 +230,7 @@ req = operations.ModifyConnectorSchemaConfigRequest(
                             ),
                         },
                         enabled=False,
-                        sync_mode="SOFT_DELETE",
+                        sync_mode=shared.TableUpdateRequestSyncModeEnum.SOFT_DELETE,
                     ),
                 },
             ),
@@ -253,13 +253,13 @@ req = operations.ModifyConnectorSchemaConfigRequest(
                             ),
                         },
                         enabled=False,
-                        sync_mode="HISTORY",
+                        sync_mode=shared.TableUpdateRequestSyncModeEnum.HISTORY,
                     ),
                 },
             ),
         },
     ),
-    connector_id="dolorem",
+    connector_id='dolorem',
 )
 
 res = s.connector_schema_management.modify_connector_schema_config(req)
@@ -287,7 +287,7 @@ s = fivetran.Fivetran(
 
 
 req = operations.ModifyConnectorTableConfigRequest(
-    accept="application/json",
+    accept='application/json',
     table_update_request=shared.TableUpdateRequest(
         columns={
             "consequuntur": shared.ColumnUpdateRequest(
@@ -304,11 +304,11 @@ req = operations.ModifyConnectorTableConfigRequest(
             ),
         },
         enabled=False,
-        sync_mode="HISTORY",
+        sync_mode=shared.TableUpdateRequestSyncModeEnum.HISTORY,
     ),
-    connector_id="numquam",
-    schema_name="commodi",
-    table_name="quam",
+    connector_id='numquam',
+    schema_name='commodi',
+    table_name='quam',
 )
 
 res = s.connector_schema_management.modify_connector_table_config(req)
@@ -336,11 +336,11 @@ s = fivetran.Fivetran(
 
 
 req = operations.ReloadConnectorSchemaConfigRequest(
-    accept="application/json",
+    accept='application/json',
     reload_standard_config_request=shared.ReloadStandardConfigRequest(
-        exclude_mode="molestiae",
+        exclude_mode='molestiae',
     ),
-    connector_id="velit",
+    connector_id='velit',
 )
 
 res = s.connector_schema_management.reload_connector_schema_config(req)
@@ -368,24 +368,24 @@ s = fivetran.Fivetran(
 
 
 req = operations.ResyncTablesRequest(
-    accept="application/json",
+    accept='application/json',
     request_body={
         "quia": [
-            "vitae",
-            "laborum",
+            'vitae',
+            'laborum',
         ],
         "animi": [
-            "odit",
-            "quo",
+            'odit',
+            'quo',
         ],
         "sequi": [
-            "ipsam",
-            "id",
-            "possimus",
-            "aut",
+            'ipsam',
+            'id',
+            'possimus',
+            'aut',
         ],
     },
-    connector_id="quasi",
+    connector_id='quasi',
 )
 
 res = s.connector_schema_management.resync_tables(req)

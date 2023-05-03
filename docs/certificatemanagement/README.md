@@ -24,12 +24,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.ApproveCertificateRequest(
-    accept="application/json",
+    accept='application/json',
     trust_certificate_request=shared.TrustCertificateRequest(
-        connector_id="unde",
-        destination_id="nulla",
-        encoded_cert="corrupti",
-        hash="illum",
+        connector_id='unde',
+        destination_id='nulla',
+        encoded_cert='corrupti',
+        hash='illum',
     ),
 )
 
@@ -58,12 +58,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.ApproveFingerprintRequest(
-    accept="application/json",
+    accept='application/json',
     trust_fingerprint_request=shared.TrustFingerprintRequest(
-        connector_id="vel",
-        destination_id="error",
-        hash="deserunt",
-        public_key="suscipit",
+        connector_id='vel',
+        destination_id='error',
+        hash='deserunt',
+        public_key='suscipit',
     ),
 )
 

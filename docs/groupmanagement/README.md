@@ -31,12 +31,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.AddUserToGroupRequest(
-    accept="application/json",
+    accept='application/json',
     add_user_to_group_request=shared.AddUserToGroupRequest(
-        email="Roosevelt_Cole@hotmail.com",
-        role="quibusdam",
+        email='Roosevelt_Cole@hotmail.com',
+        role='quibusdam',
     ),
-    group_id="labore",
+    group_id='labore',
 )
 
 res = s.group_management.add_user_to_group(req)
@@ -64,9 +64,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.CreateGroupRequest(
-    accept="application/json",
+    accept='application/json',
     new_group_request=shared.NewGroupRequest(
-        name="string",
+        name='string',
     ),
 )
 
@@ -95,8 +95,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteGroupRequest(
-    accept="application/json",
-    group_id="modi",
+    accept='application/json',
+    group_id='modi',
 )
 
 res = s.group_management.delete_group(req)
@@ -124,9 +124,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteUserFromGroupRequest(
-    accept="application/json",
-    group_id="qui",
-    user_id="aliquid",
+    accept='application/json',
+    group_id='qui',
+    user_id='aliquid',
 )
 
 res = s.group_management.delete_user_from_group(req)
@@ -154,8 +154,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.GroupDetailsRequest(
-    accept="application/json",
-    group_id="cupiditate",
+    accept='application/json',
+    group_id='cupiditate',
 )
 
 res = s.group_management.group_details(req)
@@ -183,11 +183,11 @@ s = fivetran.Fivetran(
 
 
 req = operations.ListAllConnectorsInGroupRequest(
-    accept="application/json",
-    cursor="quos",
-    group_id="perferendis",
+    accept='application/json',
+    cursor='quos',
+    group_id='perferendis',
     limit=164940,
-    schema="assumenda",
+    schema='assumenda',
 )
 
 res = s.group_management.list_all_connectors_in_group(req)
@@ -215,8 +215,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.ListAllGroupsRequest(
-    accept="application/json",
-    cursor="ipsam",
+    accept='application/json',
+    cursor='ipsam',
     limit=4695,
 )
 
@@ -245,9 +245,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.ListAllUsersInGroupRequest(
-    accept="application/json",
-    cursor="fugit",
-    group_id="dolorum",
+    accept='application/json',
+    cursor='fugit',
+    group_id='dolorum',
     limit=569618,
 )
 
@@ -276,11 +276,11 @@ s = fivetran.Fivetran(
 
 
 req = operations.ModifyGroupRequest(
-    accept="application/json",
+    accept='application/json',
     update_group_request=shared.UpdateGroupRequest(
-        name="string",
+        name='string',
     ),
-    group_id="tempora",
+    group_id='tempora',
 )
 
 res = s.group_management.modify_group(req)

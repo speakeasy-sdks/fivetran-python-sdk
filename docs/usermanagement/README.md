@@ -38,12 +38,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.AddUserMembershipInConnectorRequest(
-    accept="application/json",
+    accept='application/json',
     membership_request=shared.MembershipRequest(
-        id="c5fbb258-7053-4202-873d-5fe9b90c2890",
-        role="occaecati",
+        id='c5fbb258-7053-4202-873d-5fe9b90c2890',
+        role='occaecati',
     ),
-    user_id="rerum",
+    user_id='rerum',
 )
 
 res = s.user_management.add_user_membership_in_connector(req)
@@ -71,12 +71,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.AddUserMembershipInGroupRequest(
-    accept="application/json",
+    accept='application/json',
     membership_request=shared.MembershipRequest(
-        id="3fe49a8d-9cbf-4486-b332-3f9b77f3a410",
-        role="ipsa",
+        id='3fe49a8d-9cbf-4486-b332-3f9b77f3a410',
+        role='ipsa',
     ),
-    user_id="iure",
+    user_id='iure',
 )
 
 res = s.user_management.add_user_membership_in_group(req)
@@ -104,14 +104,14 @@ s = fivetran.Fivetran(
 
 
 req = operations.CreateUserRequest(
-    accept="application/json",
+    accept='application/json',
     new_user_request=shared.NewUserRequest(
-        email="string",
-        family_name="string",
-        given_name="string",
-        phone="string",
-        picture="string",
-        role="odio",
+        email='string',
+        family_name='string',
+        given_name='string',
+        phone='string',
+        picture='string',
+        role='odio',
     ),
 )
 
@@ -140,8 +140,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteUserRequest(
-    accept="application/json",
-    user_id="quaerat",
+    accept='application/json',
+    user_id='quaerat',
 )
 
 res = s.user_management.delete_user(req)
@@ -169,8 +169,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteUserMembershipInAccountRequest(
-    accept="application/json",
-    user_id="accusamus",
+    accept='application/json',
+    user_id='accusamus',
 )
 
 res = s.user_management.delete_user_membership_in_account(req)
@@ -198,9 +198,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteUserMembershipInConnectorRequest(
-    accept="application/json",
-    connector_id="quidem",
-    user_id="voluptatibus",
+    accept='application/json',
+    connector_id='quidem',
+    user_id='voluptatibus',
 )
 
 res = s.user_management.delete_user_membership_in_connector(req)
@@ -228,9 +228,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteUserMembershipInGroupRequest(
-    accept="application/json",
-    group_id="voluptas",
-    user_id="natus",
+    accept='application/json',
+    group_id='voluptas',
+    user_id='natus',
 )
 
 res = s.user_management.delete_user_membership_in_group(req)
@@ -258,9 +258,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.GetUserMembershipInConnectorRequest(
-    accept="application/json",
-    connector_id="eos",
-    user_id="atque",
+    accept='application/json',
+    connector_id='eos',
+    user_id='atque',
 )
 
 res = s.user_management.get_user_membership_in_connector(req)
@@ -288,9 +288,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.GetUserMembershipInGroupRequest(
-    accept="application/json",
-    group_id="sit",
-    user_id="fugiat",
+    accept='application/json',
+    group_id='sit',
+    user_id='fugiat',
 )
 
 res = s.user_management.get_user_membership_in_group(req)
@@ -318,10 +318,10 @@ s = fivetran.Fivetran(
 
 
 req = operations.GetUserMembershipsInConnectorsRequest(
-    accept="application/json",
-    cursor="ab",
+    accept='application/json',
+    cursor='ab',
     limit=743835,
-    user_id="dolorum",
+    user_id='dolorum',
 )
 
 res = s.user_management.get_user_memberships_in_connectors(req)
@@ -349,10 +349,10 @@ s = fivetran.Fivetran(
 
 
 req = operations.GetUserMembershipsInGroupsRequest(
-    accept="application/json",
-    cursor="iusto",
+    accept='application/json',
+    cursor='iusto',
     limit=453697,
-    user_id="dolorum",
+    user_id='dolorum',
 )
 
 res = s.user_management.get_user_memberships_in_groups(req)
@@ -380,8 +380,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.ListAllUsersRequest(
-    accept="application/json",
-    cursor="deleniti",
+    accept='application/json',
+    cursor='deleniti',
     limit=607045,
 )
 
@@ -410,15 +410,15 @@ s = fivetran.Fivetran(
 
 
 req = operations.ModifyUserRequest(
-    accept="application/json",
+    accept='application/json',
     update_user_request=shared.UpdateUserRequest(
-        family_name="string",
-        given_name="string",
-        phone="string",
-        picture="string",
-        role="necessitatibus",
+        family_name='string',
+        given_name='string',
+        phone='string',
+        picture='string',
+        role='necessitatibus',
     ),
-    user_id="distinctio",
+    user_id='distinctio',
 )
 
 res = s.user_management.modify_user(req)
@@ -446,12 +446,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.UpdateUserMembershipInConnectorRequest(
-    accept="application/json",
+    accept='application/json',
     update_membership_request=shared.UpdateMembershipRequest(
-        role="asperiores",
+        role='asperiores',
     ),
-    connector_id="nihil",
-    user_id="ipsum",
+    connector_id='nihil',
+    user_id='ipsum',
 )
 
 res = s.user_management.update_user_membership_in_connector(req)
@@ -479,12 +479,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.UpdateUserMembershipInGroupRequest(
-    accept="application/json",
+    accept='application/json',
     update_membership_request=shared.UpdateMembershipRequest(
-        role="voluptate",
+        role='voluptate',
     ),
-    group_id="id",
-    user_id="saepe",
+    group_id='id',
+    user_id='saepe',
 )
 
 res = s.user_management.update_user_membership_in_group(req)
@@ -512,8 +512,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.UserDetailsRequest(
-    accept="application/json",
-    user_id="eius",
+    accept='application/json',
+    user_id='eius',
 )
 
 res = s.user_management.user_details(req)

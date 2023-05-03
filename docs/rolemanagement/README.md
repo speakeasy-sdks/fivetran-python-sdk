@@ -23,8 +23,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.ListAllRolesRequest(
-    accept="application/json",
-    cursor="provident",
+    accept='application/json',
+    cursor='provident',
     limit=896039,
 )
 

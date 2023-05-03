@@ -32,14 +32,14 @@ s = fivetran.Fivetran(
 
 
 req = operations.ConnectCardRequest(
-    accept="application/json;version=2",
+    accept='application/json;version=2',
     connect_card_config_request=shared.ConnectCardConfigRequest(
         connect_card_config=shared.ConnectCardConfig(
             hide_setup_guide=False,
-            redirect_uri="iure",
+            redirect_uri='iure',
         ),
     ),
-    connector_id="magnam",
+    connector_id='magnam',
 )
 
 res = s.connector_management.connect_card(req)
@@ -67,8 +67,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.ConnectorDetailsRequest(
-    accept="application/json;version=2",
-    connector_id="debitis",
+    accept='application/json;version=2',
+    connector_id='debitis',
 )
 
 res = s.connector_management.connector_details(req)
@@ -96,20 +96,20 @@ s = fivetran.Fivetran(
 
 
 req = operations.CreateConnectorRequest(
-    accept="application/json;version=2",
+    accept='application/json;version=2',
     new_connector_request_v1=shared.NewConnectorRequestV1(
         connect_card_config=shared.ConnectCardConfig(
             hide_setup_guide=False,
-            redirect_uri="ipsa",
+            redirect_uri='ipsa',
         ),
-        daily_sync_time="delectus",
-        group_id="tempora",
+        daily_sync_time='delectus',
+        group_id='tempora',
         pause_after_trial=False,
         paused=False,
         run_setup_tests=False,
-        schedule_type="suscipit",
-        service="molestiae",
-        sync_frequency="480",
+        schedule_type='suscipit',
+        service='molestiae',
+        sync_frequency=shared.NewConnectorRequestV1SyncFrequencyEnum.FOUR_HUNDRED_AND_EIGHTY,
         trust_certificates=False,
         trust_fingerprints=False,
     ),
@@ -140,8 +140,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteConnectorRequest(
-    accept="application/json;version=2",
-    connector_id="placeat",
+    accept='application/json;version=2',
+    connector_id='placeat',
 )
 
 res = s.connector_management.delete_connector(req)
@@ -169,9 +169,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.MetadataConnectorConfigRequest(
-    accept="application/json;version=2",
-    name="Ted Mante",
-    service="temporibus",
+    accept='application/json;version=2',
+    name='Ted Mante',
+    service='temporibus',
 )
 
 res = s.connector_management.metadata_connector_config(req)
@@ -199,10 +199,10 @@ s = fivetran.Fivetran(
 
 
 req = operations.MetadataConnectorsRequest(
-    accept="application/json;version=2",
-    cursor="ab",
+    accept='application/json;version=2',
+    cursor='ab',
     limit=337396,
-    name="Iris Aufderhar",
+    name='Iris Aufderhar',
 )
 
 res = s.connector_management.metadata_connectors(req)
@@ -230,23 +230,23 @@ s = fivetran.Fivetran(
 
 
 req = operations.ModifyConnectorRequest(
-    accept="application/json;version=2",
+    accept='application/json;version=2',
     update_connector_request=shared.UpdateConnectorRequest(
-        auth="sapiente",
-        config="quo",
-        daily_sync_time="odit",
+        auth='sapiente',
+        config='quo',
+        daily_sync_time='odit',
         is_historical_sync=False,
         pause_after_trial=False,
         paused=False,
         paused_after_trial=False,
         run_setup_tests=False,
-        schedule_type="manual",
-        schema_status="at",
-        sync_frequency="1440",
+        schedule_type=shared.UpdateConnectorRequestScheduleTypeEnum.MANUAL,
+        schema_status='at',
+        sync_frequency=shared.UpdateConnectorRequestSyncFrequencyEnum.ONE_THOUSAND_FOUR_HUNDRED_AND_FORTY,
         trust_certificates=False,
         trust_fingerprints=False,
     ),
-    connector_id="molestiae",
+    connector_id='molestiae',
 )
 
 res = s.connector_management.modify_connector(req)
@@ -274,29 +274,29 @@ s = fivetran.Fivetran(
 
 
 req = operations.ResyncConnectorRequest(
-    accept="application/json;version=2",
+    accept='application/json;version=2',
     resync_connector_request=shared.ResyncConnectorRequest(
         scope={
             "quod": [
-                "totam",
-                "porro",
+                'totam',
+                'porro',
             ],
             "dolorum": [
-                "nam",
+                'nam',
             ],
             "officia": [
-                "fugit",
-                "deleniti",
-                "hic",
+                'fugit',
+                'deleniti',
+                'hic',
             ],
             "optio": [
-                "beatae",
-                "commodi",
-                "molestiae",
+                'beatae',
+                'commodi',
+                'molestiae',
             ],
         },
     ),
-    connector_id="modi",
+    connector_id='modi',
 )
 
 res = s.connector_management.resync_connector(req)
@@ -324,12 +324,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.RunSetupTestsRequest(
-    accept="application/json;version=2",
+    accept='application/json;version=2',
     run_setup_tests_request=shared.RunSetupTestsRequest(
         trust_certificates=False,
         trust_fingerprints=False,
     ),
-    connector_id="qui",
+    connector_id='qui',
 )
 
 res = s.connector_management.run_setup_tests(req)
@@ -357,11 +357,11 @@ s = fivetran.Fivetran(
 
 
 req = operations.SyncConnectorRequest(
-    accept="application/json;version=2",
+    accept='application/json;version=2',
     sync_connector_request=shared.SyncConnectorRequest(
         force=False,
     ),
-    connector_id="impedit",
+    connector_id='impedit',
 )
 
 res = s.connector_management.sync_connector(req)

@@ -33,15 +33,15 @@ s = fivetran.Fivetran(
 
 
 req = operations.CreateDbtProjectRequest(
-    accept="application/json",
+    accept='application/json',
     new_dbt_project_request=shared.NewDbtProjectRequest(
-        dbt_version="error",
-        default_schema="temporibus",
-        folder_path="laborum",
-        git_branch="quasi",
-        git_remote_url="reiciendis",
-        group_id="voluptatibus",
-        target_name="vero",
+        dbt_version='error',
+        default_schema='temporibus',
+        folder_path='laborum',
+        git_branch='quasi',
+        git_remote_url='reiciendis',
+        group_id='voluptatibus',
+        target_name='vero',
         threads=468651,
     ),
 )
@@ -71,23 +71,23 @@ s = fivetran.Fivetran(
 
 
 req = operations.CreateDbtTransformationRequest(
-    accept="application/json",
+    accept='application/json',
     new_transformation_request=shared.NewTransformationRequest(
-        dbt_model_id="praesentium",
+        dbt_model_id='praesentium',
         run_tests=False,
         schedule=shared.TransformationSchedule(
             days_of_week=[
-                "MONDAY",
-                "FRIDAY",
-                "THURSDAY",
-                "SATURDAY",
+                shared.TransformationScheduleDaysOfWeekEnum.MONDAY,
+                shared.TransformationScheduleDaysOfWeekEnum.FRIDAY,
+                shared.TransformationScheduleDaysOfWeekEnum.THURSDAY,
+                shared.TransformationScheduleDaysOfWeekEnum.SATURDAY,
             ],
             interval=19987,
-            schedule_type="INTEGRATED",
-            time_of_day="reprehenderit",
+            schedule_type=shared.TransformationScheduleScheduleTypeEnum.INTEGRATED,
+            time_of_day='reprehenderit',
         ),
     ),
-    project_id="ut",
+    project_id='ut',
 )
 
 res = s.dbt_transformation_management.create_dbt_transformation(req)
@@ -115,8 +115,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DbtModelDetailsRequest(
-    accept="application/json",
-    model_id="maiores",
+    accept='application/json',
+    model_id='maiores',
 )
 
 res = s.dbt_transformation_management.dbt_model_details(req)
@@ -144,8 +144,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DbtProjectDetailsRequest(
-    accept="application/json",
-    project_id="dicta",
+    accept='application/json',
+    project_id='dicta',
 )
 
 res = s.dbt_transformation_management.dbt_project_details(req)
@@ -173,8 +173,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DbtTransformationDetailsRequest(
-    accept="application/json",
-    transformation_id="corporis",
+    accept='application/json',
+    transformation_id='corporis',
 )
 
 res = s.dbt_transformation_management.dbt_transformation_details(req)
@@ -202,8 +202,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteDbtTransformationRequest(
-    accept="application/json",
-    transformation_id="dolore",
+    accept='application/json',
+    transformation_id='dolore',
 )
 
 res = s.dbt_transformation_management.delete_dbt_transformation(req)
@@ -231,10 +231,10 @@ s = fivetran.Fivetran(
 
 
 req = operations.ListDbtProjectModelsRequest(
-    accept="application/json",
-    cursor="iusto",
+    accept='application/json',
+    cursor='iusto',
     limit=118727,
-    project_id="harum",
+    project_id='harum',
 )
 
 res = s.dbt_transformation_management.list_dbt_project_models(req)
@@ -262,10 +262,10 @@ s = fivetran.Fivetran(
 
 
 req = operations.ListDbtProjectTransformationsRequest(
-    accept="application/json",
-    cursor="enim",
+    accept='application/json',
+    cursor='enim',
     limit=880476,
-    project_id="commodi",
+    project_id='commodi',
 )
 
 res = s.dbt_transformation_management.list_dbt_project_transformations(req)
@@ -293,9 +293,9 @@ s = fivetran.Fivetran(
 
 
 req = operations.ListDbtProjectsRequest(
-    accept="application/json",
-    cursor="repudiandae",
-    group_id="quae",
+    accept='application/json',
+    cursor='repudiandae',
+    group_id='quae',
     limit=216822,
 )
 
@@ -324,21 +324,21 @@ s = fivetran.Fivetran(
 
 
 req = operations.ModifyDbtTransformationRequest(
-    accept="application/json",
+    accept='application/json',
     update_transformation_request=shared.UpdateTransformationRequest(
         run_tests=False,
         schedule=shared.TransformationSchedule(
             days_of_week=[
-                "THURSDAY",
-                "THURSDAY",
-                "SUNDAY",
+                shared.TransformationScheduleDaysOfWeekEnum.THURSDAY,
+                shared.TransformationScheduleDaysOfWeekEnum.THURSDAY,
+                shared.TransformationScheduleDaysOfWeekEnum.SUNDAY,
             ],
             interval=265389,
-            schedule_type="TIME_OF_DAY",
-            time_of_day="rem",
+            schedule_type=shared.TransformationScheduleScheduleTypeEnum.TIME_OF_DAY,
+            time_of_day='rem',
         ),
     ),
-    transformation_id="voluptates",
+    transformation_id='voluptates',
 )
 
 res = s.dbt_transformation_management.modify_dbt_transformation(req)
@@ -366,8 +366,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.TestDbtProjectRequest(
-    accept="application/json",
-    project_id="quasi",
+    accept='application/json',
+    project_id='quasi',
 )
 
 res = s.dbt_transformation_management.test_dbt_project(req)

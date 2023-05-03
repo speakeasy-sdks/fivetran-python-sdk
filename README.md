@@ -47,12 +47,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.ApproveCertificateRequest(
-    accept="application/json",
+    accept='application/json',
     trust_certificate_request=shared.TrustCertificateRequest(
-        connector_id="corrupti",
-        destination_id="provident",
-        encoded_cert="distinctio",
-        hash="quibusdam",
+        connector_id='corrupti',
+        destination_id='provident',
+        encoded_cert='distinctio',
+        hash='quibusdam',
     ),
 )
 

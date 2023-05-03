@@ -27,13 +27,13 @@ s = fivetran.Fivetran(
 
 
 req = operations.CreateDestinationRequest(
-    accept="application/json;version=2",
+    accept='application/json;version=2',
     new_destination_request=shared.NewDestinationRequest(
-        group_id="String",
-        region="AZURE_AUSTRALIAEAST",
+        group_id='String',
+        region=shared.NewDestinationRequestRegionEnum.AZURE_AUSTRALIAEAST,
         run_setup_tests=True,
-        service="String",
-        time_zone_offset="integer: -11, 10 ... ,0 , ... +11, +12",
+        service='String',
+        time_zone_offset='integer: -11, 10 ... ,0 , ... +11, +12',
         trust_certificates=False,
         trust_fingerprints=False,
     ),
@@ -64,8 +64,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DeleteDestinationRequest(
-    accept="application/json;version=2",
-    destination_id="sint",
+    accept='application/json;version=2',
+    destination_id='sint',
 )
 
 res = s.destination_management.delete_destination(req)
@@ -93,8 +93,8 @@ s = fivetran.Fivetran(
 
 
 req = operations.DestinationDetailsRequest(
-    accept="application/json;version=2",
-    destination_id="veritatis",
+    accept='application/json;version=2',
+    destination_id='veritatis',
 )
 
 res = s.destination_management.destination_details(req)
@@ -122,16 +122,16 @@ s = fivetran.Fivetran(
 
 
 req = operations.ModifyDestinationRequest(
-    accept="application/json;version=2",
+    accept='application/json;version=2',
     update_destination_request=shared.UpdateDestinationRequest(
-        config="itaque",
-        region="GCP_NORTHAMERICA_NORTHEAST1",
+        config='itaque',
+        region=shared.UpdateDestinationRequestRegionEnum.GCP_NORTHAMERICA_NORTHEAST1,
         run_setup_tests=True,
-        time_zone_offset="integer: -11, 10 ... ,0 , ... +11, +12",
+        time_zone_offset='integer: -11, 10 ... ,0 , ... +11, +12',
         trust_certificates=False,
         trust_fingerprints=False,
     ),
-    destination_id="enim",
+    destination_id='enim',
 )
 
 res = s.destination_management.modify_destination(req)
@@ -159,12 +159,12 @@ s = fivetran.Fivetran(
 
 
 req = operations.RunDestinationSetupTestsRequest(
-    accept="application/json;version=2",
+    accept='application/json;version=2',
     run_setup_tests_request=shared.RunSetupTestsRequest(
         trust_certificates=False,
         trust_fingerprints=False,
     ),
-    destination_id="consequatur",
+    destination_id='consequatur',
 )
 
 res = s.destination_management.run_destination_setup_tests(req)
