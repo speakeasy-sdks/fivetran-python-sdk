@@ -21,6 +21,7 @@ class UserManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def add_user_membership_in_connector(self, request: operations.AddUserMembershipInConnectorRequest) -> operations.AddUserMembershipInConnectorResponse:
         r"""Add connector membership
         Adds a connector membership
@@ -50,6 +51,7 @@ class UserManagement:
 
         return res
 
+    
     def add_user_membership_in_group(self, request: operations.AddUserMembershipInGroupRequest) -> operations.AddUserMembershipInGroupResponse:
         r"""Add group membership
         Adds a group membership.
@@ -79,6 +81,7 @@ class UserManagement:
 
         return res
 
+    
     def create_user(self, request: operations.CreateUserRequest) -> operations.CreateUserResponse:
         r"""Invite a User
         Invites a new user to your Fivetran account. The invited user will have access to the account only after accepting the invitation. Invited user details are still accessible through the API.
@@ -108,6 +111,7 @@ class UserManagement:
 
         return res
 
+    
     def delete_user(self, request: operations.DeleteUserRequest) -> operations.DeleteUserResponse:
         r"""Delete a user
         Deletes a user from your Fivetran account. You will be unable to delete an account owner user if there is only one remaining.
@@ -134,6 +138,7 @@ class UserManagement:
 
         return res
 
+    
     def delete_user_membership_in_account(self, request: operations.DeleteUserMembershipInAccountRequest) -> operations.DeleteUserMembershipInAccountResponse:
         r"""Delete user role in account
         Removes a user's role in account.
@@ -160,6 +165,7 @@ class UserManagement:
 
         return res
 
+    
     def delete_user_membership_in_connector(self, request: operations.DeleteUserMembershipInConnectorRequest) -> operations.DeleteUserMembershipInConnectorResponse:
         r"""Delete connector membership
         Removes connector membership.
@@ -184,6 +190,7 @@ class UserManagement:
 
         return res
 
+    
     def delete_user_membership_in_group(self, request: operations.DeleteUserMembershipInGroupRequest) -> operations.DeleteUserMembershipInGroupResponse:
         r"""Delete group membership
         Removes group membership.
@@ -210,6 +217,7 @@ class UserManagement:
 
         return res
 
+    
     def get_user_membership_in_connector(self, request: operations.GetUserMembershipInConnectorRequest) -> operations.GetUserMembershipInConnectorResponse:
         r"""Retrieve connector membership
         Returns a connector membership object.
@@ -234,6 +242,7 @@ class UserManagement:
 
         return res
 
+    
     def get_user_membership_in_group(self, request: operations.GetUserMembershipInGroupRequest) -> operations.GetUserMembershipInGroupResponse:
         r"""Retrieve group membership
         Returns a group membership object.
@@ -260,6 +269,7 @@ class UserManagement:
 
         return res
 
+    
     def get_user_memberships_in_connectors(self, request: operations.GetUserMembershipsInConnectorsRequest) -> operations.GetUserMembershipsInConnectorsResponse:
         r"""List all connector memberships
         Returns all connector membership objects for a user within your Fivetran account
@@ -285,6 +295,7 @@ class UserManagement:
 
         return res
 
+    
     def get_user_memberships_in_groups(self, request: operations.GetUserMembershipsInGroupsRequest) -> operations.GetUserMembershipsInGroupsResponse:
         r"""List all group memberships
         Returns all group membership objects for a user within your Fivetran account.
@@ -310,6 +321,7 @@ class UserManagement:
 
         return res
 
+    
     def list_all_users(self, request: operations.ListAllUsersRequest) -> operations.ListAllUsersResponse:
         r"""List All Users
         Returns a list of all users within your Fivetran account.
@@ -335,6 +347,7 @@ class UserManagement:
 
         return res
 
+    
     def modify_user(self, request: operations.ModifyUserRequest) -> operations.ModifyUserResponse:
         r"""Modify a User
         Updates information for an existing user within your Fivetran account.
@@ -364,6 +377,7 @@ class UserManagement:
 
         return res
 
+    
     def update_user_membership_in_connector(self, request: operations.UpdateUserMembershipInConnectorRequest) -> operations.UpdateUserMembershipInConnectorResponse:
         r"""Update connector membership
         Updates connector membership.
@@ -391,6 +405,7 @@ class UserManagement:
 
         return res
 
+    
     def update_user_membership_in_group(self, request: operations.UpdateUserMembershipInGroupRequest) -> operations.UpdateUserMembershipInGroupResponse:
         r"""Update group membership
         Updates group membership.
@@ -420,6 +435,7 @@ class UserManagement:
 
         return res
 
+    
     def user_details(self, request: operations.UserDetailsRequest) -> operations.UserDetailsResponse:
         r"""Retrieve User Details
         Returns a user object if a valid identifier was provided.

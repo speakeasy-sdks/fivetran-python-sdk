@@ -21,6 +21,7 @@ class ConnectorSchemaManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def connector_column_config(self, request: operations.ConnectorColumnConfigRequest) -> operations.ConnectorColumnConfigResponse:
         r"""Retrieve Source Table Columns Config
         Returns the source table columns config for an existing connector within your Fivetran account
@@ -45,6 +46,7 @@ class ConnectorSchemaManagement:
 
         return res
 
+    
     def connector_schema_config(self, request: operations.ConnectorSchemaConfigRequest) -> operations.ConnectorSchemaConfigResponse:
         r"""Retrieve a Connector Schema Config
         Returns the connector schema config for an existing connector within your Fivetran account
@@ -69,6 +71,7 @@ class ConnectorSchemaManagement:
 
         return res
 
+    
     def modify_connector_column_config(self, request: operations.ModifyConnectorColumnConfigRequest) -> operations.ModifyConnectorColumnConfigResponse:
         r"""Modify a Connector Column Config
         Updates the column config within your table for an existing connector within your Fivetran account
@@ -96,6 +99,7 @@ class ConnectorSchemaManagement:
 
         return res
 
+    
     def modify_connector_database_schema_config(self, request: operations.ModifyConnectorDatabaseSchemaConfigRequest) -> operations.ModifyConnectorDatabaseSchemaConfigResponse:
         r"""Modify a Connector Database Schema Config
         Updates the database schema config for an existing connector within your Fivetran account (for a single schema within a connector with multiple schemas)
@@ -123,6 +127,7 @@ class ConnectorSchemaManagement:
 
         return res
 
+    
     def modify_connector_schema_config(self, request: operations.ModifyConnectorSchemaConfigRequest) -> operations.ModifyConnectorSchemaConfigResponse:
         r"""Modify a Connector Schema Config
         Updates the schema config for an existing connector within your Fivetran account (for a single schema for a connector with multiple schemas)
@@ -150,6 +155,7 @@ class ConnectorSchemaManagement:
 
         return res
 
+    
     def modify_connector_table_config(self, request: operations.ModifyConnectorTableConfigRequest) -> operations.ModifyConnectorTableConfigResponse:
         r"""Modify a Connector Table Config
         Updates the table config within your database schema for an existing connector within your Fivetran account
@@ -177,6 +183,7 @@ class ConnectorSchemaManagement:
 
         return res
 
+    
     def reload_connector_schema_config(self, request: operations.ReloadConnectorSchemaConfigRequest) -> operations.ReloadConnectorSchemaConfigResponse:
         r"""Reload a Connector Schema Config
         Reloads the connector schema config for an existing connector within your Fivetran account
@@ -204,6 +211,7 @@ class ConnectorSchemaManagement:
 
         return res
 
+    
     def resync_tables(self, request: operations.ResyncTablesRequest) -> operations.ResyncTablesResponse:
         r"""Re-sync Connector Table Data
         Triggers a historical sync of all data for multiple schema tables within a connector. This action does not override the standard sync frequency you defined in the Fivetran dashboard.

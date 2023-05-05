@@ -21,6 +21,7 @@ class RoleManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def list_all_roles(self, request: operations.ListAllRolesRequest) -> operations.ListAllRolesResponse:
         r"""List all roles
         Returns a list of all predefined and custom roles within your Fivetran account.

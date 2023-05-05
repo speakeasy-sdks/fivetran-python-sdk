@@ -31,7 +31,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.CreateDbtProjectRequest(
     accept='application/json',
     new_dbt_project_request=shared.NewDbtProjectRequest(
@@ -68,7 +67,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.CreateDbtTransformationRequest(
     accept='application/json',
@@ -113,7 +111,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DbtModelDetailsRequest(
     accept='application/json',
     model_id='maiores',
@@ -141,7 +138,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.DbtProjectDetailsRequest(
     accept='application/json',
@@ -171,7 +167,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DbtTransformationDetailsRequest(
     accept='application/json',
     transformation_id='corporis',
@@ -200,7 +195,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DeleteDbtTransformationRequest(
     accept='application/json',
     transformation_id='dolore',
@@ -228,7 +222,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ListDbtProjectModelsRequest(
     accept='application/json',
@@ -260,7 +253,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ListDbtProjectTransformationsRequest(
     accept='application/json',
     cursor='enim',
@@ -291,7 +283,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ListDbtProjectsRequest(
     accept='application/json',
     cursor='repudiandae',
@@ -321,7 +312,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ModifyDbtTransformationRequest(
     accept='application/json',
@@ -363,7 +353,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.TestDbtProjectRequest(
     accept='application/json',

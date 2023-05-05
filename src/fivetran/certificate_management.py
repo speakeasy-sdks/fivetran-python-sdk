@@ -21,6 +21,7 @@ class CertificateManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def approve_certificate(self, request: operations.ApproveCertificateRequest) -> operations.ApproveCertificateResponse:
         r"""Approve a certificate
         Approves a certificate for a connector/destination, so Fivetran trusts this certificate for a source/destination database. The connector/destination setup tests will fail if a non-approved certificate is provided.
@@ -48,6 +49,7 @@ class CertificateManagement:
 
         return res
 
+    
     def approve_fingerprint(self, request: operations.ApproveFingerprintRequest) -> operations.ApproveFingerprintResponse:
         r"""Approve a fingerprint
         Approves a fingerprint, so Fivetran trusts this fingerprint for a source/destination database, and connectors can connect to the source/destination through an SSH tunnel

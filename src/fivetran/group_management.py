@@ -21,6 +21,7 @@ class GroupManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def add_user_to_group(self, request: operations.AddUserToGroupRequest) -> operations.AddUserToGroupResponse:
         r"""Add a User to a Group
         Adds an existing user to a group in your Fivetran account.
@@ -48,6 +49,7 @@ class GroupManagement:
 
         return res
 
+    
     def create_group(self, request: operations.CreateGroupRequest) -> operations.CreateGroupResponse:
         r"""Create a Group
         Creates a new group in your Fivetran account.
@@ -75,6 +77,7 @@ class GroupManagement:
 
         return res
 
+    
     def delete_group(self, request: operations.DeleteGroupRequest) -> operations.DeleteGroupResponse:
         r"""Delete a group
         Deletes a group from your Fivetran account.
@@ -99,6 +102,7 @@ class GroupManagement:
 
         return res
 
+    
     def delete_user_from_group(self, request: operations.DeleteUserFromGroupRequest) -> operations.DeleteUserFromGroupResponse:
         r"""Remove a User from a Group
         Removes an existing user from a group in your Fivetran account.
@@ -123,6 +127,7 @@ class GroupManagement:
 
         return res
 
+    
     def group_details(self, request: operations.GroupDetailsRequest) -> operations.GroupDetailsResponse:
         r"""Retrieve Group Details
         Returns a group object if a valid identifier was provided.
@@ -147,6 +152,7 @@ class GroupManagement:
 
         return res
 
+    
     def list_all_connectors_in_group(self, request: operations.ListAllConnectorsInGroupRequest) -> operations.ListAllConnectorsInGroupResponse:
         r"""List All Connectors within a Group
         Returns a list of information about all connectors within a group in your Fivetran account.
@@ -172,6 +178,7 @@ class GroupManagement:
 
         return res
 
+    
     def list_all_groups(self, request: operations.ListAllGroupsRequest) -> operations.ListAllGroupsResponse:
         r"""List All Groups
         Returns a list of all groups within your Fivetran account.
@@ -197,6 +204,7 @@ class GroupManagement:
 
         return res
 
+    
     def list_all_users_in_group(self, request: operations.ListAllUsersInGroupRequest) -> operations.ListAllUsersInGroupResponse:
         r"""List All Users within a Group
         Returns a list of information about all users within a group in your Fivetran account.
@@ -222,6 +230,7 @@ class GroupManagement:
 
         return res
 
+    
     def modify_group(self, request: operations.ModifyGroupRequest) -> operations.ModifyGroupResponse:
         r"""Modify a Group
         Updates information for an existing group within your Fivetran account.

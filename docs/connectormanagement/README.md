@@ -30,7 +30,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ConnectCardRequest(
     accept='application/json;version=2',
     connect_card_config_request=shared.ConnectCardConfigRequest(
@@ -65,7 +64,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ConnectorDetailsRequest(
     accept='application/json;version=2',
     connector_id='debitis',
@@ -93,7 +91,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.CreateConnectorRequest(
     accept='application/json;version=2',
@@ -138,7 +135,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DeleteConnectorRequest(
     accept='application/json;version=2',
     connector_id='placeat',
@@ -166,7 +162,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.MetadataConnectorConfigRequest(
     accept='application/json;version=2',
@@ -197,7 +192,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.MetadataConnectorsRequest(
     accept='application/json;version=2',
     cursor='ab',
@@ -227,7 +221,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ModifyConnectorRequest(
     accept='application/json;version=2',
@@ -271,7 +264,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ResyncConnectorRequest(
     accept='application/json;version=2',
@@ -322,7 +314,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.RunSetupTestsRequest(
     accept='application/json;version=2',
     run_setup_tests_request=shared.RunSetupTestsRequest(
@@ -354,7 +345,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.SyncConnectorRequest(
     accept='application/json;version=2',

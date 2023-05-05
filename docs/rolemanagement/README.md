@@ -21,7 +21,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ListAllRolesRequest(
     accept='application/json',
     cursor='provident',

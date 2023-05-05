@@ -28,7 +28,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ConnectorColumnConfigRequest(
     accept='application/json',
     connector_id='cum',
@@ -59,7 +58,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ConnectorSchemaConfigRequest(
     accept='application/json',
     connector_id='excepturi',
@@ -87,7 +85,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ModifyConnectorColumnConfigRequest(
     accept='application/json',
@@ -123,7 +120,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ModifyConnectorDatabaseSchemaConfigRequest(
     accept='application/json',
@@ -168,7 +164,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ModifyConnectorSchemaConfigRequest(
     accept='application/json',
@@ -285,7 +280,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ModifyConnectorTableConfigRequest(
     accept='application/json',
     table_update_request=shared.TableUpdateRequest(
@@ -334,7 +328,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ReloadConnectorSchemaConfigRequest(
     accept='application/json',
     reload_standard_config_request=shared.ReloadStandardConfigRequest(
@@ -365,7 +358,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ResyncTablesRequest(
     accept='application/json',

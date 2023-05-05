@@ -21,6 +21,7 @@ class TeamManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def add_team_membership_in_connector(self, request: operations.AddTeamMembershipInConnectorRequest) -> operations.AddTeamMembershipInConnectorResponse:
         r"""Add connector membership
         Adds a connector role within a team
@@ -48,6 +49,7 @@ class TeamManagement:
 
         return res
 
+    
     def add_team_membership_in_group(self, request: operations.AddTeamMembershipInGroupRequest) -> operations.AddTeamMembershipInGroupResponse:
         r"""Add group membership
         Adds a group membership in a team
@@ -75,6 +77,7 @@ class TeamManagement:
 
         return res
 
+    
     def add_user_to_team(self, request: operations.AddUserToTeamRequest) -> operations.AddUserToTeamResponse:
         r"""Add a user to a team
         Assigns a user role within a team
@@ -102,6 +105,7 @@ class TeamManagement:
 
         return res
 
+    
     def create_team(self, request: operations.CreateTeamRequest) -> operations.CreateTeamResponse:
         r"""Create a team
         Creates a new team in your Fivetran account
@@ -129,6 +133,7 @@ class TeamManagement:
 
         return res
 
+    
     def delete_team(self, request: operations.DeleteTeamRequest) -> operations.DeleteTeamResponse:
         r"""Delete a team
         Deletes a team from your Fivetran account
@@ -153,6 +158,7 @@ class TeamManagement:
 
         return res
 
+    
     def delete_team_membership_in_account(self, request: operations.DeleteTeamMembershipInAccountRequest) -> operations.DeleteTeamMembershipInAccountResponse:
         r"""Delete team role in account
         Removes a team role within your Fivetran account
@@ -177,6 +183,7 @@ class TeamManagement:
 
         return res
 
+    
     def delete_team_membership_in_connector(self, request: operations.DeleteTeamMembershipInConnectorRequest) -> operations.DeleteTeamMembershipInConnectorResponse:
         r"""Delete connector membership
         Removes connector membership in a team
@@ -201,6 +208,7 @@ class TeamManagement:
 
         return res
 
+    
     def delete_team_membership_in_group(self, request: operations.DeleteTeamMembershipInGroupRequest) -> operations.DeleteTeamMembershipInGroupResponse:
         r"""Delete group membership
         Removes group membership in a team
@@ -225,6 +233,7 @@ class TeamManagement:
 
         return res
 
+    
     def delete_user_from_team(self, request: operations.DeleteUserFromTeamRequest) -> operations.DeleteUserFromTeamResponse:
         r"""Delete a user from a team
         Removes a user from a team
@@ -249,6 +258,7 @@ class TeamManagement:
 
         return res
 
+    
     def get_team_membership_in_connector(self, request: operations.GetTeamMembershipInConnectorRequest) -> operations.GetTeamMembershipInConnectorResponse:
         r"""Retrieve connector membership
         Returns a connector membership within a team
@@ -273,6 +283,7 @@ class TeamManagement:
 
         return res
 
+    
     def get_team_membership_in_group(self, request: operations.GetTeamMembershipInGroupRequest) -> operations.GetTeamMembershipInGroupResponse:
         r"""Retrieve group membership
         Returns a group membership within a team.
@@ -297,6 +308,7 @@ class TeamManagement:
 
         return res
 
+    
     def get_team_memberships_in_connectors(self, request: operations.GetTeamMembershipsInConnectorsRequest) -> operations.GetTeamMembershipsInConnectorsResponse:
         r"""List all connector memberships
         Returns connector memberships within a team.
@@ -322,6 +334,7 @@ class TeamManagement:
 
         return res
 
+    
     def get_team_memberships_in_groups(self, request: operations.GetTeamMembershipsInGroupsRequest) -> operations.GetTeamMembershipsInGroupsResponse:
         r"""List all group memberships
         Returns a group membership within a team
@@ -347,6 +360,7 @@ class TeamManagement:
 
         return res
 
+    
     def get_user_in_team(self, request: operations.GetUserInTeamRequest) -> operations.GetUserInTeamResponse:
         r"""Retrieve user membership in a team
         Returns the user role a user has within a team
@@ -371,6 +385,7 @@ class TeamManagement:
 
         return res
 
+    
     def list_all_teams(self, request: operations.ListAllTeamsRequest) -> operations.ListAllTeamsResponse:
         r"""List all teams
         Returns a list of all teams within your Fivetran account
@@ -396,6 +411,7 @@ class TeamManagement:
 
         return res
 
+    
     def list_users_in_team(self, request: operations.ListUsersInTeamRequest) -> operations.ListUsersInTeamResponse:
         r"""List all user memberships
         Returns a list of users and their roles within a team in your Fivetran account
@@ -421,6 +437,7 @@ class TeamManagement:
 
         return res
 
+    
     def modify_team(self, request: operations.ModifyTeamRequest) -> operations.ModifyTeamResponse:
         r"""Modify a team
         Updates information for an existing team within your Fivetran account
@@ -448,6 +465,7 @@ class TeamManagement:
 
         return res
 
+    
     def team_details(self, request: operations.TeamDetailsRequest) -> operations.TeamDetailsResponse:
         r"""Retrieve team details
         Returns information for a given team within your Fivetran account
@@ -472,6 +490,7 @@ class TeamManagement:
 
         return res
 
+    
     def update_team_membership_in_connector(self, request: operations.UpdateTeamMembershipInConnectorRequest) -> operations.UpdateTeamMembershipInConnectorResponse:
         r"""Update connector membership
         Updates connector membership in a team
@@ -499,6 +518,7 @@ class TeamManagement:
 
         return res
 
+    
     def update_team_membership_in_group(self, request: operations.UpdateTeamMembershipInGroupRequest) -> operations.UpdateTeamMembershipInGroupResponse:
         r"""Update group membership
         Updates group membership in a team
@@ -526,6 +546,7 @@ class TeamManagement:
 
         return res
 
+    
     def update_user_membership(self, request: operations.UpdateUserMembershipRequest) -> operations.UpdateUserMembershipResponse:
         r"""Modify a user membership
         Updates a user role within a team in your Fivetran account

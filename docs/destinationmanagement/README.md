@@ -25,7 +25,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.CreateDestinationRequest(
     accept='application/json;version=2',
     new_destination_request=shared.NewDestinationRequest(
@@ -62,7 +61,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DeleteDestinationRequest(
     accept='application/json;version=2',
     destination_id='sint',
@@ -91,7 +89,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DestinationDetailsRequest(
     accept='application/json;version=2',
     destination_id='veritatis',
@@ -119,7 +116,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ModifyDestinationRequest(
     accept='application/json;version=2',
@@ -156,7 +152,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.RunDestinationSetupTestsRequest(
     accept='application/json;version=2',

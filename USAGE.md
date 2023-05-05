@@ -10,7 +10,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ApproveCertificateRequest(
     accept='application/json',
     trust_certificate_request=shared.TrustCertificateRequest(

@@ -41,7 +41,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.AddTeamMembershipInConnectorRequest(
     accept='application/json',
     membership_request=shared.MembershipRequest(
@@ -73,7 +72,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.AddTeamMembershipInGroupRequest(
     accept='application/json',
@@ -107,7 +105,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.AddUserToTeamRequest(
     accept='application/json',
     team_membership_request=shared.TeamMembershipRequest(
@@ -139,7 +136,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.CreateTeamRequest(
     accept='application/json',
@@ -173,7 +169,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DeleteTeamRequest(
     accept='application/json',
     team_id='facilis',
@@ -202,7 +197,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DeleteTeamMembershipInAccountRequest(
     accept='application/json',
     team_id='in',
@@ -230,7 +224,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.DeleteTeamMembershipInConnectorRequest(
     accept='application/json',
@@ -261,7 +254,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DeleteTeamMembershipInGroupRequest(
     accept='application/json',
     group_id='repudiandae',
@@ -290,7 +282,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.DeleteUserFromTeamRequest(
     accept='application/json',
@@ -321,7 +312,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.GetTeamMembershipInConnectorRequest(
     accept='application/json',
     connector_id='repellat',
@@ -351,7 +341,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.GetTeamMembershipInGroupRequest(
     accept='application/json',
     group_id='sed',
@@ -380,7 +369,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.GetTeamMembershipsInConnectorsRequest(
     accept='application/json',
@@ -412,7 +400,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.GetTeamMembershipsInGroupsRequest(
     accept='application/json',
     cursor='praesentium',
@@ -443,7 +430,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.GetUserInTeamRequest(
     accept='application/json',
     team_id='sunt',
@@ -472,7 +458,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ListAllTeamsRequest(
     accept='application/json',
@@ -503,7 +488,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ListUsersInTeamRequest(
     accept='application/json',
     cursor='maxime',
@@ -533,7 +517,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ModifyTeamRequest(
     accept='application/json',
@@ -568,7 +551,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.TeamDetailsRequest(
     accept='application/json',
     team_id='autem',
@@ -596,7 +578,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.UpdateTeamMembershipInConnectorRequest(
     accept='application/json',
@@ -630,7 +611,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.UpdateTeamMembershipInGroupRequest(
     accept='application/json',
     update_membership_request=shared.UpdateMembershipRequest(
@@ -662,7 +642,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.UpdateUserMembershipRequest(
     accept='application/json',

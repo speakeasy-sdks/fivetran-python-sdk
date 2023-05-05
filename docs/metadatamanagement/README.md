@@ -23,7 +23,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ColumnMetadataRequest(
     accept='application/json',
     connector_id='facilis',
@@ -54,7 +53,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.SchemaMetadataRequest(
     accept='application/json',
     connector_id='delectus',
@@ -84,7 +82,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.TableMetadataRequest(
     accept='application/json',

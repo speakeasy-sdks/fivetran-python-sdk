@@ -21,6 +21,7 @@ class WebhookManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create_account_webhook(self, request: operations.CreateAccountWebhookRequest) -> operations.CreateAccountWebhookResponse:
         r"""Create account webhook
         This endpoint allows you to create a new webhook for the current account.
@@ -48,6 +49,7 @@ class WebhookManagement:
 
         return res
 
+    
     def create_group_webhook(self, request: operations.CreateGroupWebhookRequest) -> operations.CreateGroupWebhookResponse:
         r"""Create group webhook
         This endpoint allows you to create a new webhook for a given group
@@ -75,6 +77,7 @@ class WebhookManagement:
 
         return res
 
+    
     def delete_webhook(self, request: operations.DeleteWebhookRequest) -> operations.DeleteWebhookResponse:
         r"""Delete webhook
         This endpoint allows you to delete an existing webhook with a given identifier
@@ -99,6 +102,7 @@ class WebhookManagement:
 
         return res
 
+    
     def list_all_webhooks(self, request: operations.ListAllWebhooksRequest) -> operations.ListAllWebhooksResponse:
         r"""Retrieve the list of webhooks
         The endpoint allows you to retrieve the list of existing webhooks available for the current account
@@ -124,6 +128,7 @@ class WebhookManagement:
 
         return res
 
+    
     def modify_webhook(self, request: operations.ModifyWebhookRequest) -> operations.ModifyWebhookResponse:
         r"""Update webhook
         The endpoint allows you to update the existing webhook with a given identifier
@@ -151,6 +156,7 @@ class WebhookManagement:
 
         return res
 
+    
     def test_webhook(self, request: operations.TestWebhookRequest) -> operations.TestWebhookResponse:
         r"""Test webhook
         The endpoint allows you to test an existing webhook. It sends a webhook with a given identifier for a dummy connector with identifier _connector_1
@@ -178,6 +184,7 @@ class WebhookManagement:
 
         return res
 
+    
     def webhook_details(self, request: operations.WebhookDetailsRequest) -> operations.WebhookDetailsResponse:
         r"""Retrieve webhook details
         This endpoint allows you to retrieve details of the existing webhook for a given identifier

@@ -21,6 +21,7 @@ class MetadataManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def column_metadata(self, request: operations.ColumnMetadataRequest) -> operations.ColumnMetadataResponse:
         r"""Retrieve column metadata
         Returns column-level metadata for an existing connector within your Fivetran account.
@@ -46,6 +47,7 @@ class MetadataManagement:
 
         return res
 
+    
     def schema_metadata(self, request: operations.SchemaMetadataRequest) -> operations.SchemaMetadataResponse:
         r"""Retrieve schema metadata
         Returns schema-level metadata for an existing connector within your Fivetran account.
@@ -71,6 +73,7 @@ class MetadataManagement:
 
         return res
 
+    
     def table_metadata(self, request: operations.TableMetadataRequest) -> operations.TableMetadataResponse:
         r"""Retrieve table metadata
         Returns table-level metadata for an existing connector within your Fivetran account.

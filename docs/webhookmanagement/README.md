@@ -27,7 +27,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.CreateAccountWebhookRequest(
     accept='application/json',
     webhook_request=shared.WebhookRequest(
@@ -62,7 +61,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.CreateGroupWebhookRequest(
     accept='application/json',
@@ -103,7 +101,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DeleteWebhookRequest(
     accept='application/json',
     webhook_id='totam',
@@ -131,7 +128,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ListAllWebhooksRequest(
     accept='application/json',
@@ -161,7 +157,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ModifyWebhookRequest(
     accept='application/json',
@@ -202,7 +197,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.TestWebhookRequest(
     accept='application/json',
     webhook_test_request=shared.WebhookTestRequest(
@@ -233,7 +227,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.WebhookDetailsRequest(
     accept='application/json',

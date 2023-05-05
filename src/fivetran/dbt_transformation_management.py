@@ -21,6 +21,7 @@ class DBTTransformationManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create_dbt_project(self, request: operations.CreateDbtProjectRequest) -> operations.CreateDbtProjectResponse:
         r"""Create DBT Project
         Creates a new DBT Project within a specified Group.
@@ -48,6 +49,7 @@ class DBTTransformationManagement:
 
         return res
 
+    
     def create_dbt_transformation(self, request: operations.CreateDbtTransformationRequest) -> operations.CreateDbtTransformationResponse:
         r"""Create DBT Transformation
         Creates a new DBT Transformation within a specified DBT Project.
@@ -75,6 +77,7 @@ class DBTTransformationManagement:
 
         return res
 
+    
     def dbt_model_details(self, request: operations.DbtModelDetailsRequest) -> operations.DbtModelDetailsResponse:
         r"""Retrieve DBT Model Details
         Returns a DBT Model details if a valid identifier was provided.
@@ -99,6 +102,7 @@ class DBTTransformationManagement:
 
         return res
 
+    
     def dbt_project_details(self, request: operations.DbtProjectDetailsRequest) -> operations.DbtProjectDetailsResponse:
         r"""Retrieve DBT Project Details
         Returns a DBT Project details if a valid identifier was provided.
@@ -123,6 +127,7 @@ class DBTTransformationManagement:
 
         return res
 
+    
     def dbt_transformation_details(self, request: operations.DbtTransformationDetailsRequest) -> operations.DbtTransformationDetailsResponse:
         r"""Retrieve DBT Transformation Details
         Returns a DBT Transformation details if a valid identifier was provided.
@@ -147,6 +152,7 @@ class DBTTransformationManagement:
 
         return res
 
+    
     def delete_dbt_transformation(self, request: operations.DeleteDbtTransformationRequest) -> operations.DeleteDbtTransformationResponse:
         r"""Delete DBT Transformation
         Deletes a DBT Transformation from your DBT Project.
@@ -171,6 +177,7 @@ class DBTTransformationManagement:
 
         return res
 
+    
     def list_dbt_project_models(self, request: operations.ListDbtProjectModelsRequest) -> operations.ListDbtProjectModelsResponse:
         r"""List All DBT Models
         Returns a list of all DBT Models within DBT Project.
@@ -196,6 +203,7 @@ class DBTTransformationManagement:
 
         return res
 
+    
     def list_dbt_project_transformations(self, request: operations.ListDbtProjectTransformationsRequest) -> operations.ListDbtProjectTransformationsResponse:
         r"""List All DBT Transformations
         Returns a list of all DBT Transformations within DBT Project.
@@ -221,6 +229,7 @@ class DBTTransformationManagement:
 
         return res
 
+    
     def list_dbt_projects(self, request: operations.ListDbtProjectsRequest) -> operations.ListDbtProjectsResponse:
         r"""List All DBT Projects
         Returns a list of all DBT Projects within your Fivetran account.
@@ -246,6 +255,7 @@ class DBTTransformationManagement:
 
         return res
 
+    
     def modify_dbt_transformation(self, request: operations.ModifyDbtTransformationRequest) -> operations.ModifyDbtTransformationResponse:
         r"""Modify DBT Transformation
         Updates information for an existing DBT Transformation.
@@ -273,6 +283,7 @@ class DBTTransformationManagement:
 
         return res
 
+    
     def test_dbt_project(self, request: operations.TestDbtProjectRequest) -> operations.TestDbtProjectResponse:
         r"""Test DBT Project
         Runs setup tests for DBT Project.

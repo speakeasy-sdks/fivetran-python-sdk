@@ -36,7 +36,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.AddUserMembershipInConnectorRequest(
     accept='application/json',
     membership_request=shared.MembershipRequest(
@@ -69,7 +68,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.AddUserMembershipInGroupRequest(
     accept='application/json',
     membership_request=shared.MembershipRequest(
@@ -101,7 +99,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.CreateUserRequest(
     accept='application/json',
@@ -138,7 +135,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DeleteUserRequest(
     accept='application/json',
     user_id='quaerat',
@@ -167,7 +163,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DeleteUserMembershipInAccountRequest(
     accept='application/json',
     user_id='accusamus',
@@ -195,7 +190,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.DeleteUserMembershipInConnectorRequest(
     accept='application/json',
@@ -226,7 +220,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DeleteUserMembershipInGroupRequest(
     accept='application/json',
     group_id='voluptas',
@@ -255,7 +248,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.GetUserMembershipInConnectorRequest(
     accept='application/json',
@@ -286,7 +278,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.GetUserMembershipInGroupRequest(
     accept='application/json',
     group_id='sit',
@@ -315,7 +306,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.GetUserMembershipsInConnectorsRequest(
     accept='application/json',
@@ -347,7 +337,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.GetUserMembershipsInGroupsRequest(
     accept='application/json',
     cursor='iusto',
@@ -378,7 +367,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ListAllUsersRequest(
     accept='application/json',
     cursor='deleniti',
@@ -407,7 +395,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ModifyUserRequest(
     accept='application/json',
@@ -444,7 +431,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.UpdateUserMembershipInConnectorRequest(
     accept='application/json',
     update_membership_request=shared.UpdateMembershipRequest(
@@ -477,7 +463,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.UpdateUserMembershipInGroupRequest(
     accept='application/json',
     update_membership_request=shared.UpdateMembershipRequest(
@@ -509,7 +494,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.UserDetailsRequest(
     accept='application/json',

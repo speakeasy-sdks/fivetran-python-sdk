@@ -22,7 +22,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ApproveCertificateRequest(
     accept='application/json',
     trust_certificate_request=shared.TrustCertificateRequest(
@@ -55,7 +54,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ApproveFingerprintRequest(
     accept='application/json',

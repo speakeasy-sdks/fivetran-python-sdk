@@ -21,6 +21,7 @@ class DestinationManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create_destination(self, request: operations.CreateDestinationRequest) -> operations.CreateDestinationResponse:
         r"""Create destination
         Creates a new destination within a specified group in your Fivetran account.
@@ -50,6 +51,7 @@ class DestinationManagement:
 
         return res
 
+    
     def delete_destination(self, request: operations.DeleteDestinationRequest) -> operations.DeleteDestinationResponse:
         r"""Delete a destination
         Deletes a destination from your Fivetran account.
@@ -76,6 +78,7 @@ class DestinationManagement:
 
         return res
 
+    
     def destination_details(self, request: operations.DestinationDetailsRequest) -> operations.DestinationDetailsResponse:
         r"""Retrieve Destination Details
         Returns a destination object if a valid identifier was provided.
@@ -102,6 +105,7 @@ class DestinationManagement:
 
         return res
 
+    
     def modify_destination(self, request: operations.ModifyDestinationRequest) -> operations.ModifyDestinationResponse:
         r"""Modify a Destination
         Updates information for an existing destination within your Fivetran account.
@@ -131,6 +135,7 @@ class DestinationManagement:
 
         return res
 
+    
     def run_destination_setup_tests(self, request: operations.RunDestinationSetupTestsRequest) -> operations.RunDestinationSetupTestsResponse:
         r"""Run Destination Setup Tests
         Runs the setup tests for an existing destination within your Fivetran account.

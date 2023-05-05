@@ -29,7 +29,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.AddUserToGroupRequest(
     accept='application/json',
     add_user_to_group_request=shared.AddUserToGroupRequest(
@@ -62,7 +61,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.CreateGroupRequest(
     accept='application/json',
     new_group_request=shared.NewGroupRequest(
@@ -93,7 +91,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.DeleteGroupRequest(
     accept='application/json',
     group_id='modi',
@@ -121,7 +118,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.DeleteUserFromGroupRequest(
     accept='application/json',
@@ -152,7 +148,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.GroupDetailsRequest(
     accept='application/json',
     group_id='cupiditate',
@@ -180,7 +175,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ListAllConnectorsInGroupRequest(
     accept='application/json',
@@ -213,7 +207,6 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ListAllGroupsRequest(
     accept='application/json',
     cursor='ipsam',
@@ -242,7 +235,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ListAllUsersInGroupRequest(
     accept='application/json',
@@ -273,7 +265,6 @@ s = fivetran.Fivetran(
         username="YOUR_USERNAME_HERE",
     ),
 )
-
 
 req = operations.ModifyGroupRequest(
     accept='application/json',

@@ -295,3 +295,11 @@ Based on:
 - Speakeasy CLI 1.27.0 https://github.com/speakeasy-api/speakeasy
 ### Releases
 - [PyPI v1.17.0] https://pypi.org/project/fivetran-python-sdk/1.17.0 - .
+
+## 2023-05-05 00:27:59
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.29.0 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.18.0] https://pypi.org/project/fivetran-python-sdk/1.18.0 - .
