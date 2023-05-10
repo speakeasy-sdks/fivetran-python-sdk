@@ -12,5 +12,5 @@ from typing import Optional
 class SyncConnectorRequest:
     
     force: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('force'), 'exclude': lambda f: f is None }})
-    r"""If force is true and the connector is currently syncing, it will stop the sync and re-run it. If force is false, the connector will sync only if it isn't currently syncing. The default value is false"""  
+    r"""If force is true and the connector is currently syncing, it will stop the sync and re-run it. If force is false, the connector will sync only if it isn't currently syncing. The default value is false"""
     

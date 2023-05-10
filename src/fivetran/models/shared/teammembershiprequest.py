@@ -12,7 +12,7 @@ from typing import Optional
 class TeamMembershipRequest:
     
     role: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role'), 'exclude': lambda f: f is None }})
-    r"""The user's role within the team"""  
+    r"""The user's role within the team"""
     user_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier of user"""  
+    r"""The unique identifier of user"""
     

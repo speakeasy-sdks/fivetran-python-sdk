@@ -3,23 +3,38 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from typing import Any, Optional
+from ..shared import destinationresponse as shared_destinationresponse
+from dataclasses_json import Undefined, dataclass_json
+from fivetran import utils
+from typing import Optional
 
 
 @dataclasses.dataclass
 class DestinationDetailsRequest:
     
     destination_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'destinationId', 'style': 'simple', 'explode': False }})
-    r"""The unique identifier for the destination within your Fivetran account."""  
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})  
+    r"""The unique identifier for the destination within your Fivetran account."""
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    
+
+@dataclass_json(undefined=Undefined.EXCLUDE)
+@dataclasses.dataclass
+class DestinationDetails200ApplicationJSON:
+    r"""Successful response"""
+    
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
+    r"""Response status code"""
+    data: Optional[shared_destinationresponse.DestinationResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
+    r"""Response status text"""
     
 
 @dataclasses.dataclass
 class DestinationDetailsResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
-    destination_details_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
-    r"""Successful response"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    destination_details_200_application_json_object: Optional[DestinationDetails200ApplicationJSON] = dataclasses.field(default=None)
+    r"""Successful response"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     

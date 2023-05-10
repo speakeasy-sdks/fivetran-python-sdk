@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class CertificateManagement:
     _client: requests_http.Session
@@ -21,6 +21,7 @@ class CertificateManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def approve_certificate(self, request: operations.ApproveCertificateRequest) -> operations.ApproveCertificateResponse:
         r"""Approve a certificate
         Approves a certificate for a connector/destination, so Fivetran trusts this certificate for a source/destination database. The connector/destination setup tests will fail if a non-approved certificate is provided.
@@ -43,11 +44,12 @@ class CertificateManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.approve_certificate_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ApproveCertificate200ApplicationJSON])
+                res.approve_certificate_200_application_json_object = out
 
         return res
 
+    
     def approve_fingerprint(self, request: operations.ApproveFingerprintRequest) -> operations.ApproveFingerprintResponse:
         r"""Approve a fingerprint
         Approves a fingerprint, so Fivetran trusts this fingerprint for a source/destination database, and connectors can connect to the source/destination through an SSH tunnel
@@ -70,8 +72,8 @@ class CertificateManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.approve_fingerprint_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ApproveFingerprint200ApplicationJSON])
+                res.approve_fingerprint_200_application_json_object = out
 
         return res
 

@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations, shared
-from typing import Any, Optional
+from typing import Optional
 
 class UserManagement:
     _client: requests_http.Session
@@ -21,6 +21,7 @@ class UserManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def add_user_membership_in_connector(self, request: operations.AddUserMembershipInConnectorRequest) -> operations.AddUserMembershipInConnectorResponse:
         r"""Add connector membership
         Adds a connector membership
@@ -50,6 +51,7 @@ class UserManagement:
 
         return res
 
+    
     def add_user_membership_in_group(self, request: operations.AddUserMembershipInGroupRequest) -> operations.AddUserMembershipInGroupResponse:
         r"""Add group membership
         Adds a group membership.
@@ -72,13 +74,14 @@ class UserManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.add_user_membership_in_group_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.AddUserMembershipInGroup201ApplicationJSON])
+                res.add_user_membership_in_group_201_application_json_object = out
         elif http_res.status_code in [400, 404]:
             pass
 
         return res
 
+    
     def create_user(self, request: operations.CreateUserRequest) -> operations.CreateUserResponse:
         r"""Invite a User
         Invites a new user to your Fivetran account. The invited user will have access to the account only after accepting the invitation. Invited user details are still accessible through the API.
@@ -101,13 +104,14 @@ class UserManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_user_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateUser201ApplicationJSON])
+                res.create_user_201_application_json_object = out
         elif http_res.status_code == 400:
             pass
 
         return res
 
+    
     def delete_user(self, request: operations.DeleteUserRequest) -> operations.DeleteUserResponse:
         r"""Delete a user
         Deletes a user from your Fivetran account. You will be unable to delete an account owner user if there is only one remaining.
@@ -127,13 +131,14 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_user_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteUser200ApplicationJSON])
+                res.delete_user_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
         return res
 
+    
     def delete_user_membership_in_account(self, request: operations.DeleteUserMembershipInAccountRequest) -> operations.DeleteUserMembershipInAccountResponse:
         r"""Delete user role in account
         Removes a user's role in account.
@@ -153,13 +158,14 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_user_membership_in_account_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteUserMembershipInAccount200ApplicationJSON])
+                res.delete_user_membership_in_account_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
         return res
 
+    
     def delete_user_membership_in_connector(self, request: operations.DeleteUserMembershipInConnectorRequest) -> operations.DeleteUserMembershipInConnectorResponse:
         r"""Delete connector membership
         Removes connector membership.
@@ -179,11 +185,12 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_user_membership_in_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteUserMembershipInConnector200ApplicationJSON])
+                res.delete_user_membership_in_connector_200_application_json_object = out
 
         return res
 
+    
     def delete_user_membership_in_group(self, request: operations.DeleteUserMembershipInGroupRequest) -> operations.DeleteUserMembershipInGroupResponse:
         r"""Delete group membership
         Removes group membership.
@@ -203,13 +210,14 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_user_membership_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteUserMembershipInGroup200ApplicationJSON])
+                res.delete_user_membership_in_group_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
         return res
 
+    
     def get_user_membership_in_connector(self, request: operations.GetUserMembershipInConnectorRequest) -> operations.GetUserMembershipInConnectorResponse:
         r"""Retrieve connector membership
         Returns a connector membership object.
@@ -229,11 +237,12 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_user_membership_in_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetUserMembershipInConnector200ApplicationJSON])
+                res.get_user_membership_in_connector_200_application_json_object = out
 
         return res
 
+    
     def get_user_membership_in_group(self, request: operations.GetUserMembershipInGroupRequest) -> operations.GetUserMembershipInGroupResponse:
         r"""Retrieve group membership
         Returns a group membership object.
@@ -253,13 +262,14 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_user_membership_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetUserMembershipInGroup200ApplicationJSON])
+                res.get_user_membership_in_group_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
         return res
 
+    
     def get_user_memberships_in_connectors(self, request: operations.GetUserMembershipsInConnectorsRequest) -> operations.GetUserMembershipsInConnectorsResponse:
         r"""List all connector memberships
         Returns all connector membership objects for a user within your Fivetran account
@@ -280,11 +290,12 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_user_memberships_in_connectors_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetUserMembershipsInConnectors200ApplicationJSON])
+                res.get_user_memberships_in_connectors_200_application_json_object = out
 
         return res
 
+    
     def get_user_memberships_in_groups(self, request: operations.GetUserMembershipsInGroupsRequest) -> operations.GetUserMembershipsInGroupsResponse:
         r"""List all group memberships
         Returns all group membership objects for a user within your Fivetran account.
@@ -305,11 +316,12 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.get_user_memberships_in_groups_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetUserMembershipsInGroups200ApplicationJSON])
+                res.get_user_memberships_in_groups_200_application_json_object = out
 
         return res
 
+    
     def list_all_users(self, request: operations.ListAllUsersRequest) -> operations.ListAllUsersResponse:
         r"""List All Users
         Returns a list of all users within your Fivetran account.
@@ -330,11 +342,12 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_all_users_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListAllUsers200ApplicationJSON])
+                res.list_all_users_200_application_json_object = out
 
         return res
 
+    
     def modify_user(self, request: operations.ModifyUserRequest) -> operations.ModifyUserResponse:
         r"""Modify a User
         Updates information for an existing user within your Fivetran account.
@@ -357,13 +370,14 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_user_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyUser200ApplicationJSON])
+                res.modify_user_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
         return res
 
+    
     def update_user_membership_in_connector(self, request: operations.UpdateUserMembershipInConnectorRequest) -> operations.UpdateUserMembershipInConnectorResponse:
         r"""Update connector membership
         Updates connector membership.
@@ -386,11 +400,12 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.update_user_membership_in_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.UpdateUserMembershipInConnector200ApplicationJSON])
+                res.update_user_membership_in_connector_200_application_json_object = out
 
         return res
 
+    
     def update_user_membership_in_group(self, request: operations.UpdateUserMembershipInGroupRequest) -> operations.UpdateUserMembershipInGroupResponse:
         r"""Update group membership
         Updates group membership.
@@ -413,13 +428,14 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.update_user_membership_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.UpdateUserMembershipInGroup200ApplicationJSON])
+                res.update_user_membership_in_group_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
         return res
 
+    
     def user_details(self, request: operations.UserDetailsRequest) -> operations.UserDetailsResponse:
         r"""Retrieve User Details
         Returns a user object if a valid identifier was provided.
@@ -439,8 +455,8 @@ class UserManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.user_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.UserDetails200ApplicationJSON])
+                res.user_details_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 

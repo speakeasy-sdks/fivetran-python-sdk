@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class MetadataManagement:
     _client: requests_http.Session
@@ -21,6 +21,7 @@ class MetadataManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def column_metadata(self, request: operations.ColumnMetadataRequest) -> operations.ColumnMetadataResponse:
         r"""Retrieve column metadata
         Returns column-level metadata for an existing connector within your Fivetran account.
@@ -41,11 +42,12 @@ class MetadataManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.column_metadata_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ColumnMetadata200ApplicationJSON])
+                res.column_metadata_200_application_json_object = out
 
         return res
 
+    
     def schema_metadata(self, request: operations.SchemaMetadataRequest) -> operations.SchemaMetadataResponse:
         r"""Retrieve schema metadata
         Returns schema-level metadata for an existing connector within your Fivetran account.
@@ -66,11 +68,12 @@ class MetadataManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.schema_metadata_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.SchemaMetadata200ApplicationJSON])
+                res.schema_metadata_200_application_json_object = out
 
         return res
 
+    
     def table_metadata(self, request: operations.TableMetadataRequest) -> operations.TableMetadataResponse:
         r"""Retrieve table metadata
         Returns table-level metadata for an existing connector within your Fivetran account.
@@ -91,8 +94,8 @@ class MetadataManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.table_metadata_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.TableMetadata200ApplicationJSON])
+                res.table_metadata_200_application_json_object = out
 
         return res
 

@@ -12,5 +12,5 @@ from typing import Optional
 class ReloadStandardConfigRequest:
     
     exclude_mode: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('exclude_mode'), 'exclude': lambda f: f is None }})
-    r"""Specifies whether all schemas and tables will be enabled or disabled in the standard config"""  
+    r"""Specifies whether all schemas and tables will be enabled or disabled in the standard config"""
     

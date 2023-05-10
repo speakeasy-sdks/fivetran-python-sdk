@@ -10,9 +10,9 @@ from typing import Optional
 
 class StandardConfigUpdateRequestSchemaChangeHandlingEnum(str, Enum):
     r"""The possible values for the schema_change_handling parameter are as follows: <br /> ALLOW_ALL - all new schemas, tables, and columns which appear in the source after the initial setup are included in syncs <br /> ALLOW_COLUMNS - all new schemas and tables which appear in the source after the initial setup are excluded from syncs, but new columns are included <br /> BLOCK_ALL - all new schemas, tables, and columns which appear in the source after the initial setup are excluded from syncs"""
-    ALLOW_ALL = "ALLOW_ALL"
-    ALLOW_COLUMNS = "ALLOW_COLUMNS"
-    BLOCK_ALL = "BLOCK_ALL"
+    ALLOW_ALL = 'ALLOW_ALL'
+    ALLOW_COLUMNS = 'ALLOW_COLUMNS'
+    BLOCK_ALL = 'BLOCK_ALL'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -20,7 +20,7 @@ class StandardConfigUpdateRequestSchemaChangeHandlingEnum(str, Enum):
 class StandardConfigUpdateRequest:
     
     schema_change_handling: Optional[StandardConfigUpdateRequestSchemaChangeHandlingEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema_change_handling'), 'exclude': lambda f: f is None }})
-    r"""The possible values for the schema_change_handling parameter are as follows: <br /> ALLOW_ALL - all new schemas, tables, and columns which appear in the source after the initial setup are included in syncs <br /> ALLOW_COLUMNS - all new schemas and tables which appear in the source after the initial setup are excluded from syncs, but new columns are included <br /> BLOCK_ALL - all new schemas, tables, and columns which appear in the source after the initial setup are excluded from syncs"""  
+    r"""The possible values for the schema_change_handling parameter are as follows: <br /> ALLOW_ALL - all new schemas, tables, and columns which appear in the source after the initial setup are included in syncs <br /> ALLOW_COLUMNS - all new schemas and tables which appear in the source after the initial setup are excluded from syncs, but new columns are included <br /> BLOCK_ALL - all new schemas, tables, and columns which appear in the source after the initial setup are excluded from syncs"""
     schemas: Optional[dict[str, shared_schemaupdaterequest.SchemaUpdateRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schemas'), 'exclude': lambda f: f is None }})
-    r"""The set of schemas within your connector schema config that are synced into the destination"""  
+    r"""The set of schemas within your connector schema config that are synced into the destination"""
     

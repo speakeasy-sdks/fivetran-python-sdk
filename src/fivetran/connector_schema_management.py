@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class ConnectorSchemaManagement:
     _client: requests_http.Session
@@ -21,6 +21,7 @@ class ConnectorSchemaManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def connector_column_config(self, request: operations.ConnectorColumnConfigRequest) -> operations.ConnectorColumnConfigResponse:
         r"""Retrieve Source Table Columns Config
         Returns the source table columns config for an existing connector within your Fivetran account
@@ -40,11 +41,12 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.connector_column_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ConnectorColumnConfig200ApplicationJSON])
+                res.connector_column_config_200_application_json_object = out
 
         return res
 
+    
     def connector_schema_config(self, request: operations.ConnectorSchemaConfigRequest) -> operations.ConnectorSchemaConfigResponse:
         r"""Retrieve a Connector Schema Config
         Returns the connector schema config for an existing connector within your Fivetran account
@@ -64,11 +66,12 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.connector_schema_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ConnectorSchemaConfig200ApplicationJSON])
+                res.connector_schema_config_200_application_json_object = out
 
         return res
 
+    
     def modify_connector_column_config(self, request: operations.ModifyConnectorColumnConfigRequest) -> operations.ModifyConnectorColumnConfigResponse:
         r"""Modify a Connector Column Config
         Updates the column config within your table for an existing connector within your Fivetran account
@@ -91,11 +94,12 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_connector_column_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyConnectorColumnConfig200ApplicationJSON])
+                res.modify_connector_column_config_200_application_json_object = out
 
         return res
 
+    
     def modify_connector_database_schema_config(self, request: operations.ModifyConnectorDatabaseSchemaConfigRequest) -> operations.ModifyConnectorDatabaseSchemaConfigResponse:
         r"""Modify a Connector Database Schema Config
         Updates the database schema config for an existing connector within your Fivetran account (for a single schema within a connector with multiple schemas)
@@ -118,11 +122,12 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_connector_database_schema_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyConnectorDatabaseSchemaConfig200ApplicationJSON])
+                res.modify_connector_database_schema_config_200_application_json_object = out
 
         return res
 
+    
     def modify_connector_schema_config(self, request: operations.ModifyConnectorSchemaConfigRequest) -> operations.ModifyConnectorSchemaConfigResponse:
         r"""Modify a Connector Schema Config
         Updates the schema config for an existing connector within your Fivetran account (for a single schema for a connector with multiple schemas)
@@ -145,11 +150,12 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_connector_schema_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyConnectorSchemaConfig200ApplicationJSON])
+                res.modify_connector_schema_config_200_application_json_object = out
 
         return res
 
+    
     def modify_connector_table_config(self, request: operations.ModifyConnectorTableConfigRequest) -> operations.ModifyConnectorTableConfigResponse:
         r"""Modify a Connector Table Config
         Updates the table config within your database schema for an existing connector within your Fivetran account
@@ -172,11 +178,12 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_connector_table_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyConnectorTableConfig200ApplicationJSON])
+                res.modify_connector_table_config_200_application_json_object = out
 
         return res
 
+    
     def reload_connector_schema_config(self, request: operations.ReloadConnectorSchemaConfigRequest) -> operations.ReloadConnectorSchemaConfigResponse:
         r"""Reload a Connector Schema Config
         Reloads the connector schema config for an existing connector within your Fivetran account
@@ -199,11 +206,12 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.reload_connector_schema_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ReloadConnectorSchemaConfig200ApplicationJSON])
+                res.reload_connector_schema_config_200_application_json_object = out
 
         return res
 
+    
     def resync_tables(self, request: operations.ResyncTablesRequest) -> operations.ResyncTablesResponse:
         r"""Re-sync Connector Table Data
         Triggers a historical sync of all data for multiple schema tables within a connector. This action does not override the standard sync frequency you defined in the Fivetran dashboard.
@@ -226,8 +234,8 @@ class ConnectorSchemaManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.resync_tables_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ResyncTables200ApplicationJSON])
+                res.resync_tables_200_application_json_object = out
 
         return res
 

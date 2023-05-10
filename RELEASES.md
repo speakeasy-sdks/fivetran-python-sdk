@@ -135,3 +135,187 @@ Based on:
 - Speakeasy CLI 1.15.0 https://github.com/speakeasy-api/speakeasy
 ### Releases
 - [PyPI v1.7.0] https://pypi.org/project/fivetran-python-sdk/1.7.0 - .
+
+## 2023-03-24 00:30:04
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.17.0 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.8.0] https://pypi.org/project/fivetran-python-sdk/1.8.0 - .
+
+## 2023-03-25 00:29:45
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.18.7 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.9.0] https://pypi.org/project/fivetran-python-sdk/1.9.0 - .
+
+## 2023-03-28 00:31:19
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.18.9 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.9.1] https://pypi.org/project/fivetran-python-sdk/1.9.1 - .
+
+## 2023-03-29 00:35:02
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.19.2 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.10.0] https://pypi.org/project/fivetran-python-sdk/1.10.0 - .
+
+## 2023-04-01 00:31:18
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.19.3 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.10.1] https://pypi.org/project/fivetran-python-sdk/1.10.1 - .
+
+## 2023-04-06 00:28:33
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.19.6 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.10.2] https://pypi.org/project/fivetran-python-sdk/1.10.2 - .
+
+## 2023-04-12 00:29:07
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.19.7 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.10.3] https://pypi.org/project/fivetran-python-sdk/1.10.3 - .
+
+## 2023-04-14 00:28:34
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.20.0 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.11.0] https://pypi.org/project/fivetran-python-sdk/1.11.0 - .
+
+## 2023-04-18 00:28:23
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.20.1 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.11.1] https://pypi.org/project/fivetran-python-sdk/1.11.1 - .
+
+## 2023-04-19 00:30:58
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.20.2 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.11.2] https://pypi.org/project/fivetran-python-sdk/1.11.2 - .
+
+## 2023-04-20 00:28:39
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.21.3 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.12.0] https://pypi.org/project/fivetran-python-sdk/1.12.0 - .
+
+## 2023-04-21 00:29:02
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.21.4 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.12.1] https://pypi.org/project/fivetran-python-sdk/1.12.1 - .
+
+## 2023-04-22 00:29:07
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.22.1 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.13.0] https://pypi.org/project/fivetran-python-sdk/1.13.0 - .
+
+## 2023-04-25 00:29:33
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.22.2 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.13.1] https://pypi.org/project/fivetran-python-sdk/1.13.1 - .
+
+## 2023-04-26 00:30:05
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.23.1 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.14.0] https://pypi.org/project/fivetran-python-sdk/1.14.0 - .
+
+## 2023-04-27 00:32:08
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.25.1 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.15.0] https://pypi.org/project/fivetran-python-sdk/1.15.0 - .
+
+## 2023-04-28 00:30:36
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.26.2 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.16.0] https://pypi.org/project/fivetran-python-sdk/1.16.0 - .
+
+## 2023-04-30 00:32:25
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.26.4 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.16.1] https://pypi.org/project/fivetran-python-sdk/1.16.1 - .
+
+## 2023-05-02 00:29:15
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.26.5 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.16.2] https://pypi.org/project/fivetran-python-sdk/1.16.2 - .
+
+## 2023-05-03 00:32:56
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.27.0 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.17.0] https://pypi.org/project/fivetran-python-sdk/1.17.0 - .
+
+## 2023-05-05 00:27:59
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.29.0 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.18.0] https://pypi.org/project/fivetran-python-sdk/1.18.0 - .
+
+## 2023-05-06 00:27:04
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.29.1 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.18.1] https://pypi.org/project/fivetran-python-sdk/1.18.1 - .
+
+## 2023-05-10 00:28:41
+### Changes
+Based on:
+- OpenAPI Doc v1 https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
+- Speakeasy CLI 1.29.2 https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v1.18.2] https://pypi.org/project/fivetran-python-sdk/1.18.2 - .

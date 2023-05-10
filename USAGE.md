@@ -10,20 +10,19 @@ s = fivetran.Fivetran(
     ),
 )
 
-
 req = operations.ApproveCertificateRequest(
-    accept="application/json",
+    accept='application/json',
     trust_certificate_request=shared.TrustCertificateRequest(
-        connector_id="unde",
-        destination_id="deserunt",
-        encoded_cert="porro",
-        hash="nulla",
+        connector_id='corrupti',
+        destination_id='provident',
+        encoded_cert='distinctio',
+        hash='quibusdam',
     ),
 )
-    
+
 res = s.certificate_management.approve_certificate(req)
 
-if res.approve_certificate_200_application_json_any is not None:
+if res.approve_certificate_200_application_json_object is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

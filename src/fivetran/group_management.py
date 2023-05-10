@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class GroupManagement:
     _client: requests_http.Session
@@ -21,6 +21,7 @@ class GroupManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def add_user_to_group(self, request: operations.AddUserToGroupRequest) -> operations.AddUserToGroupResponse:
         r"""Add a User to a Group
         Adds an existing user to a group in your Fivetran account.
@@ -43,11 +44,12 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.add_user_to_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.AddUserToGroup200ApplicationJSON])
+                res.add_user_to_group_200_application_json_object = out
 
         return res
 
+    
     def create_group(self, request: operations.CreateGroupRequest) -> operations.CreateGroupResponse:
         r"""Create a Group
         Creates a new group in your Fivetran account.
@@ -70,11 +72,12 @@ class GroupManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_group_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateGroup201ApplicationJSON])
+                res.create_group_201_application_json_object = out
 
         return res
 
+    
     def delete_group(self, request: operations.DeleteGroupRequest) -> operations.DeleteGroupResponse:
         r"""Delete a group
         Deletes a group from your Fivetran account.
@@ -94,11 +97,12 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteGroup200ApplicationJSON])
+                res.delete_group_200_application_json_object = out
 
         return res
 
+    
     def delete_user_from_group(self, request: operations.DeleteUserFromGroupRequest) -> operations.DeleteUserFromGroupResponse:
         r"""Remove a User from a Group
         Removes an existing user from a group in your Fivetran account.
@@ -118,11 +122,12 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_user_from_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteUserFromGroup200ApplicationJSON])
+                res.delete_user_from_group_200_application_json_object = out
 
         return res
 
+    
     def group_details(self, request: operations.GroupDetailsRequest) -> operations.GroupDetailsResponse:
         r"""Retrieve Group Details
         Returns a group object if a valid identifier was provided.
@@ -142,11 +147,12 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.group_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GroupDetails200ApplicationJSON])
+                res.group_details_200_application_json_object = out
 
         return res
 
+    
     def list_all_connectors_in_group(self, request: operations.ListAllConnectorsInGroupRequest) -> operations.ListAllConnectorsInGroupResponse:
         r"""List All Connectors within a Group
         Returns a list of information about all connectors within a group in your Fivetran account.
@@ -167,11 +173,12 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_all_connectors_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListAllConnectorsInGroup200ApplicationJSON])
+                res.list_all_connectors_in_group_200_application_json_object = out
 
         return res
 
+    
     def list_all_groups(self, request: operations.ListAllGroupsRequest) -> operations.ListAllGroupsResponse:
         r"""List All Groups
         Returns a list of all groups within your Fivetran account.
@@ -192,11 +199,12 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_all_groups_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListAllGroups200ApplicationJSON])
+                res.list_all_groups_200_application_json_object = out
 
         return res
 
+    
     def list_all_users_in_group(self, request: operations.ListAllUsersInGroupRequest) -> operations.ListAllUsersInGroupResponse:
         r"""List All Users within a Group
         Returns a list of information about all users within a group in your Fivetran account.
@@ -217,11 +225,12 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_all_users_in_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListAllUsersInGroup200ApplicationJSON])
+                res.list_all_users_in_group_200_application_json_object = out
 
         return res
 
+    
     def modify_group(self, request: operations.ModifyGroupRequest) -> operations.ModifyGroupResponse:
         r"""Modify a Group
         Updates information for an existing group within your Fivetran account.
@@ -244,8 +253,8 @@ class GroupManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_group_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyGroup200ApplicationJSON])
+                res.modify_group_200_application_json_object = out
 
         return res
 

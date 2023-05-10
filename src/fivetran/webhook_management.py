@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class WebhookManagement:
     _client: requests_http.Session
@@ -21,6 +21,7 @@ class WebhookManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create_account_webhook(self, request: operations.CreateAccountWebhookRequest) -> operations.CreateAccountWebhookResponse:
         r"""Create account webhook
         This endpoint allows you to create a new webhook for the current account.
@@ -43,11 +44,12 @@ class WebhookManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_account_webhook_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateAccountWebhook200ApplicationJSON])
+                res.create_account_webhook_200_application_json_object = out
 
         return res
 
+    
     def create_group_webhook(self, request: operations.CreateGroupWebhookRequest) -> operations.CreateGroupWebhookResponse:
         r"""Create group webhook
         This endpoint allows you to create a new webhook for a given group
@@ -70,11 +72,12 @@ class WebhookManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_group_webhook_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateGroupWebhook200ApplicationJSON])
+                res.create_group_webhook_200_application_json_object = out
 
         return res
 
+    
     def delete_webhook(self, request: operations.DeleteWebhookRequest) -> operations.DeleteWebhookResponse:
         r"""Delete webhook
         This endpoint allows you to delete an existing webhook with a given identifier
@@ -94,11 +97,12 @@ class WebhookManagement:
         
         if http_res.status_code == 204:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_webhook_204_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteWebhook204ApplicationJSON])
+                res.delete_webhook_204_application_json_object = out
 
         return res
 
+    
     def list_all_webhooks(self, request: operations.ListAllWebhooksRequest) -> operations.ListAllWebhooksResponse:
         r"""Retrieve the list of webhooks
         The endpoint allows you to retrieve the list of existing webhooks available for the current account
@@ -119,11 +123,12 @@ class WebhookManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_all_webhooks_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListAllWebhooks200ApplicationJSON])
+                res.list_all_webhooks_200_application_json_object = out
 
         return res
 
+    
     def modify_webhook(self, request: operations.ModifyWebhookRequest) -> operations.ModifyWebhookResponse:
         r"""Update webhook
         The endpoint allows you to update the existing webhook with a given identifier
@@ -146,11 +151,12 @@ class WebhookManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_webhook_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyWebhook200ApplicationJSON])
+                res.modify_webhook_200_application_json_object = out
 
         return res
 
+    
     def test_webhook(self, request: operations.TestWebhookRequest) -> operations.TestWebhookResponse:
         r"""Test webhook
         The endpoint allows you to test an existing webhook. It sends a webhook with a given identifier for a dummy connector with identifier _connector_1
@@ -173,11 +179,12 @@ class WebhookManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.test_webhook_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.TestWebhook200ApplicationJSON])
+                res.test_webhook_200_application_json_object = out
 
         return res
 
+    
     def webhook_details(self, request: operations.WebhookDetailsRequest) -> operations.WebhookDetailsResponse:
         r"""Retrieve webhook details
         This endpoint allows you to retrieve details of the existing webhook for a given identifier
@@ -197,8 +204,8 @@ class WebhookManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.webhook_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.WebhookDetails200ApplicationJSON])
+                res.webhook_details_200_application_json_object = out
 
         return res
 

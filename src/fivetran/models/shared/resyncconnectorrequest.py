@@ -12,5 +12,5 @@ from typing import Optional
 class ResyncConnectorRequest:
     
     scope: Optional[dict[str, list[str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scope'), 'exclude': lambda f: f is None }})
-    r"""A map containing an array of tables to re-sync for each schema, must be non-empty. The parameter is optional"""  
+    r"""A map containing an array of tables to re-sync for each schema, must be non-empty. The parameter is optional"""
     

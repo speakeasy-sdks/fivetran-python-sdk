@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class ConnectorManagement:
     _client: requests_http.Session
@@ -21,6 +21,7 @@ class ConnectorManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def connect_card(self, request: operations.ConnectCardRequest) -> operations.ConnectCardResponse:
         r"""Connect Card
         Generates the Connect Card URI for the connector
@@ -43,11 +44,12 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.connect_card_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ConnectCard200ApplicationJSON])
+                res.connect_card_200_application_json_object = out
 
         return res
 
+    
     def connector_details(self, request: operations.ConnectorDetailsRequest) -> operations.ConnectorDetailsResponse:
         r"""Retrieve Connector Details
         Returns a connector object if a valid identifier was provided
@@ -67,11 +69,12 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.connector_details_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ConnectorDetails200ApplicationJSON])
+                res.connector_details_200_application_json_object = out
 
         return res
 
+    
     def create_connector(self, request: operations.CreateConnectorRequest) -> operations.CreateConnectorResponse:
         r"""Create a Connector
         Creates a new connector within a specified group in your Fivetran account. Runs setup tests and returns testing results.
@@ -94,13 +97,14 @@ class ConnectorManagement:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.create_connector_201_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.CreateConnector201ApplicationJSON])
+                res.create_connector_201_application_json_object = out
         elif http_res.status_code == 400:
             pass
 
         return res
 
+    
     def delete_connector(self, request: operations.DeleteConnectorRequest) -> operations.DeleteConnectorResponse:
         r"""Delete a Connector
         Deletes a connector from your Fivetran account.
@@ -120,13 +124,14 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.delete_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.DeleteConnector200ApplicationJSON])
+                res.delete_connector_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
         return res
 
+    
     def metadata_connector_config(self, request: operations.MetadataConnectorConfigRequest) -> operations.MetadataConnectorConfigResponse:
         r"""Retrieve connector configuration metadata
         Returns metadata of configuration parameters and authorization parameters for a specified connector type.
@@ -146,11 +151,12 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.metadata_connector_config_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.MetadataConnectorConfig200ApplicationJSON])
+                res.metadata_connector_config_200_application_json_object = out
 
         return res
 
+    
     def metadata_connectors(self, request: operations.MetadataConnectorsRequest) -> operations.MetadataConnectorsResponse:
         r"""Retrieve source metadata
         Returns all available source types within your Fivetran account. This endpoint makes it easier to display Fivetran connectors within your application because it provides metadata including the proper source name (‘Facebook Ad Account’ instead of facebook_ad_account), the source icon, and links to Fivetran resources. As we update source names and icons, that metadata will automatically update within this endpoint
@@ -171,11 +177,12 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.metadata_connectors_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.MetadataConnectors200ApplicationJSON])
+                res.metadata_connectors_200_application_json_object = out
 
         return res
 
+    
     def modify_connector(self, request: operations.ModifyConnectorRequest) -> operations.ModifyConnectorResponse:
         r"""Modify a Connector
         Updates the information for an existing connector within your Fivetran account.
@@ -198,13 +205,14 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.modify_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ModifyConnector200ApplicationJSON])
+                res.modify_connector_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
         return res
 
+    
     def resync_connector(self, request: operations.ResyncConnectorRequest) -> operations.ResyncConnectorResponse:
         r"""Re-sync Connector Data (Historical Sync)
         Triggers a full historical sync of a connector or multiple schema tables within a connector. If the connector is paused, the table sync will be scheduled to be performed when the connector is re-enabled. If there is a data sync already in progress, we will try to complete it. If it fails, the request will be declined and the HTTP 409 Conflict error will be returned.
@@ -227,13 +235,14 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.resync_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ResyncConnector200ApplicationJSON])
+                res.resync_connector_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
         return res
 
+    
     def run_setup_tests(self, request: operations.RunSetupTestsRequest) -> operations.RunSetupTestsResponse:
         r"""Run connector setup tests
         Runs the setup tests for an existing connector within your Fivetran account.
@@ -256,13 +265,14 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.run_setup_tests_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.RunSetupTests200ApplicationJSON])
+                res.run_setup_tests_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 
         return res
 
+    
     def sync_connector(self, request: operations.SyncConnectorRequest) -> operations.SyncConnectorResponse:
         r"""Sync Connector Data
         Triggers a data sync for an existing connector within your Fivetran account without waiting for the next scheduled sync. This action does not override the standard sync frequency you defined in the Fivetran dashboard.
@@ -285,8 +295,8 @@ class ConnectorManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.sync_connector_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.SyncConnector200ApplicationJSON])
+                res.sync_connector_200_application_json_object = out
         elif http_res.status_code == 404:
             pass
 

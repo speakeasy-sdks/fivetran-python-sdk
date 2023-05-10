@@ -4,26 +4,41 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import schemaupdaterequest as shared_schemaupdaterequest
-from typing import Any, Optional
+from ..shared import standardconfigresponse as shared_standardconfigresponse
+from dataclasses_json import Undefined, dataclass_json
+from fivetran import utils
+from typing import Optional
 
 
 @dataclasses.dataclass
 class ModifyConnectorDatabaseSchemaConfigRequest:
     
     connector_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectorId', 'style': 'simple', 'explode': False }})
-    r"""The unique identifier for the connector within the Fivetran system"""  
+    r"""The unique identifier for the connector within the Fivetran system"""
     schema_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'schemaName', 'style': 'simple', 'explode': False }})
-    r"""The database schema name within your destination (different from the connector schema)"""  
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})  
-    schema_update_request: Optional[shared_schemaupdaterequest.SchemaUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})  
+    r"""The database schema name within your destination (different from the connector schema)"""
+    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    schema_update_request: Optional[shared_schemaupdaterequest.SchemaUpdateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    
+
+@dataclass_json(undefined=Undefined.EXCLUDE)
+@dataclasses.dataclass
+class ModifyConnectorDatabaseSchemaConfig200ApplicationJSON:
+    r"""Successful response"""
+    
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
+    r"""Response status code"""
+    data: Optional[shared_standardconfigresponse.StandardConfigResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
+    r"""Response status text"""
     
 
 @dataclasses.dataclass
 class ModifyConnectorDatabaseSchemaConfigResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
-    modify_connector_database_schema_config_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
-    r"""Successful response"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    modify_connector_database_schema_config_200_application_json_object: Optional[ModifyConnectorDatabaseSchemaConfig200ApplicationJSON] = dataclasses.field(default=None)
+    r"""Successful response"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     

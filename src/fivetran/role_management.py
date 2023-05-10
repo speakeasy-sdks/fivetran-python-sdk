@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from fivetran.models import operations
-from typing import Any, Optional
+from typing import Optional
 
 class RoleManagement:
     _client: requests_http.Session
@@ -21,6 +21,7 @@ class RoleManagement:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def list_all_roles(self, request: operations.ListAllRolesRequest) -> operations.ListAllRolesResponse:
         r"""List all roles
         Returns a list of all predefined and custom roles within your Fivetran account.
@@ -41,8 +42,8 @@ class RoleManagement:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.list_all_roles_200_application_json_any = out
+                out = utils.unmarshal_json(http_res.text, Optional[operations.ListAllRoles200ApplicationJSON])
+                res.list_all_roles_200_application_json_object = out
 
         return res
 

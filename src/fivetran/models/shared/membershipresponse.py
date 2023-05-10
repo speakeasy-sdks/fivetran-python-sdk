@@ -16,9 +16,9 @@ class MembershipResponse:
     r"""Successful response"""
     
     created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso'), 'exclude': lambda f: f is None }})
-    r"""The date and time the membership was created"""  
+    r"""The date and time the membership was created"""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    r"""The membership entity unique identifier"""  
+    r"""The membership entity unique identifier"""
     role: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role'), 'exclude': lambda f: f is None }})
-    r"""The role the user has within the entity"""  
+    r"""The role the user has within the entity"""
     
