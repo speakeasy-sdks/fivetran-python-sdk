@@ -1,30 +1,9 @@
 name: Generate
-
-on:
+"on":
   workflow_dispatch:
     inputs:
       force:
-        description: "Force the generation of the SDKs"
+        description: Force the generation of the SDKs
         type: boolean
         default: false
-  schedule:
-    - cron: 0 0 * * * # Runs every day at midnight
-
-jobs:
-  generate:
-    name: Generate SDK
-    runs-on: ubuntu-latest
-    steps:
-      - uses: speakeasy-api/sdk-generation-action@v13
-        with:
-          speakeasy_version: latest
-          openapi_doc_location: https://prod.speakeasyapi.dev/v1/apis/fivetran/version/1.0.0/schema/download
-          openapi_doc_auth_header: x-api-key
-          languages: |-
-            - python
-          publish_python: true
-          mode: pr
-          speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
-          force: ${{ github.event.inputs.force }}
-          openapi_doc_auth_token: ${{ secrets.SPEAKEASY_API_KEY }}
+jobs: {}
